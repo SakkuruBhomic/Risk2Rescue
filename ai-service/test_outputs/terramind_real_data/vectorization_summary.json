@@ -1,0 +1,22 @@
+{
+  "source_raster": "test_outputs/terramind_real_data\\terramind_flood_mask.tif",
+  "source_crs": "EPSG:32644",
+  "output_crs": "EPSG:4326",
+  "dimensions": [
+    224,
+    224
+  ],
+  "resolution": [
+    10.0,
+    10.0
+  ],
+  "flood_pixels": 2763,
+  "flood_percentage": 5.5066,
+  "polygons_before_filter": 49,
+  "polygons_after_filter": 30,
+  "total_area_m2": 268700.0,
+  "min_probability": 0.5875216126441956,
+  "max_probability": 1.0,
+  "mean_probability": 0.9993378162384033,
+  "disclaimer": "These polygons represent TerraMind model predictions derived from real satellite imagery. They are not ground-truth-validated flood boundaries. Probability is not accuracy."
+}

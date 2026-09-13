@@ -1,0 +1,36 @@
+{
+  "S2": {
+    "bands": [
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B8A",
+      "B09",
+      "B11",
+      "B12"
+    ],
+    "resampling": "bilinear",
+    "transformation": "raw DN values",
+    "spatial_resolution": "10m"
+  },
+  "S1": {
+    "bands": [
+      "vv",
+      "vh"
+    ],
+    "resampling": "bilinear",
+    "transformation": "10 * log10(DN) for dB",
+    "spatial_resolution": "10m"
+  },
+  "DEM": {
+    "resampling": "bilinear",
+    "transformation": "raw elevation",
+    "spatial_resolution": "10m",
+    "temporal": "replicated 4x"
+  }
+}

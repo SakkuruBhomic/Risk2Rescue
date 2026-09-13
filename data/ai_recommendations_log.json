@@ -1,0 +1,5523 @@
+[
+  {
+    "id": "REC-1789090836747",
+    "timestamp": "2026-09-11T01:40:36.747Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789087526679",
+    "timestamp": "2026-09-11T00:45:26.679Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789087483837",
+    "timestamp": "2026-09-11T00:44:43.837Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789087457469",
+    "timestamp": "2026-09-11T00:44:17.469Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789087442594",
+    "timestamp": "2026-09-11T00:44:02.594Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789086891334",
+    "timestamp": "2026-09-11T00:34:51.334Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789086823862",
+    "timestamp": "2026-09-11T00:33:43.862Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789086729824",
+    "timestamp": "2026-09-11T00:32:09.824Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789086636482",
+    "timestamp": "2026-09-11T00:30:36.482Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {
+        "gust": 10.1,
+        "pressure": 1005
+      }
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps. Doppler telemetry records peak sustained gusts of 10.1 km/h."
+  },
+  {
+    "id": "REC-1789086543842",
+    "timestamp": "2026-09-11T00:29:03.842Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789085943834",
+    "timestamp": "2026-09-11T00:19:03.834Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789085343837",
+    "timestamp": "2026-09-11T00:09:03.837Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789084743841",
+    "timestamp": "2026-09-10T23:59:03.841Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789084142839",
+    "timestamp": "2026-09-10T23:49:02.839Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789084119603",
+    "timestamp": "2026-09-10T23:48:39.603Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {
+        "gust": 12.2,
+        "pressure": 1005
+      }
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps. Doppler telemetry records peak sustained gusts of 12.2 km/h."
+  },
+  {
+    "id": "REC-1789083626662",
+    "timestamp": "2026-09-10T23:40:26.663Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789083026658",
+    "timestamp": "2026-09-10T23:30:26.658Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789082663721",
+    "timestamp": "2026-09-10T23:24:23.721Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789080889369",
+    "timestamp": "2026-09-10T22:54:49.369Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789080783437",
+    "timestamp": "2026-09-10T22:53:03.437Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {
+        "gust": 15.1,
+        "pressure": 1004
+      }
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps. Doppler telemetry records peak sustained gusts of 15.1 km/h."
+  },
+  {
+    "id": "REC-1789079333877",
+    "timestamp": "2026-09-10T22:28:53.877Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078615588",
+    "timestamp": "2026-09-10T22:16:55.588Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078480894",
+    "timestamp": "2026-09-10T22:14:40.894Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078480653",
+    "timestamp": "2026-09-10T22:14:40.653Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078479475",
+    "timestamp": "2026-09-10T22:14:39.475Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078465246",
+    "timestamp": "2026-09-10T22:14:25.246Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078464565",
+    "timestamp": "2026-09-10T22:14:24.565Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078315520",
+    "timestamp": "2026-09-10T22:11:55.520Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078203513",
+    "timestamp": "2026-09-10T22:10:03.513Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078189548",
+    "timestamp": "2026-09-10T22:09:49.548Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078037235",
+    "timestamp": "2026-09-10T22:07:17.235Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789078009909",
+    "timestamp": "2026-09-10T22:06:49.909Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {
+        "gust": 16.2,
+        "pressure": 1004
+      }
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps. Doppler telemetry records peak sustained gusts of 16.2 km/h."
+  },
+  {
+    "id": "REC-1789078001891",
+    "timestamp": "2026-09-10T22:06:41.891Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {
+        "gust": 16.2,
+        "pressure": 1004
+      }
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps. Doppler telemetry records peak sustained gusts of 16.2 km/h."
+  },
+  {
+    "id": "REC-1789077698753",
+    "timestamp": "2026-09-10T22:01:38.753Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789077478171",
+    "timestamp": "2026-09-10T21:57:58.171Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789077325530",
+    "timestamp": "2026-09-10T21:55:25.530Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789076663373",
+    "timestamp": "2026-09-10T21:44:23.373Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789074030961",
+    "timestamp": "2026-09-10T21:00:30.961Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789073430437",
+    "timestamp": "2026-09-10T20:50:30.437Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789072917886",
+    "timestamp": "2026-09-10T20:41:57.886Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789072891803",
+    "timestamp": "2026-09-10T20:41:31.803Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789072696987",
+    "timestamp": "2026-09-10T20:38:16.987Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789072512680",
+    "timestamp": "2026-09-10T20:35:12.680Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789072145907",
+    "timestamp": "2026-09-10T20:29:05.907Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789071959275",
+    "timestamp": "2026-09-10T20:25:59.275Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789071899762",
+    "timestamp": "2026-09-10T20:24:59.762Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {
+        "gust": 18.4,
+        "pressure": 1005
+      }
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps. Doppler telemetry records peak sustained gusts of 18.4 km/h."
+  },
+  {
+    "id": "REC-1789071338846",
+    "timestamp": "2026-09-10T20:15:38.846Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789071209672",
+    "timestamp": "2026-09-10T20:13:29.672Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789071208718",
+    "timestamp": "2026-09-10T20:13:28.718Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789071182139",
+    "timestamp": "2026-09-10T20:13:02.139Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789071181239",
+    "timestamp": "2026-09-10T20:13:01.239Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789071180105",
+    "timestamp": "2026-09-10T20:13:00.105Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789071142667",
+    "timestamp": "2026-09-10T20:12:22.667Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789071093398",
+    "timestamp": "2026-09-10T20:11:33.398Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789070827946",
+    "timestamp": "2026-09-10T20:07:07.946Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789070227958",
+    "timestamp": "2026-09-10T19:57:07.958Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789069627218",
+    "timestamp": "2026-09-10T19:47:07.218Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789069626364",
+    "timestamp": "2026-09-10T19:47:06.364Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789069261968",
+    "timestamp": "2026-09-10T19:41:01.968Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789069138581",
+    "timestamp": "2026-09-10T19:38:58.581Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789069028423",
+    "timestamp": "2026-09-10T19:37:08.423Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789069021317",
+    "timestamp": "2026-09-10T19:37:01.317Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789068533867",
+    "timestamp": "2026-09-10T19:28:53.867Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789068132735",
+    "timestamp": "2026-09-10T19:22:12.735Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789068132562",
+    "timestamp": "2026-09-10T19:22:12.562Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789068132349",
+    "timestamp": "2026-09-10T19:22:12.349Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789068131739",
+    "timestamp": "2026-09-10T19:22:11.739Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067890549",
+    "timestamp": "2026-09-10T19:18:10.549Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067734245",
+    "timestamp": "2026-09-10T19:15:34.245Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067734071",
+    "timestamp": "2026-09-10T19:15:34.071Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067733885",
+    "timestamp": "2026-09-10T19:15:33.885Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067733737",
+    "timestamp": "2026-09-10T19:15:33.737Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067733571",
+    "timestamp": "2026-09-10T19:15:33.571Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067733436",
+    "timestamp": "2026-09-10T19:15:33.436Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067733205",
+    "timestamp": "2026-09-10T19:15:33.205Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067732055",
+    "timestamp": "2026-09-10T19:15:32.055Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067673814",
+    "timestamp": "2026-09-10T19:14:33.814Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789067162884",
+    "timestamp": "2026-09-10T19:06:02.884Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066779591",
+    "timestamp": "2026-09-10T18:59:39.591Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066762723",
+    "timestamp": "2026-09-10T18:59:22.723Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066698006",
+    "timestamp": "2026-09-10T18:58:18.006Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066681856",
+    "timestamp": "2026-09-10T18:58:01.856Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066649171",
+    "timestamp": "2026-09-10T18:57:29.171Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066480790",
+    "timestamp": "2026-09-10T18:54:40.790Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066391967",
+    "timestamp": "2026-09-10T18:53:11.968Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066213524",
+    "timestamp": "2026-09-10T18:50:13.524Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066210313",
+    "timestamp": "2026-09-10T18:50:10.313Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066207649",
+    "timestamp": "2026-09-10T18:50:07.649Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066206482",
+    "timestamp": "2026-09-10T18:50:06.482Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066201144",
+    "timestamp": "2026-09-10T18:50:01.144Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066200152",
+    "timestamp": "2026-09-10T18:50:00.152Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066198570",
+    "timestamp": "2026-09-10T18:49:58.570Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066130272",
+    "timestamp": "2026-09-10T18:48:50.272Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066092625",
+    "timestamp": "2026-09-10T18:48:12.625Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789066033322",
+    "timestamp": "2026-09-10T18:47:13.322Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {
+        "gust": 19.4,
+        "pressure": 1006
+      }
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps. Doppler telemetry records peak sustained gusts of 19.4 km/h."
+  },
+  {
+    "id": "REC-1789065769270",
+    "timestamp": "2026-09-10T18:42:49.270Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789065733962",
+    "timestamp": "2026-09-10T18:42:13.962Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789065133949",
+    "timestamp": "2026-09-10T18:32:13.949Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789064533202",
+    "timestamp": "2026-09-10T18:22:13.202Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789063981954",
+    "timestamp": "2026-09-10T18:13:01.954Z",
+    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Barpeta Lowland Clusters",
+          "pop": 27612,
+          "vpi": 0.746,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Visakhapatnam Urban Coast",
+          "pop": 2091035,
+          "vpi": 0.737,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Majuli River Island",
+          "pop": 19338,
+          "vpi": 0.696,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ002",
+          "deficit": 93310
+        },
+        {
+          "zone": "RZ_VIZAG",
+          "deficit": 2086835
+        },
+        {
+          "zone": "RZ001",
+          "deficit": 111360
+        },
+        {
+          "zone": "RZ005",
+          "deficit": 37778
+        },
+        {
+          "zone": "RZ003",
+          "deficit": 6880
+        },
+        {
+          "zone": "RZ004",
+          "deficit": 56641
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  }
+]

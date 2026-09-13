@@ -1,0 +1,43 @@
+{
+  "routing_provider": "Project OSRM (OpenStreetMap)",
+  "routing_profile": "driving",
+  "osrm_endpoint": "https://router.project-osrm.org",
+  "habitation_count": 268,
+  "shelter_count": 10,
+  "route_pair_selection_strategy": "Shortlisted top 1 nearest shelter by straight-line distance, routed via OSRM.",
+  "route_count": 268,
+  "successful_route_count": 268,
+  "failed_route_count": 0,
+  "metrics": {
+    "minimum_road_distance_m": 115.5,
+    "maximum_road_distance_m": 68207.4,
+    "average_road_distance_m": 30806.99,
+    "minimum_travel_time_min": 0.28,
+    "maximum_travel_time_min": 65.68,
+    "average_travel_time_min": 30.6,
+    "minimum_detour_ratio": 0.12,
+    "maximum_detour_ratio": 12.73
+  },
+  "highlights": {
+    "habitation_with_shortest_route": "Samanthakuru",
+    "habitation_with_longest_route": "Yendagandi",
+    "shelter_with_most_assignments": "Pedaraghavulupeta"
+  },
+  "shelter_capacity_context": {
+    "total_shelters": 10,
+    "total_capacity": 7282,
+    "available_capacity": 7282,
+    "mass_evacuation_calculation_performed": false,
+    "reason": "Task 15 found 0 direct habitation/flood intersections. Mass evacuation based on district population is invalid."
+  },
+  "flood_intersection": {
+    "routes_clear_of_predicted_flood": 268,
+    "routes_intersecting_predicted_flood": 0
+  },
+  "limitations": [
+    "Route intersection with a predicted flood polygon means 'route overlaps model-predicted flood geometry'.",
+    "This does NOT prove the road is flooded, closed, unsafe, or impassable (requires real-time telemetry).",
+    "0 directly exposed habitations does NOT imply zero disaster risk.",
+    "District population is NOT affected population."
+  ]
+}

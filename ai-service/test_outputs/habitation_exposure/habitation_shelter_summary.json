@@ -1,0 +1,29 @@
+{
+  "total_habitations_inspected": 15,
+  "konaseema_habitations": 0,
+  "coordinate_valid": 0,
+  "invalid_outside": 0,
+  "suspicious_records": 9,
+  "direct_flood_intersections": 0,
+  "within_500m": 0,
+  "within_1km": 0,
+  "within_5km": 0,
+  "within_10km": 0,
+  "directly_intersecting_population": 0,
+  "near_flood_population": 0,
+  "nearest_habitation": null,
+  "nearest_habitation_distance": null,
+  "shelter_count": 0,
+  "total_capacity": 0,
+  "current_occupancy": 0,
+  "available_capacity": 0,
+  "nearest_shelter": null,
+  "straight_line_shelter_distance": null,
+  "hypothetical_relocation_capacity_result": "Current TerraMind test polygon does not directly intersect any habitation centroid.",
+  "warnings": [
+    "DISTRICT POPULATION is NOT affected population.",
+    "PROXIMITY is NOT confirmed exposure.",
+    "Shelters are LOCAL PROJECT DATA unless independently verified.",
+    "Suspicious habitation names were not silently treated as authoritative."
+  ]
+}

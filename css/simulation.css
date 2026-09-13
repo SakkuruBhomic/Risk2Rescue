@@ -1,0 +1,336 @@
+/* ================================================================
+   SIMULATION.CSS — Drill Controller, SOS Beacon, Audio Siren & SitRep UI
+   ================================================================ */
+
+/* --- Audio Siren Floating Badge --- */
+.siren-badge-btn {
+  background: rgba(239, 68, 68, 0.18);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #f87171;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.siren-badge-btn:hover {
+  background: rgba(239, 68, 68, 0.35);
+  border-color: #ef4444;
+  transform: translateY(-1px);
+}
+.siren-badge-btn.sounding {
+  background: #ef4444;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+  animation: sirenPulse 0.8s infinite alternate;
+}
+@keyframes sirenPulse {
+  0% { transform: scale(1); box-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
+  100% { transform: scale(1.05); box-shadow: 0 0 25px rgba(239, 68, 68, 0.9); }
+}
+
+/* --- Simulation Drill Control Banner --- */
+@keyframes drillProgressGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+    border-color: rgba(56, 189, 248, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.85), inset 0 0 10px rgba(56, 189, 248, 0.3);
+    border-color: #38bdf8;
+  }
+}
+.drill-banner {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: rgba(11, 19, 38, 0.92);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  backdrop-filter: blur(14px);
+  border-radius: 14px;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.2);
+  color: #f1f5f9;
+  font-size: 12px;
+  animation: drillProgressGlow 2.5s infinite ease-in-out;
+}
+.drill-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.drill-pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 12px #38bdf8;
+  animation: drillBlink 1s infinite ease-in-out;
+}
+@keyframes drillBlink {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Drill 5-Phase Breadcrumb Tracker (Advisory -> Evacuation -> Peak Impact -> Rescue -> Recovery) */
+.drill-phases-tracker {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 4px 10px;
+}
+.drill-phase-step {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.drill-phase-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 800;
+  color: #94a3b8;
+  transition: all 0.3s ease;
+}
+.drill-phase-label {
+  white-space: nowrap;
+}
+.drill-phase-step.completed {
+  color: #22c55e;
+}
+.drill-phase-step.completed .drill-phase-dot {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: #22c55e;
+  color: #22c55e;
+}
+.drill-phase-step.active {
+  color: #ffffff;
+  font-weight: 700;
+  transform: scale(1.05);
+}
+.drill-phase-step.active .drill-phase-dot {
+  background: #ef4444;
+  border-color: #fca5a5;
+  color: #ffffff;
+  animation: sirenPulse 0.9s infinite alternate, beaconGlow 1.6s infinite;
+}
+.drill-phase-sep {
+  color: #475569;
+  font-size: 10px;
+  user-select: none;
+}
+.drill-stats {
+  display: flex;
+  gap: 12px;
+  padding: 0 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.drill-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+.drill-stat-lbl {
+  font-size: 10px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.drill-stat-val {
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+/* --- Citizen SOS Distress Floating Button & Controls --- */
+#tool-sos, .sos-beacon-btn {
+  position: relative;
+}
+#tool-sos::after, .sos-beacon-btn::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: inherit;
+  border: 2px solid rgba(239, 68, 68, 0.7);
+  animation: pulse-ring 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  pointer-events: none;
+}
+#tool-sos.sos-active, .sos-beacon-btn.sos-active {
+  animation: sirenPulse 0.35s infinite alternate !important;
+  background: #ef4444 !important;
+  color: #fff !important;
+  box-shadow: 0 0 35px rgba(239, 68, 68, 1) !important;
+}
+
+.sos-beacon-btn {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.6);
+  transition: all 0.25s ease;
+  animation: beaconGlow 1.8s infinite;
+}
+.sos-beacon-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 28px rgba(239, 68, 68, 0.85);
+}
+@keyframes beaconGlow {
+  0% { box-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(239, 68, 68, 0.85); }
+  100% { box-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
+}
+
+/* Red Screen-Edge Vignette Flash on SOS Trigger */
+@keyframes redVignetteFlash {
+  0% { opacity: 0; }
+  25% { opacity: 0.85; }
+  60% { opacity: 0.35; }
+  100% { opacity: 0; }
+}
+.sos-vignette-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99999;
+  box-shadow: inset 0 0 120px 45px rgba(239, 68, 68, 0.8);
+  animation: redVignetteFlash 1.6s ease-out forwards;
+}
+
+/* Snappy Elastic Slide-Down for Emergency Alert Banner */
+@keyframes emergencyBannerSlideDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -80px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, 8px) scale(1.02);
+  }
+  80% {
+    transform: translate(-50%, -2px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+#citizen-emergency-banner {
+  animation: emergencyBannerSlideDown 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) both !important;
+}
+
+/* --- Scenario Modal --- */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+.scenario-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.scenario-card:hover {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.5);
+  transform: translateY(-2px);
+}
+.scenario-card.active {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+/* --- SitRep Situation Report Modal & Printable Styles --- */
+.sitrep-modal {
+  max-width: 820px;
+  width: 90%;
+  background: #090e1a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+  color: #f1f5f9;
+  padding: 24px;
+  max-height: 88vh;
+  overflow-y: auto;
+}
+.sitrep-header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.sitrep-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 13px;
+}
+.sitrep-table th, .sitrep-table td {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 12px;
+  text-align: left;
+}
+.sitrep-table th {
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .sitrep-modal, .sitrep-modal * {
+    visibility: visible;
+  }
+  .sitrep-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    color: #000;
+    background: #fff;
+  }
+}

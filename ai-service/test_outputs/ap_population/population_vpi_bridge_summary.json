@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "source_hierarchy": "1. AP SDMA (Geometry) 2. AP Govt Gazette (2011 Baseline) 3. MoHFW (2026 Projection)",
+    "official_documents": [
+      "AP District Reorganization Notifications (2022)",
+      "Report of the Technical Group on Population Projections for India and States 2011-2036"
+    ],
+    "derivation_methodology": "Scaled from validated current-26 2011 baseline using official state projection",
+    "geometry_source": "AP SDMA 26-district FeatureServer",
+    "calculation_date": "2026-09-12"
+  },
+  "state_2011_reconciliation": {
+    "reconstructed_sum": 49200713,
+    "official_state_sum": 49386799,
+    "absolute_diff": 186086,
+    "percentage_diff": 0.37679299684921874
+  },
+  "state_2026_reconciliation": {
+    "derived_sum": 53400000,
+    "official_target": 53400000,
+    "absolute_diff": 0
+  },
+  "vpi_normalization_bounds": {
+    "min_density": 51.88093717965224,
+    "max_density": 2140.9555861348085
+  }
+}

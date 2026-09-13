@@ -1,0 +1,171 @@
+[
+  {
+    "id": "scenario-cyclone-vayu",
+    "name": "Super Cyclone Landfall (Cat 4 Impact)",
+    "hazardType": "cyclone",
+    "region": "Coastal Andhra Pradesh / Godavari Delta",
+    "center": [16.9891, 82.2475],
+    "zoom": 10,
+    "severity": "CRITICAL",
+    "windGustsKmH": 155,
+    "surgeMeters": 3.8,
+    "temperature": "31°C",
+    "habitationsAtRisk": 38,
+    "populationImpacted": 142000,
+    "shelterCapacity": 32000,
+    "activeAlerts": [
+      {
+        "title": "Cat 4 Cyclone Core Approaching Kakinada Port Coast",
+        "level": "CRITICAL",
+        "time": "Just now",
+        "description": "Peak wind gusts 155 km/h. Sea water ingress detected in Kakinada coastal sector. Total evacuation ordered."
+      },
+      {
+        "title": "Storm Surge Warning for Kakinada & Godavari Belt",
+        "level": "HIGH",
+        "time": "15m ago",
+        "description": "Tidal surge expected to exceed 3.5m during high tide window."
+      }
+    ],
+    "redZones": [
+      { "name": "Kakinada Port & Beach Corridor", "lat": 16.9891, "lng": 82.2475, "radius": 7500, "risk": "Extreme Surge & Wind" },
+      { "name": "Uppada Coastal Erosion Belt", "lat": 17.0800, "lng": 82.3300, "radius": 5200, "risk": "High Tidal Inundation" },
+      { "name": "Godavari Estuary Lowlands", "lat": 16.7800, "lng": 82.2700, "radius": 4800, "risk": "Flash River Backflow" }
+    ],
+    "safeShelters": [
+      { "name": "Kakinada Port Cyclone Relief Center", "lat": 16.9891, "lng": 82.2475, "capacity": 8500, "occupancy": 3200 },
+      { "name": "Visakhapatnam Port Trust Shelter", "lat": 17.6868, "lng": 83.2185, "capacity": 6000, "occupancy": 2100 },
+      { "name": "Machilipatnam Multi-Purpose Cyclone Center", "lat": 16.1875, "lng": 81.1389, "capacity": 4500, "occupancy": 1100 }
+    ]
+  },
+  {
+    "id": "scenario-brahmaputra-flood",
+    "name": "Brahmaputra Major Basin Inundation",
+    "hazardType": "flood",
+    "region": "Guwahati & Kamrup Basin, Assam",
+    "center": [26.18, 91.75],
+    "zoom": 11,
+    "severity": "EXTREME",
+    "windGustsKmH": 45,
+    "surgeMeters": 4.5,
+    "temperature": "27°C",
+    "habitationsAtRisk": 52,
+    "populationImpacted": 220000,
+    "shelterCapacity": 48000,
+    "activeAlerts": [
+      {
+        "title": "Brahmaputra Water Level Exceeds Extreme Danger Level",
+        "level": "CRITICAL",
+        "time": "Just now",
+        "description": "Water flowing 1.8m above danger mark at Guwahati gauge station. Inundation of riverside sectors."
+      },
+      {
+        "title": "Embankment Breach Alert — North Guwahati",
+        "level": "CRITICAL",
+        "time": "20m ago",
+        "description": "50-meter breach identified near Sualkuchi reach. NDRF boat teams deployed."
+      }
+    ],
+    "redZones": [
+      { "name": "Uzan Bazar Floodplain", "lat": 26.19, "lng": 91.76, "radius": 6000, "risk": "River Overflow" },
+      { "name": "North Guwahati Lowlands", "lat": 26.21, "lng": 91.72, "radius": 7000, "risk": "Embankment Breach" }
+    ],
+    "safeShelters": [
+      { "name": "Saruskajai Stadium Relief Camp", "lat": 26.13, "lng": 91.76, "capacity": 12000, "occupancy": 4500 },
+      { "name": "Guwahati University Hill Campus", "lat": 26.15, "lng": 91.66, "capacity": 9000, "occupancy": 3200 }
+    ]
+  },
+  {
+    "id": "scenario-chamoli-landslide",
+    "name": "Chamoli Glacial Outburst & Landslide",
+    "hazardType": "landslide",
+    "region": "Garhwal Himalayas, Uttarakhand",
+    "center": [30.40, 79.33],
+    "zoom": 11,
+    "severity": "CRITICAL",
+    "windGustsKmH": 60,
+    "surgeMeters": 6.2,
+    "temperature": "14°C",
+    "habitationsAtRisk": 18,
+    "populationImpacted": 34000,
+    "shelterCapacity": 12000,
+    "activeAlerts": [
+      {
+        "title": "Debris Flow Triggered on Alaknanda Tributary",
+        "level": "CRITICAL",
+        "time": "10m ago",
+        "description": "Sudden slope collapse detected by GSI piezometers. Downstream valley evacuations in progress."
+      }
+    ],
+    "redZones": [
+      { "name": "Joshimath Downslope Debris Track", "lat": 30.55, "lng": 79.56, "radius": 4500, "risk": "Active Slope Creep" },
+      { "name": "Rishiganga River Confluence", "lat": 30.48, "lng": 79.62, "radius": 5000, "risk": "Debris Flash Dam" }
+    ],
+    "safeShelters": [
+      { "name": "Pipalkoti High Ground Transit Camp", "lat": 30.43, "lng": 79.43, "capacity": 4000, "occupancy": 1500 },
+      { "name": "Chamoli District HQ Emergency Shelter", "lat": 30.40, "lng": 79.32, "capacity": 6000, "occupancy": 2400 }
+    ]
+  },
+  {
+    "id": "scenario-kachchh-earthquake",
+    "name": "Kachchh Major Seismic Rupture (M7.1)",
+    "hazardType": "earthquake",
+    "region": "Bhuj - Kachchh Mainland Fault, Gujarat",
+    "center": [23.25, 69.66],
+    "zoom": 10,
+    "severity": "CRITICAL",
+    "windGustsKmH": 20,
+    "surgeMeters": 0,
+    "temperature": "32°C",
+    "habitationsAtRisk": 64,
+    "populationImpacted": 280000,
+    "shelterCapacity": 65000,
+    "activeAlerts": [
+      {
+        "title": "Magnitude 7.1 Seismic Tremor Recorded by IMD",
+        "level": "CRITICAL",
+        "time": "Just now",
+        "description": "Shallow hypocenter at 12km. Structural damage reported across old Bhuj and Anjar zones."
+      }
+    ],
+    "redZones": [
+      { "name": "Anjar Fault Rupture Corridor", "lat": 23.11, "lng": 70.02, "radius": 9000, "risk": "Severe Structural Shaking" },
+      { "name": "Bhuj Old Walled Sector", "lat": 23.24, "lng": 69.67, "radius": 6000, "risk": "Masonry Collapse Zone" }
+    ],
+    "safeShelters": [
+      { "name": "Kachchh University Open Relief Fields", "lat": 23.22, "lng": 69.65, "capacity": 25000, "occupancy": 8000 },
+      { "name": "Mirzapar Airstrip Emergency Hub", "lat": 23.24, "lng": 69.61, "capacity": 20000, "occupancy": 4200 }
+    ]
+  },
+  {
+    "id": "scenario-kerala-cloudburst",
+    "name": "Wayanad Cloudburst & Flash Surge",
+    "hazardType": "cloudburst",
+    "region": "Western Ghats, Wayanad, Kerala",
+    "center": [11.68, 76.13],
+    "zoom": 11,
+    "severity": "CRITICAL",
+    "windGustsKmH": 75,
+    "surgeMeters": 3.2,
+    "temperature": "22°C",
+    "habitationsAtRisk": 26,
+    "populationImpacted": 55000,
+    "shelterCapacity": 18000,
+    "activeAlerts": [
+      {
+        "title": "220mm Rain in 3 Hours — Cloudburst Confirmed",
+        "level": "CRITICAL",
+        "time": "5m ago",
+        "description": "Flash flooding of hillside streams. Chooralmala and Meppadi bridges submerged."
+      }
+    ],
+    "redZones": [
+      { "name": "Chooralmala Stream Catchment", "lat": 11.53, "lng": 76.18, "radius": 5500, "risk": "Flash Mudflow Surge" },
+      { "name": "Meppadi Hill Slopes", "lat": 11.55, "lng": 76.12, "radius": 4800, "risk": "Soil Liquefaction" }
+    ],
+    "safeShelters": [
+      { "name": "Kalpetta Govt College Relief Camp", "lat": 11.61, "lng": 76.08, "capacity": 6000, "occupancy": 2100 },
+      { "name": "Meppadi St. Joseph High Ground Shelter", "lat": 11.57, "lng": 76.14, "capacity": 4500, "occupancy": 1800 }
+    ]
+  }
+]

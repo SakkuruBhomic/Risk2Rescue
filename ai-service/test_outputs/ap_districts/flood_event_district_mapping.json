@@ -1,0 +1,632 @@
+[
+  {
+    "event_id": "event_0",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 2600.000000039581,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_1",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 3499.9999999947613,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_2",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 1799.9999999784632,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_3",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 1700.0000000093132,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_4",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 3899.9999999901047,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_5",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 6699.999999965075,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_6",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 1400.0000000128057,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_7",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 1000.0000000104774,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_8",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 31700.000000051223,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_9",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 6599.999999973807,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_10",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 18100.00000002852,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_11",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 23399.999999976717,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_12",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 2899.999999984284,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_13",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 12699.999999952852,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_14",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 1000.0000000256114,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_15",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 2199.999999975553,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_16",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 1400.000000015716,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_17",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 1300.000000008149,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_18",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 2600.0000000023283,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_19",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 39800.00000012631,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_20",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 2300.000000059372,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_21",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 3899.999999945867,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_22",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 25799.99999997788,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_23",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 2700.0000000017462,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_24",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 9899.999999979045,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_25",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 3099.9999999889405,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_26",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 4000.0000000098953,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_27",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 46700.00000009779,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_28",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 1299.9999999837019,
+        "overlap_percentage": 100.0
+      }
+    ]
+  },
+  {
+    "event_id": "event_29",
+    "hazard_type": "Flood",
+    "model": "TerraMind",
+    "checkpoint": "ibm-esa-geospatial/TerraMind-base-Flood",
+    "primary_district": "KONASEEMA",
+    "primary_district_code": "08",
+    "primary_overlap_percentage": 100.0,
+    "overlapping_district_count": 1,
+    "overlapping_districts": [
+      "KONASEEMA"
+    ],
+    "overlaps_detail": [
+      {
+        "district_name": "KONASEEMA",
+        "district_code": "08",
+        "intersection_area_m2": 2699.999999977299,
+        "overlap_percentage": 100.0
+      }
+    ]
+  }
+]

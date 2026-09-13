@@ -1,0 +1,20 @@
+{
+  "target_district": "KONASEEMA",
+  "note": "DISTRICT POPULATION != POPULATION EXPOSED TO THE TERRAMIND POLYGON != POPULATION AFFECTED BY FLOOD != EVACUATION POPULATION",
+  "konaseema_metrics": {
+    "district": "KONASEEMA",
+    "district_code": "08",
+    "population_2011": 1719093,
+    "population_2011_source": "Government of Andhra Pradesh District Reorganization Notifications (2022) / Census 2011 Reaggregated",
+    "population_2026_est": 1865817,
+    "population_status": "2026_projected_estimate",
+    "projection_source": "MoHFW Technical Group on Population Projections 2011-2036",
+    "methodology": "Scaled from validated current-26 2011 baseline using the official Andhra Pradesh state-level 2026 population projection.",
+    "area_km2": 2345.4410627564166,
+    "area_crs": "EPSG:32644 (UTM Zone 44N)",
+    "density_2026": 795.5079450204768,
+    "density_normalized": 0.35595999798894074,
+    "vpi_population_contribution": 0.05339399969834111,
+    "provenance": "Reaggregated 26-district demographics from AP Govt Gazettes via secondary compilation"
+  }
+}

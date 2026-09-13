@@ -1,0 +1,351 @@
+{
+  "state": "Andhra Pradesh",
+  "state_code": "28",
+  "census_year": 2011,
+  "source": "Office of the Registrar General & Census Commissioner, India — Primary Census Abstract (PCA)",
+  "total_districts": 13,
+  "total_population": 49386799,
+  "total_male": 24738766,
+  "total_female": 24648033,
+  "total_households": 16035251,
+  "districts": [
+    {
+      "district_code": "542",
+      "name": "Srikakulam",
+      "headquarters": {
+        "name": "Srikakulam",
+        "lat": 18.2970,
+        "lng": 83.8965
+      },
+      "total_population": 2703114,
+      "male_population": 1341738,
+      "female_population": 1361376,
+      "households": 902436,
+      "coastal_classification": "coastal",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Srikakulam Urban", "population": 125939, "population_source": "Census of India 2011, PCA", "lat": 18.2970, "lng": 83.8965 },
+        { "name": "Palasa-Kasibugga", "population": 57507, "population_source": "Census of India 2011, PCA", "lat": 18.7667, "lng": 84.4167 },
+        { "name": "Sompeta Coastal Reach", "population": 48200, "population_source": "district-level estimate", "lat": 18.9333, "lng": 84.6000 },
+        { "name": "Kalingapatnam Port Corridor", "population": 36500, "population_source": "district-level estimate", "lat": 18.3364, "lng": 84.1291 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "Cyclone Titli", "year": 2018, "severity": "Catastrophic", "impact": "Landfall near Palasa/Sompeta with gale gusts exceeding 165 km/h, widespread infrastructure destruction" },
+        { "name": "Cyclone Phailin", "year": 2013, "severity": "Severe", "impact": "Extreme storm surge and mass evacuation across northern coastal belt" },
+        { "name": "Cyclone Gulab", "year": 2021, "severity": "Moderate", "impact": "Torrential coastal rainfall and local flash flooding" }
+      ]
+    },
+    {
+      "district_code": "543",
+      "name": "Vizianagaram",
+      "headquarters": {
+        "name": "Vizianagaram",
+        "lat": 18.1124,
+        "lng": 83.4074
+      },
+      "total_population": 2344474,
+      "male_population": 1161477,
+      "female_population": 1182997,
+      "households": 749514,
+      "coastal_classification": "coastal",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Vizianagaram Urban", "population": 228025, "population_source": "Census of India 2011, PCA", "lat": 18.1124, "lng": 83.4074 },
+        { "name": "Bhogapuram Coastal Belt", "population": 54200, "population_source": "district-level estimate", "lat": 18.0267, "lng": 83.4933 },
+        { "name": "Bobbili", "population": 56819, "population_source": "Census of India 2011, PCA", "lat": 18.5667, "lng": 83.3667 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "Cyclone Hudhud", "year": 2014, "severity": "Severe", "impact": "High-velocity gale damage, tree falls, and extensive electrical grid collapse" },
+        { "name": "Cyclone Titli", "year": 2018, "severity": "Severe", "impact": "Widespread crop submersion and rural housing destruction" },
+        { "name": "Cyclone Gulab", "year": 2021, "severity": "Moderate", "impact": "Flash floods across Vegavathi and Nagavali river basins" }
+      ]
+    },
+    {
+      "district_code": "544",
+      "name": "Visakhapatnam",
+      "headquarters": {
+        "name": "Visakhapatnam",
+        "lat": 17.6868,
+        "lng": 83.2185
+      },
+      "total_population": 4290589,
+      "male_population": 2138910,
+      "female_population": 2151679,
+      "households": 1379340,
+      "coastal_classification": "coastal",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Visakhapatnam Urban Agglomeration", "population": 1728128, "population_source": "Census of India 2011, PCA", "lat": 17.6868, "lng": 83.2185 },
+        { "name": "Bheemunipatnam (Bheemili)", "population": 54862, "population_source": "Census of India 2011, PCA", "lat": 17.8913, "lng": 83.4542 },
+        { "name": "Anakapalle", "population": 86519, "population_source": "Census of India 2011, PCA", "lat": 17.6913, "lng": 83.0039 },
+        { "name": "Gajuwaka Industrial Belt", "population": 258900, "population_source": "Census of India 2011, PCA", "lat": 17.6990, "lng": 83.2080 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "Cyclone Hudhud", "year": 2014, "severity": "Catastrophic", "impact": "Direct city landfall with peak recorded gusts of 260 km/h; catastrophic infrastructure destruction, airport roof blown off, entire green canopy destroyed, 500,000 displaced" },
+        { "name": "Cyclone Gulab", "year": 2021, "severity": "Moderate", "impact": "Severe urban waterlogging and sea water ingress" },
+        { "name": "1990 Andhra Pradesh Cyclone", "year": 1990, "severity": "Super Cyclonic Storm", "impact": "Catastrophic port impact and storm surge inundation" }
+      ]
+    },
+    {
+      "district_code": "545",
+      "name": "East Godavari",
+      "headquarters": {
+        "name": "Kakinada",
+        "lat": 16.9891,
+        "lng": 82.2475
+      },
+      "total_population": 5154296,
+      "male_population": 2569688,
+      "female_population": 2584608,
+      "households": 1605841,
+      "coastal_classification": "coastal",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Kakinada Urban", "population": 312538, "population_source": "Census of India 2011, PCA", "lat": 16.9891, "lng": 82.2475 },
+        { "name": "Rajahmundry Urban Agglomeration", "population": 341831, "population_source": "Census of India 2011, PCA", "lat": 17.0005, "lng": 81.8040 },
+        { "name": "Amalapuram (Konaseema Delta)", "population": 53231, "population_source": "Census of India 2011, PCA", "lat": 16.5787, "lng": 82.0061 },
+        { "name": "Tallarevu Mandal", "population": 18200, "population_source": "Census of India 2011, PCA", "lat": 16.7800, "lng": 82.2700 },
+        { "name": "Uppada Coastal Belt", "population": 22000, "population_source": "Census of India 2011, PCA", "lat": 17.0800, "lng": 82.3300 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "1996 Andhra Pradesh Cyclone", "year": 1996, "severity": "Catastrophic", "impact": "Direct landfall near Kakinada; over 1,000 casualties in Konaseema delta and Kakinada coastal reach" },
+        { "name": "Cyclone Michaung", "year": 2023, "severity": "Severe", "impact": "Heavy coastal rainfall, tidal inundation, and severe agricultural crop submersion" },
+        { "name": "Godavari River Floods", "year": 2022, "severity": "Severe", "impact": "Record peak discharge exceeding 2.5 million cusecs at Dowleswaram Barrage, inundating low-lying habitations" }
+      ]
+    },
+    {
+      "district_code": "546",
+      "name": "West Godavari",
+      "headquarters": {
+        "name": "Eluru",
+        "lat": 16.7107,
+        "lng": 81.0952
+      },
+      "total_population": 3936966,
+      "male_population": 1964918,
+      "female_population": 1972048,
+      "households": 1255628,
+      "coastal_classification": "coastal",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Eluru Urban", "population": 218020, "population_source": "Census of India 2011, PCA", "lat": 16.7107, "lng": 81.0952 },
+        { "name": "Bhimavaram Urban", "population": 146961, "population_source": "Census of India 2011, PCA", "lat": 16.5449, "lng": 81.5212 },
+        { "name": "Narasapuram Coastal Hub", "population": 58770, "population_source": "Census of India 2011, PCA", "lat": 16.4411, "lng": 81.6917 },
+        { "name": "Tanuku", "population": 72342, "population_source": "Census of India 2011, PCA", "lat": 16.7562, "lng": 81.6811 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "Godavari River Floods", "year": 2022, "severity": "Severe", "impact": "Major embankment erosion and island village submergence across the Vasista and Vainateya branches" },
+        { "name": "Cyclone Laila", "year": 2010, "severity": "Severe", "impact": "Torrential rain and coastal tidal ingress in Narasapuram mandal" },
+        { "name": "Cyclone Michaung", "year": 2023, "severity": "High", "impact": "Agricultural flooding across 40,000 hectares of paddy fields" }
+      ]
+    },
+    {
+      "district_code": "547",
+      "name": "Krishna",
+      "headquarters": {
+        "name": "Machilipatnam",
+        "lat": 16.1875,
+        "lng": 81.1389
+      },
+      "total_population": 4517398,
+      "male_population": 2267375,
+      "female_population": 2250023,
+      "households": 1476334,
+      "coastal_classification": "coastal",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Vijayawada Urban Agglomeration", "population": 1034358, "population_source": "Census of India 2011, PCA", "lat": 16.5062, "lng": 80.6480 },
+        { "name": "Machilipatnam Coastal Urban", "population": 169892, "population_source": "Census of India 2011, PCA", "lat": 16.1875, "lng": 81.1389 },
+        { "name": "Gudivada", "population": 118167, "population_source": "Census of India 2011, PCA", "lat": 16.4410, "lng": 80.9926 },
+        { "name": "Avanigadda / Diviseema Island", "population": 62400, "population_source": "district-level estimate", "lat": 16.0200, "lng": 80.9200 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "1977 Andhra Pradesh Cyclone (Diviseema)", "year": 1977, "severity": "Catastrophic", "impact": "Deadliest storm in AP history; 6-meter tidal surge swept over Diviseema and Machilipatnam causing ~10,000 fatalities" },
+        { "name": "1990 Super Cyclone", "year": 1990, "severity": "Catastrophic", "impact": "Direct landfall near Machilipatnam, severe tidal surge and widespread coastal destruction" },
+        { "name": "Cyclone Phethai", "year": 2018, "severity": "Severe", "impact": "Gale winds and coastal rainfall inundating low-lying habitations" },
+        { "name": "Krishna River Floods", "year": 2009, "severity": "Severe", "impact": "Historic flood discharge of 1.1 million cusecs submerging Vijayawada low-lying sectors" }
+      ]
+    },
+    {
+      "district_code": "548",
+      "name": "Guntur",
+      "headquarters": {
+        "name": "Guntur",
+        "lat": 16.3067,
+        "lng": 80.4365
+      },
+      "total_population": 4887813,
+      "male_population": 2440521,
+      "female_population": 2447292,
+      "households": 1582990,
+      "coastal_classification": "coastal",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Guntur Urban", "population": 670073, "population_source": "Census of India 2011, PCA", "lat": 16.3067, "lng": 80.4365 },
+        { "name": "Bapatla Coastal Sector", "population": 70777, "population_source": "Census of India 2011, PCA", "lat": 15.9042, "lng": 80.4674 },
+        { "name": "Tenali", "population": 164937, "population_source": "Census of India 2011, PCA", "lat": 16.2430, "lng": 80.6400 },
+        { "name": "Nizampatnam Fishing Harbour", "population": 20982, "population_source": "Census of India 2011, PCA", "lat": 15.9083, "lng": 80.6722 },
+        { "name": "Repalle Coastal Reach", "population": 50866, "population_source": "Census of India 2011, PCA", "lat": 16.0200, "lng": 80.8500 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "Cyclone Michaung", "year": 2023, "severity": "Severe", "impact": "Direct landfall near Bapatla with 110 km/h gales and 3m storm surge, isolating coastal villages" },
+        { "name": "1990 Super Cyclone", "year": 1990, "severity": "Catastrophic", "impact": "Severe coastal surge and inundation across Repalle and Bapatla mandals" },
+        { "name": "Krishna River Floods", "year": 2009, "severity": "Severe", "impact": "Submergence of riverine villages along the right bank of Krishna river" }
+      ]
+    },
+    {
+      "district_code": "549",
+      "name": "Prakasam",
+      "headquarters": {
+        "name": "Ongole",
+        "lat": 15.5057,
+        "lng": 80.0499
+      },
+      "total_population": 3397448,
+      "male_population": 1714764,
+      "female_population": 1682684,
+      "households": 1087575,
+      "coastal_classification": "coastal",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Ongole Urban", "population": 204749, "population_source": "Census of India 2011, PCA", "lat": 15.5057, "lng": 80.0499 },
+        { "name": "Chirala Coastal Urban", "population": 87200, "population_source": "Census of India 2011, PCA", "lat": 15.8246, "lng": 80.3522 },
+        { "name": "Kandukur", "population": 57246, "population_source": "Census of India 2011, PCA", "lat": 15.2165, "lng": 79.9042 },
+        { "name": "Kothapatnam Coastal Reach", "population": 34100, "population_source": "district-level estimate", "lat": 15.4500, "lng": 80.1200 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "1979 Andhra Pradesh Cyclone", "year": 1979, "severity": "Catastrophic", "impact": "Direct landfall near Ongole; massive tidal wave breached sea walls causing hundreds of casualties" },
+        { "name": "Cyclone Nivar", "year": 2020, "severity": "Severe", "impact": "Torrential rains, sea water intrusion into coastal salt pans and villages" },
+        { "name": "Cyclone Michaung", "year": 2023, "severity": "High", "impact": "Prolonged gale force winds and severe coastal erosion along Chirala beach road" }
+      ]
+    },
+    {
+      "district_code": "550",
+      "name": "Sri Potti Sriramulu Nellore",
+      "headquarters": {
+        "name": "Nellore",
+        "lat": 14.4426,
+        "lng": 79.9865
+      },
+      "total_population": 2963557,
+      "male_population": 1492974,
+      "female_population": 1470583,
+      "households": 953513,
+      "coastal_classification": "coastal",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Nellore Urban", "population": 499575, "population_source": "Census of India 2011, PCA", "lat": 14.4426, "lng": 79.9865 },
+        { "name": "Kavali Coastal Urban", "population": 90099, "population_source": "Census of India 2011, PCA", "lat": 14.9132, "lng": 79.9928 },
+        { "name": "Gudur", "population": 74037, "population_source": "Census of India 2011, PCA", "lat": 14.1463, "lng": 79.8504 },
+        { "name": "Dugarajapatnam / Pulicat Sector", "population": 38900, "population_source": "district-level estimate", "lat": 13.9850, "lng": 80.1500 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "Cyclone Vardah", "year": 2016, "severity": "Severe", "impact": "High squall winds and coastal sea surge inundating southern mandals" },
+        { "name": "Cyclone Nivar", "year": 2020, "severity": "Severe", "impact": "Heavy coastal damage, sea water ingress, power grid disruption" },
+        { "name": "Pennar River Flash Floods", "year": 2021, "severity": "Catastrophic", "impact": "Historic floods in Pennar river; Somasila dam high discharge flooded Nellore city and cut off Chennai-Kolkata NH-16" },
+        { "name": "Cyclone Michaung", "year": 2023, "severity": "Severe", "impact": "Continuous torrential rainfall flooding coastal habitations and aquaculture farms" }
+      ]
+    },
+    {
+      "district_code": "551",
+      "name": "Y.S.R. (Kadapa)",
+      "headquarters": {
+        "name": "Kadapa",
+        "lat": 14.4673,
+        "lng": 78.8242
+      },
+      "total_population": 2882469,
+      "male_population": 1451777,
+      "female_population": 1430692,
+      "households": 884093,
+      "coastal_classification": "inland",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Kadapa Urban", "population": 344893, "population_source": "Census of India 2011, PCA", "lat": 14.4673, "lng": 78.8242 },
+        { "name": "Proddatur Urban", "population": 163970, "population_source": "Census of India 2011, PCA", "lat": 14.7500, "lng": 78.5500 },
+        { "name": "Pulivendula", "population": 65706, "population_source": "Census of India 2011, PCA", "lat": 14.4167, "lng": 78.2333 },
+        { "name": "Rajampet (Cheyyeru Basin)", "population": 54200, "population_source": "district-level estimate", "lat": 14.1833, "lng": 79.1500 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "Annamayya Dam Breach / Cheyyeru Flash Deluge", "year": 2021, "severity": "Catastrophic", "impact": "Sudden earthen dam breach released 200,000+ cusecs into Cheyyeru river, completely washing away Pulapathur, Mandapalli, and Gundlur villages with tragic loss of life" },
+        { "name": "Rayalaseema Chronic Agrarian Drought", "year": 2016, "severity": "Severe", "impact": "Severe ground water depletion, failure of groundnut crops across 35 mandals" }
+      ]
+    },
+    {
+      "district_code": "552",
+      "name": "Kurnool",
+      "headquarters": {
+        "name": "Kurnool",
+        "lat": 15.8281,
+        "lng": 78.0373
+      },
+      "total_population": 4053463,
+      "male_population": 2039227,
+      "female_population": 2014236,
+      "households": 1090835,
+      "coastal_classification": "inland",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Kurnool Urban", "population": 457633, "population_source": "Census of India 2011, PCA", "lat": 15.8281, "lng": 78.0373 },
+        { "name": "Nandyal Urban", "population": 200516, "population_source": "Census of India 2011, PCA", "lat": 15.4800, "lng": 78.4800 },
+        { "name": "Adoni Urban", "population": 166537, "population_source": "Census of India 2011, PCA", "lat": 15.6300, "lng": 77.2800 },
+        { "name": "Yemmiganur", "population": 95149, "population_source": "Census of India 2011, PCA", "lat": 15.7333, "lng": 77.4833 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "Tungabhadra & Krishna River Mega Deluge", "year": 2009, "severity": "Catastrophic", "impact": "Unprecedented reservoir inflow submerged Kurnool city under 10-15 feet of flood water, disrupting 500,000 lives and destroying city infrastructure" },
+        { "name": "Rayalaseema Severe Heat Waves", "year": 2019, "severity": "High", "impact": "Temperatures exceeding 46°C triggering extreme thermal distress" }
+      ]
+    },
+    {
+      "district_code": "553",
+      "name": "Anantapur",
+      "headquarters": {
+        "name": "Anantapur",
+        "lat": 14.6819,
+        "lng": 77.6006
+      },
+      "total_population": 4081148,
+      "male_population": 2064495,
+      "female_population": 2016653,
+      "households": 1244428,
+      "coastal_classification": "inland",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Anantapur Urban", "population": 261004, "population_source": "Census of India 2011, PCA", "lat": 14.6819, "lng": 77.6006 },
+        { "name": "Hindupur Urban", "population": 151677, "population_source": "Census of India 2011, PCA", "lat": 13.8290, "lng": 77.4925 },
+        { "name": "Dharmavaram", "population": 121874, "population_source": "Census of India 2011, PCA", "lat": 14.4140, "lng": 77.7210 },
+        { "name": "Guntakal Rail Hub", "population": 126270, "population_source": "Census of India 2011, PCA", "lat": 15.1700, "lng": 77.3800 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "Rayalaseema Chronic Arid Drought", "year": 2018, "severity": "Severe", "impact": "One of India's driest districts; recurring monsoon deficits exceeding 40% forcing agrarian distress" },
+        { "name": "Penna River Flash Inundation", "year": 2021, "severity": "High", "impact": "Rare intense cloudburst causing sudden flash flooding across low-lying railway underpasses and villages" }
+      ]
+    },
+    {
+      "district_code": "554",
+      "name": "Chittoor",
+      "headquarters": {
+        "name": "Chittoor",
+        "lat": 13.2172,
+        "lng": 79.1003
+      },
+      "total_population": 4174064,
+      "male_population": 2090204,
+      "female_population": 2083860,
+      "households": 1303870,
+      "coastal_classification": "inland",
+      "population_source": "Census of India 2011, Primary Census Abstract (PCA)",
+      "key_centers_and_mandals": [
+        { "name": "Tirupati Urban Agglomeration", "population": 287482, "population_source": "Census of India 2011, PCA", "lat": 13.6288, "lng": 79.4192 },
+        { "name": "Chittoor Urban", "population": 153756, "population_source": "Census of India 2011, PCA", "lat": 13.2172, "lng": 79.1003 },
+        { "name": "Madanapalle Urban", "population": 136414, "population_source": "Census of India 2011, PCA", "lat": 13.5500, "lng": 78.5000 },
+        { "name": "Srikalahasti", "population": 80056, "population_source": "Census of India 2011, PCA", "lat": 13.7500, "lng": 79.7000 }
+      ],
+      "historical_disaster_exposure": [
+        { "name": "Cyclone Nivar Torrential Floods", "year": 2020, "severity": "Severe", "impact": "Record precipitation causing Swarnamukhi river to overflow, flooding low-lying habitations in Tirupati and Chittoor valleys" },
+        { "name": "Swarnamukhi River Flash Deluge", "year": 2021, "severity": "Catastrophic", "impact": "Unprecedented flash flooding washing away culverts and submerging pilgrim transit routes" },
+        { "name": "Cyclone Mandous", "year": 2022, "severity": "Severe", "impact": "Gale squalls and localized flooding in eastern Chittoor mandals" }
+      ]
+    }
+  ]
+}
