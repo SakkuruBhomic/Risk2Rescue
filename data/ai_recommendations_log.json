@@ -1,5 +1,3348 @@
 [
   {
+    "id": "REC-1789298710393",
+    "timestamp": "2026-09-13T11:25:10.393Z",
+    "model": "Deterministic Operational Risk Analyst Engine",
+    "provider": "deterministic-fallback",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "Kakinada Urban Slums",
+          "pop": 8500
+        },
+        {
+          "name": "Coastal Industrial Park",
+          "pop": 2500
+        },
+        {
+          "name": "Machilipatnam Delta",
+          "pop": 4200
+        }
+      ],
+      "deficitReports": [],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of Kakinada Urban Slums and Coastal Industrial Park (combined 11k citizens at risk) to Kakinada Municipal Shelter. Visakhapatnam Hill Camp is nearing maximum capacity at 86% (4300/5000 beds) — redirect second-wave evacuees toward regional overflow centers."
+  },
+  {
+    "id": "REC-1789290443301",
+    "timestamp": "2026-09-13T09:07:23.301Z",
+    "model": "Deterministic Operational Risk Analyst Engine",
+    "provider": "deterministic-fallback",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "RAMACHANDRAPURAM(U)",
+          "pop": 46769,
+          "vpi": 0.619,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Ravulapalem",
+          "pop": 25117,
+          "vpi": 0.576,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Mamidikuduru",
+          "pop": 76668,
+          "vpi": 0.567,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ_22",
+          "deficit": 39487
+        },
+        {
+          "zone": "RZ_69",
+          "deficit": 25117
+        },
+        {
+          "zone": "RZ_228",
+          "deficit": 76668
+        },
+        {
+          "zone": "RZ_89",
+          "deficit": 26633
+        },
+        {
+          "zone": "RZ_48",
+          "deficit": 14243
+        },
+        {
+          "zone": "RZ_43",
+          "deficit": 13706
+        },
+        {
+          "zone": "RZ_34",
+          "deficit": 12663
+        },
+        {
+          "zone": "RZ_49",
+          "deficit": 10552
+        },
+        {
+          "zone": "RZ_21",
+          "deficit": 9859
+        },
+        {
+          "zone": "RZ_64",
+          "deficit": 8509
+        },
+        {
+          "zone": "RZ_75",
+          "deficit": 8728
+        },
+        {
+          "zone": "RZ_96",
+          "deficit": 10505
+        },
+        {
+          "zone": "RZ_18",
+          "deficit": 8040
+        },
+        {
+          "zone": "RZ_36",
+          "deficit": 7691
+        },
+        {
+          "zone": "RZ_44",
+          "deficit": 7536
+        },
+        {
+          "zone": "RZ_84",
+          "deficit": 7377
+        },
+        {
+          "zone": "RZ_183",
+          "deficit": 57774
+        },
+        {
+          "zone": "RZ_29",
+          "deficit": 6535
+        },
+        {
+          "zone": "RZ_80",
+          "deficit": 6150
+        },
+        {
+          "zone": "RZ_15",
+          "deficit": 5021
+        },
+        {
+          "zone": "RZ_88",
+          "deficit": 5682
+        },
+        {
+          "zone": "RZ_31",
+          "deficit": 4677
+        },
+        {
+          "zone": "RZ_57",
+          "deficit": 10092
+        },
+        {
+          "zone": "RZ_58",
+          "deficit": 4406
+        },
+        {
+          "zone": "RZ_62",
+          "deficit": 4459
+        },
+        {
+          "zone": "RZ_19",
+          "deficit": 4110
+        },
+        {
+          "zone": "RZ_38",
+          "deficit": 3945
+        },
+        {
+          "zone": "RZ_42",
+          "deficit": 4189
+        },
+        {
+          "zone": "RZ_11",
+          "deficit": 3314
+        },
+        {
+          "zone": "RZ_20",
+          "deficit": 3447
+        },
+        {
+          "zone": "RZ_25",
+          "deficit": 3452
+        },
+        {
+          "zone": "RZ_26",
+          "deficit": 3740
+        },
+        {
+          "zone": "RZ_51",
+          "deficit": 3502
+        },
+        {
+          "zone": "RZ_13",
+          "deficit": 3209
+        },
+        {
+          "zone": "RZ_24",
+          "deficit": 2879
+        },
+        {
+          "zone": "RZ_54",
+          "deficit": 10746
+        },
+        {
+          "zone": "RZ_16",
+          "deficit": 2548
+        },
+        {
+          "zone": "RZ_17",
+          "deficit": 2475
+        },
+        {
+          "zone": "RZ_35",
+          "deficit": 2473
+        },
+        {
+          "zone": "RZ_40",
+          "deficit": 2400
+        },
+        {
+          "zone": "RZ_52",
+          "deficit": 2692
+        },
+        {
+          "zone": "RZ_63",
+          "deficit": 2355
+        },
+        {
+          "zone": "RZ_27",
+          "deficit": 2218
+        },
+        {
+          "zone": "RZ_37",
+          "deficit": 1993
+        },
+        {
+          "zone": "RZ_14",
+          "deficit": 1301
+        },
+        {
+          "zone": "RZ_23",
+          "deficit": 1407
+        },
+        {
+          "zone": "RZ_28",
+          "deficit": 1453
+        },
+        {
+          "zone": "RZ_39",
+          "deficit": 1432
+        },
+        {
+          "zone": "RZ_47",
+          "deficit": 1620
+        },
+        {
+          "zone": "RZ_55",
+          "deficit": 1545
+        },
+        {
+          "zone": "RZ_10",
+          "deficit": 865
+        },
+        {
+          "zone": "RZ_30",
+          "deficit": 1098
+        },
+        {
+          "zone": "RZ_32",
+          "deficit": 1931
+        },
+        {
+          "zone": "RZ_33",
+          "deficit": 613
+        },
+        {
+          "zone": "RZ_9",
+          "deficit": 1493
+        },
+        {
+          "zone": "RZ_45",
+          "deficit": 2350
+        },
+        {
+          "zone": "RZ_53",
+          "deficit": 4084
+        },
+        {
+          "zone": "RZ_86",
+          "deficit": 1458
+        },
+        {
+          "zone": "RZ_41",
+          "deficit": 2334
+        },
+        {
+          "zone": "RZ_102",
+          "deficit": 8571
+        },
+        {
+          "zone": "RZ_4",
+          "deficit": 1866
+        },
+        {
+          "zone": "RZ_59",
+          "deficit": 2141
+        },
+        {
+          "zone": "RZ_61",
+          "deficit": 4507
+        },
+        {
+          "zone": "RZ_97",
+          "deficit": 7202
+        },
+        {
+          "zone": "RZ_66",
+          "deficit": 7354
+        },
+        {
+          "zone": "RZ_93",
+          "deficit": 4756
+        },
+        {
+          "zone": "RZ_60",
+          "deficit": 1659
+        },
+        {
+          "zone": "RZ_71",
+          "deficit": 1675
+        },
+        {
+          "zone": "RZ_112",
+          "deficit": 10350
+        },
+        {
+          "zone": "RZ_68",
+          "deficit": 5985
+        },
+        {
+          "zone": "RZ_73",
+          "deficit": 4004
+        },
+        {
+          "zone": "RZ_107",
+          "deficit": 11911
+        },
+        {
+          "zone": "RZ_124",
+          "deficit": 4504
+        },
+        {
+          "zone": "RZ_65",
+          "deficit": 2014
+        },
+        {
+          "zone": "RZ_74",
+          "deficit": 2888
+        },
+        {
+          "zone": "RZ_67",
+          "deficit": 226
+        },
+        {
+          "zone": "RZ_72",
+          "deficit": 2099
+        },
+        {
+          "zone": "RZ_135",
+          "deficit": 7754
+        },
+        {
+          "zone": "RZ_50",
+          "deficit": 2503
+        },
+        {
+          "zone": "RZ_83",
+          "deficit": 3951
+        },
+        {
+          "zone": "RZ_82",
+          "deficit": 3899
+        },
+        {
+          "zone": "RZ_46",
+          "deficit": 2031
+        },
+        {
+          "zone": "RZ_90",
+          "deficit": 5235
+        },
+        {
+          "zone": "RZ_92",
+          "deficit": 4528
+        },
+        {
+          "zone": "RZ_76",
+          "deficit": 2056
+        },
+        {
+          "zone": "RZ_77",
+          "deficit": 5767
+        },
+        {
+          "zone": "RZ_134",
+          "deficit": 8958
+        },
+        {
+          "zone": "RZ_78",
+          "deficit": 537
+        },
+        {
+          "zone": "RZ_115",
+          "deficit": 6904
+        },
+        {
+          "zone": "RZ_109",
+          "deficit": 1479
+        },
+        {
+          "zone": "RZ_133",
+          "deficit": 2643
+        },
+        {
+          "zone": "RZ_85",
+          "deficit": 1270
+        },
+        {
+          "zone": "RZ_56",
+          "deficit": 429
+        },
+        {
+          "zone": "RZ_81",
+          "deficit": 2775
+        },
+        {
+          "zone": "RZ_79",
+          "deficit": 2186
+        },
+        {
+          "zone": "RZ_95",
+          "deficit": 5314
+        },
+        {
+          "zone": "RZ_139",
+          "deficit": 9993
+        },
+        {
+          "zone": "RZ_104",
+          "deficit": 3185
+        },
+        {
+          "zone": "RZ_87",
+          "deficit": 3202
+        },
+        {
+          "zone": "RZ_132",
+          "deficit": 3634
+        },
+        {
+          "zone": "RZ_156",
+          "deficit": 10266
+        },
+        {
+          "zone": "RZ_91",
+          "deficit": 1697
+        },
+        {
+          "zone": "RZ_100",
+          "deficit": 5867
+        },
+        {
+          "zone": "RZ_94",
+          "deficit": 3996
+        },
+        {
+          "zone": "RZ_103",
+          "deficit": 2999
+        },
+        {
+          "zone": "RZ_129",
+          "deficit": 25757
+        },
+        {
+          "zone": "RZ_118",
+          "deficit": 9047
+        },
+        {
+          "zone": "RZ_7",
+          "deficit": 2291
+        },
+        {
+          "zone": "RZ_126",
+          "deficit": 2246
+        },
+        {
+          "zone": "RZ_131",
+          "deficit": 2624
+        },
+        {
+          "zone": "RZ_136",
+          "deficit": 10382
+        },
+        {
+          "zone": "RZ_144",
+          "deficit": 4428
+        },
+        {
+          "zone": "RZ_137",
+          "deficit": 2612
+        },
+        {
+          "zone": "RZ_119",
+          "deficit": 2143
+        },
+        {
+          "zone": "RZ_186",
+          "deficit": 5908
+        },
+        {
+          "zone": "RZ_123",
+          "deficit": 7946
+        },
+        {
+          "zone": "RZ_146",
+          "deficit": 2954
+        },
+        {
+          "zone": "RZ_166",
+          "deficit": 9616
+        },
+        {
+          "zone": "RZ_105",
+          "deficit": 10012
+        },
+        {
+          "zone": "RZ_154",
+          "deficit": 4217
+        },
+        {
+          "zone": "RZ_167",
+          "deficit": 5749
+        },
+        {
+          "zone": "RZ_117",
+          "deficit": 8934
+        },
+        {
+          "zone": "RZ_155",
+          "deficit": 8778
+        },
+        {
+          "zone": "RZ_121",
+          "deficit": 6740
+        },
+        {
+          "zone": "RZ_203",
+          "deficit": 20972
+        },
+        {
+          "zone": "RZ_162",
+          "deficit": 918
+        },
+        {
+          "zone": "RZ_173",
+          "deficit": 12448
+        },
+        {
+          "zone": "RZ_116",
+          "deficit": 5568
+        },
+        {
+          "zone": "RZ_98",
+          "deficit": 3108
+        },
+        {
+          "zone": "RZ_205",
+          "deficit": 12013
+        },
+        {
+          "zone": "RZ_111",
+          "deficit": 1107
+        },
+        {
+          "zone": "RZ_153",
+          "deficit": 2091
+        },
+        {
+          "zone": "RZ_1",
+          "deficit": 9113
+        },
+        {
+          "zone": "RZ_114",
+          "deficit": 4114
+        },
+        {
+          "zone": "RZ_140",
+          "deficit": 3271
+        },
+        {
+          "zone": "RZ_101",
+          "deficit": 5388
+        },
+        {
+          "zone": "RZ_2",
+          "deficit": 3483
+        },
+        {
+          "zone": "RZ_99",
+          "deficit": 2247
+        },
+        {
+          "zone": "RZ_106",
+          "deficit": 3177
+        },
+        {
+          "zone": "RZ_182",
+          "deficit": 1822
+        },
+        {
+          "zone": "RZ_12",
+          "deficit": 333
+        },
+        {
+          "zone": "RZ_147",
+          "deficit": 5411
+        },
+        {
+          "zone": "RZ_122",
+          "deficit": 1820
+        },
+        {
+          "zone": "RZ_184",
+          "deficit": 2601
+        },
+        {
+          "zone": "RZ_128",
+          "deficit": 8815
+        },
+        {
+          "zone": "RZ_120",
+          "deficit": 5850
+        },
+        {
+          "zone": "RZ_149",
+          "deficit": 643
+        },
+        {
+          "zone": "RZ_157",
+          "deficit": 1041
+        },
+        {
+          "zone": "RZ_191",
+          "deficit": 1814
+        },
+        {
+          "zone": "RZ_3",
+          "deficit": 1103
+        },
+        {
+          "zone": "RZ_110",
+          "deficit": 8140
+        },
+        {
+          "zone": "RZ_164",
+          "deficit": 3301
+        },
+        {
+          "zone": "RZ_130",
+          "deficit": 3892
+        },
+        {
+          "zone": "RZ_141",
+          "deficit": 2838
+        },
+        {
+          "zone": "RZ_255",
+          "deficit": 17061
+        },
+        {
+          "zone": "RZ_145",
+          "deficit": 4416
+        },
+        {
+          "zone": "RZ_159",
+          "deficit": 2166
+        },
+        {
+          "zone": "RZ_165",
+          "deficit": 4163
+        },
+        {
+          "zone": "RZ_113",
+          "deficit": 5501
+        },
+        {
+          "zone": "RZ_125",
+          "deficit": 1480
+        },
+        {
+          "zone": "RZ_127",
+          "deficit": 2837
+        },
+        {
+          "zone": "RZ_188",
+          "deficit": 2637
+        },
+        {
+          "zone": "RZ_241",
+          "deficit": 14757
+        },
+        {
+          "zone": "RZ_138",
+          "deficit": 12557
+        },
+        {
+          "zone": "RZ_151",
+          "deficit": 4182
+        },
+        {
+          "zone": "RZ_172",
+          "deficit": 10319
+        },
+        {
+          "zone": "RZ_197",
+          "deficit": 13483
+        },
+        {
+          "zone": "RZ_229",
+          "deficit": 9366
+        },
+        {
+          "zone": "RZ_201",
+          "deficit": 2239
+        },
+        {
+          "zone": "RZ_193",
+          "deficit": 3651
+        },
+        {
+          "zone": "RZ_171",
+          "deficit": 6696
+        },
+        {
+          "zone": "RZ_181",
+          "deficit": 6234
+        },
+        {
+          "zone": "RZ_158",
+          "deficit": 6278
+        },
+        {
+          "zone": "RZ_192",
+          "deficit": 2130
+        },
+        {
+          "zone": "RZ_148",
+          "deficit": 1873
+        },
+        {
+          "zone": "RZ_70",
+          "deficit": 5714
+        },
+        {
+          "zone": "RZ_207",
+          "deficit": 7991
+        },
+        {
+          "zone": "RZ_215",
+          "deficit": 6300
+        },
+        {
+          "zone": "RZ_108",
+          "deficit": 567
+        },
+        {
+          "zone": "RZ_221",
+          "deficit": 2850
+        },
+        {
+          "zone": "RZ_168",
+          "deficit": 4982
+        },
+        {
+          "zone": "RZ_190",
+          "deficit": 1825
+        },
+        {
+          "zone": "RZ_152",
+          "deficit": 6782
+        },
+        {
+          "zone": "RZ_160",
+          "deficit": 8590
+        },
+        {
+          "zone": "RZ_206",
+          "deficit": 2499
+        },
+        {
+          "zone": "RZ_227",
+          "deficit": 6783
+        },
+        {
+          "zone": "RZ_226",
+          "deficit": 5032
+        },
+        {
+          "zone": "RZ_244",
+          "deficit": 8640
+        },
+        {
+          "zone": "RZ_254",
+          "deficit": 9251
+        },
+        {
+          "zone": "RZ_143",
+          "deficit": 3899
+        },
+        {
+          "zone": "RZ_161",
+          "deficit": 3699
+        },
+        {
+          "zone": "RZ_174",
+          "deficit": 4352
+        },
+        {
+          "zone": "RZ_212",
+          "deficit": 6551
+        },
+        {
+          "zone": "RZ_217",
+          "deficit": 10845
+        },
+        {
+          "zone": "RZ_194",
+          "deficit": 4992
+        },
+        {
+          "zone": "RZ_0",
+          "deficit": 3055
+        },
+        {
+          "zone": "RZ_200",
+          "deficit": 5648
+        },
+        {
+          "zone": "RZ_237",
+          "deficit": 3312
+        },
+        {
+          "zone": "RZ_267",
+          "deficit": 16936
+        },
+        {
+          "zone": "RZ_6",
+          "deficit": 14845
+        },
+        {
+          "zone": "RZ_180",
+          "deficit": 8393
+        },
+        {
+          "zone": "RZ_204",
+          "deficit": 4072
+        },
+        {
+          "zone": "RZ_259",
+          "deficit": 5663
+        },
+        {
+          "zone": "RZ_264",
+          "deficit": 15370
+        },
+        {
+          "zone": "RZ_240",
+          "deficit": 9386
+        },
+        {
+          "zone": "RZ_150",
+          "deficit": 13483
+        },
+        {
+          "zone": "RZ_256",
+          "deficit": 6785
+        },
+        {
+          "zone": "RZ_163",
+          "deficit": 1905
+        },
+        {
+          "zone": "RZ_177",
+          "deficit": 13659
+        },
+        {
+          "zone": "RZ_219",
+          "deficit": 2054
+        },
+        {
+          "zone": "RZ_243",
+          "deficit": 2831
+        },
+        {
+          "zone": "RZ_169",
+          "deficit": 4076
+        },
+        {
+          "zone": "RZ_263",
+          "deficit": 12511
+        },
+        {
+          "zone": "RZ_232",
+          "deficit": 3517
+        },
+        {
+          "zone": "RZ_5",
+          "deficit": 1041
+        },
+        {
+          "zone": "RZ_211",
+          "deficit": 1249
+        },
+        {
+          "zone": "RZ_176",
+          "deficit": 2082
+        },
+        {
+          "zone": "RZ_213",
+          "deficit": 7495
+        },
+        {
+          "zone": "RZ_220",
+          "deficit": 5126
+        },
+        {
+          "zone": "RZ_249",
+          "deficit": 6859
+        },
+        {
+          "zone": "RZ_178",
+          "deficit": 1661
+        },
+        {
+          "zone": "RZ_209",
+          "deficit": 2126
+        },
+        {
+          "zone": "RZ_235",
+          "deficit": 3340
+        },
+        {
+          "zone": "RZ_251",
+          "deficit": 1601
+        },
+        {
+          "zone": "RZ_258",
+          "deficit": 4661
+        },
+        {
+          "zone": "RZ_214",
+          "deficit": 3412
+        },
+        {
+          "zone": "RZ_253",
+          "deficit": 4993
+        },
+        {
+          "zone": "RZ_185",
+          "deficit": 2000
+        },
+        {
+          "zone": "RZ_195",
+          "deficit": 1558
+        },
+        {
+          "zone": "RZ_142",
+          "deficit": 1255
+        },
+        {
+          "zone": "RZ_179",
+          "deficit": 3084
+        },
+        {
+          "zone": "RZ_236",
+          "deficit": 4498
+        },
+        {
+          "zone": "RZ_170",
+          "deficit": 970
+        },
+        {
+          "zone": "RZ_175",
+          "deficit": 4252
+        },
+        {
+          "zone": "RZ_202",
+          "deficit": 10199
+        },
+        {
+          "zone": "RZ_248",
+          "deficit": 9307
+        },
+        {
+          "zone": "RZ_250",
+          "deficit": 8489
+        },
+        {
+          "zone": "RZ_260",
+          "deficit": 15406
+        },
+        {
+          "zone": "RZ_187",
+          "deficit": 2038
+        },
+        {
+          "zone": "RZ_199",
+          "deficit": 4519
+        },
+        {
+          "zone": "RZ_246",
+          "deficit": 14323
+        },
+        {
+          "zone": "RZ_257",
+          "deficit": 10009
+        },
+        {
+          "zone": "RZ_261",
+          "deficit": 2379
+        },
+        {
+          "zone": "RZ_223",
+          "deficit": 10083
+        },
+        {
+          "zone": "RZ_189",
+          "deficit": 1853
+        },
+        {
+          "zone": "RZ_231",
+          "deficit": 1491
+        },
+        {
+          "zone": "RZ_265",
+          "deficit": 7984
+        },
+        {
+          "zone": "RZ_225",
+          "deficit": 9006
+        },
+        {
+          "zone": "RZ_262",
+          "deficit": 5071
+        },
+        {
+          "zone": "RZ_8",
+          "deficit": 2678
+        },
+        {
+          "zone": "RZ_216",
+          "deficit": 2218
+        },
+        {
+          "zone": "RZ_233",
+          "deficit": 1899
+        },
+        {
+          "zone": "RZ_196",
+          "deficit": 1639
+        },
+        {
+          "zone": "RZ_222",
+          "deficit": 1803
+        },
+        {
+          "zone": "RZ_247",
+          "deficit": 4355
+        },
+        {
+          "zone": "RZ_198",
+          "deficit": 1577
+        },
+        {
+          "zone": "RZ_218",
+          "deficit": 668
+        },
+        {
+          "zone": "RZ_224",
+          "deficit": 4208
+        },
+        {
+          "zone": "RZ_242",
+          "deficit": 2974
+        },
+        {
+          "zone": "RZ_230",
+          "deficit": 1069
+        },
+        {
+          "zone": "RZ_234",
+          "deficit": 1852
+        },
+        {
+          "zone": "RZ_239",
+          "deficit": 2954
+        },
+        {
+          "zone": "RZ_245",
+          "deficit": 4621
+        },
+        {
+          "zone": "RZ_266",
+          "deficit": 8694
+        },
+        {
+          "zone": "RZ_208",
+          "deficit": 6766
+        },
+        {
+          "zone": "RZ_252",
+          "deficit": 7305
+        },
+        {
+          "zone": "RZ_210",
+          "deficit": 1884
+        },
+        {
+          "zone": "RZ_238",
+          "deficit": 3674
+        }
+      ],
+      "telemetry": {}
+    },
+    "recommendation": "Recommend immediate relocation of RAMACHANDRAPURAM(U) and Ravulapalem (combined 72k citizens at risk) to Samanthakurru. Pedaraghavulupeta is nearing maximum capacity at 100% (829/829 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ_22 registers an aggregate carrying-capacity deficit of 39,487 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
+  },
+  {
+    "id": "REC-1789287879526",
+    "timestamp": "2026-09-13T08:24:39.526Z",
+    "model": "Deterministic Operational Risk Analyst Engine",
+    "provider": "deterministic-fallback",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "RAMACHANDRAPURAM(U)",
+          "pop": 46769,
+          "vpi": 0.619,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Ravulapalem",
+          "pop": 25117,
+          "vpi": 0.576,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Mamidikuduru",
+          "pop": 76668,
+          "vpi": 0.567,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ_22",
+          "deficit": 39487
+        },
+        {
+          "zone": "RZ_69",
+          "deficit": 25117
+        },
+        {
+          "zone": "RZ_228",
+          "deficit": 76668
+        },
+        {
+          "zone": "RZ_89",
+          "deficit": 26633
+        },
+        {
+          "zone": "RZ_48",
+          "deficit": 14243
+        },
+        {
+          "zone": "RZ_43",
+          "deficit": 13706
+        },
+        {
+          "zone": "RZ_34",
+          "deficit": 12663
+        },
+        {
+          "zone": "RZ_49",
+          "deficit": 10552
+        },
+        {
+          "zone": "RZ_21",
+          "deficit": 9859
+        },
+        {
+          "zone": "RZ_64",
+          "deficit": 8509
+        },
+        {
+          "zone": "RZ_75",
+          "deficit": 8728
+        },
+        {
+          "zone": "RZ_96",
+          "deficit": 10505
+        },
+        {
+          "zone": "RZ_18",
+          "deficit": 8040
+        },
+        {
+          "zone": "RZ_36",
+          "deficit": 7691
+        },
+        {
+          "zone": "RZ_44",
+          "deficit": 7536
+        },
+        {
+          "zone": "RZ_84",
+          "deficit": 7377
+        },
+        {
+          "zone": "RZ_183",
+          "deficit": 57774
+        },
+        {
+          "zone": "RZ_29",
+          "deficit": 6535
+        },
+        {
+          "zone": "RZ_80",
+          "deficit": 6150
+        },
+        {
+          "zone": "RZ_15",
+          "deficit": 5021
+        },
+        {
+          "zone": "RZ_88",
+          "deficit": 5682
+        },
+        {
+          "zone": "RZ_31",
+          "deficit": 4677
+        },
+        {
+          "zone": "RZ_57",
+          "deficit": 10092
+        },
+        {
+          "zone": "RZ_58",
+          "deficit": 4406
+        },
+        {
+          "zone": "RZ_62",
+          "deficit": 4459
+        },
+        {
+          "zone": "RZ_19",
+          "deficit": 4110
+        },
+        {
+          "zone": "RZ_38",
+          "deficit": 3945
+        },
+        {
+          "zone": "RZ_42",
+          "deficit": 4189
+        },
+        {
+          "zone": "RZ_11",
+          "deficit": 3314
+        },
+        {
+          "zone": "RZ_20",
+          "deficit": 3447
+        },
+        {
+          "zone": "RZ_25",
+          "deficit": 3452
+        },
+        {
+          "zone": "RZ_26",
+          "deficit": 3740
+        },
+        {
+          "zone": "RZ_51",
+          "deficit": 3502
+        },
+        {
+          "zone": "RZ_13",
+          "deficit": 3209
+        },
+        {
+          "zone": "RZ_24",
+          "deficit": 2879
+        },
+        {
+          "zone": "RZ_54",
+          "deficit": 10746
+        },
+        {
+          "zone": "RZ_16",
+          "deficit": 2548
+        },
+        {
+          "zone": "RZ_17",
+          "deficit": 2475
+        },
+        {
+          "zone": "RZ_35",
+          "deficit": 2473
+        },
+        {
+          "zone": "RZ_40",
+          "deficit": 2400
+        },
+        {
+          "zone": "RZ_52",
+          "deficit": 2692
+        },
+        {
+          "zone": "RZ_63",
+          "deficit": 2355
+        },
+        {
+          "zone": "RZ_27",
+          "deficit": 2218
+        },
+        {
+          "zone": "RZ_37",
+          "deficit": 1993
+        },
+        {
+          "zone": "RZ_14",
+          "deficit": 1301
+        },
+        {
+          "zone": "RZ_23",
+          "deficit": 1407
+        },
+        {
+          "zone": "RZ_28",
+          "deficit": 1453
+        },
+        {
+          "zone": "RZ_39",
+          "deficit": 1432
+        },
+        {
+          "zone": "RZ_47",
+          "deficit": 1620
+        },
+        {
+          "zone": "RZ_55",
+          "deficit": 1545
+        },
+        {
+          "zone": "RZ_10",
+          "deficit": 865
+        },
+        {
+          "zone": "RZ_30",
+          "deficit": 1098
+        },
+        {
+          "zone": "RZ_32",
+          "deficit": 1931
+        },
+        {
+          "zone": "RZ_33",
+          "deficit": 613
+        },
+        {
+          "zone": "RZ_9",
+          "deficit": 1493
+        },
+        {
+          "zone": "RZ_45",
+          "deficit": 2350
+        },
+        {
+          "zone": "RZ_53",
+          "deficit": 4084
+        },
+        {
+          "zone": "RZ_86",
+          "deficit": 1458
+        },
+        {
+          "zone": "RZ_41",
+          "deficit": 2334
+        },
+        {
+          "zone": "RZ_102",
+          "deficit": 8571
+        },
+        {
+          "zone": "RZ_4",
+          "deficit": 1866
+        },
+        {
+          "zone": "RZ_59",
+          "deficit": 2141
+        },
+        {
+          "zone": "RZ_61",
+          "deficit": 4507
+        },
+        {
+          "zone": "RZ_97",
+          "deficit": 7202
+        },
+        {
+          "zone": "RZ_66",
+          "deficit": 7354
+        },
+        {
+          "zone": "RZ_93",
+          "deficit": 4756
+        },
+        {
+          "zone": "RZ_60",
+          "deficit": 1659
+        },
+        {
+          "zone": "RZ_71",
+          "deficit": 1675
+        },
+        {
+          "zone": "RZ_112",
+          "deficit": 10350
+        },
+        {
+          "zone": "RZ_68",
+          "deficit": 5985
+        },
+        {
+          "zone": "RZ_73",
+          "deficit": 4004
+        },
+        {
+          "zone": "RZ_107",
+          "deficit": 11911
+        },
+        {
+          "zone": "RZ_124",
+          "deficit": 4504
+        },
+        {
+          "zone": "RZ_65",
+          "deficit": 2014
+        },
+        {
+          "zone": "RZ_74",
+          "deficit": 2888
+        },
+        {
+          "zone": "RZ_67",
+          "deficit": 226
+        },
+        {
+          "zone": "RZ_72",
+          "deficit": 2099
+        },
+        {
+          "zone": "RZ_135",
+          "deficit": 7754
+        },
+        {
+          "zone": "RZ_50",
+          "deficit": 2503
+        },
+        {
+          "zone": "RZ_83",
+          "deficit": 3951
+        },
+        {
+          "zone": "RZ_82",
+          "deficit": 3899
+        },
+        {
+          "zone": "RZ_46",
+          "deficit": 2031
+        },
+        {
+          "zone": "RZ_90",
+          "deficit": 5235
+        },
+        {
+          "zone": "RZ_92",
+          "deficit": 4528
+        },
+        {
+          "zone": "RZ_76",
+          "deficit": 2056
+        },
+        {
+          "zone": "RZ_77",
+          "deficit": 5767
+        },
+        {
+          "zone": "RZ_134",
+          "deficit": 8958
+        },
+        {
+          "zone": "RZ_78",
+          "deficit": 537
+        },
+        {
+          "zone": "RZ_115",
+          "deficit": 6904
+        },
+        {
+          "zone": "RZ_109",
+          "deficit": 1479
+        },
+        {
+          "zone": "RZ_133",
+          "deficit": 2643
+        },
+        {
+          "zone": "RZ_85",
+          "deficit": 1270
+        },
+        {
+          "zone": "RZ_56",
+          "deficit": 429
+        },
+        {
+          "zone": "RZ_81",
+          "deficit": 2775
+        },
+        {
+          "zone": "RZ_79",
+          "deficit": 2186
+        },
+        {
+          "zone": "RZ_95",
+          "deficit": 5314
+        },
+        {
+          "zone": "RZ_139",
+          "deficit": 9993
+        },
+        {
+          "zone": "RZ_104",
+          "deficit": 3185
+        },
+        {
+          "zone": "RZ_87",
+          "deficit": 3202
+        },
+        {
+          "zone": "RZ_132",
+          "deficit": 3634
+        },
+        {
+          "zone": "RZ_156",
+          "deficit": 10266
+        },
+        {
+          "zone": "RZ_91",
+          "deficit": 1697
+        },
+        {
+          "zone": "RZ_100",
+          "deficit": 5867
+        },
+        {
+          "zone": "RZ_94",
+          "deficit": 3996
+        },
+        {
+          "zone": "RZ_103",
+          "deficit": 2999
+        },
+        {
+          "zone": "RZ_129",
+          "deficit": 25757
+        },
+        {
+          "zone": "RZ_118",
+          "deficit": 9047
+        },
+        {
+          "zone": "RZ_7",
+          "deficit": 2291
+        },
+        {
+          "zone": "RZ_126",
+          "deficit": 2246
+        },
+        {
+          "zone": "RZ_131",
+          "deficit": 2624
+        },
+        {
+          "zone": "RZ_136",
+          "deficit": 10382
+        },
+        {
+          "zone": "RZ_144",
+          "deficit": 4428
+        },
+        {
+          "zone": "RZ_137",
+          "deficit": 2612
+        },
+        {
+          "zone": "RZ_119",
+          "deficit": 2143
+        },
+        {
+          "zone": "RZ_186",
+          "deficit": 5908
+        },
+        {
+          "zone": "RZ_123",
+          "deficit": 7946
+        },
+        {
+          "zone": "RZ_146",
+          "deficit": 2954
+        },
+        {
+          "zone": "RZ_166",
+          "deficit": 9616
+        },
+        {
+          "zone": "RZ_105",
+          "deficit": 10012
+        },
+        {
+          "zone": "RZ_154",
+          "deficit": 4217
+        },
+        {
+          "zone": "RZ_167",
+          "deficit": 5749
+        },
+        {
+          "zone": "RZ_117",
+          "deficit": 8934
+        },
+        {
+          "zone": "RZ_155",
+          "deficit": 8778
+        },
+        {
+          "zone": "RZ_121",
+          "deficit": 6740
+        },
+        {
+          "zone": "RZ_203",
+          "deficit": 20972
+        },
+        {
+          "zone": "RZ_162",
+          "deficit": 918
+        },
+        {
+          "zone": "RZ_173",
+          "deficit": 12448
+        },
+        {
+          "zone": "RZ_116",
+          "deficit": 5568
+        },
+        {
+          "zone": "RZ_98",
+          "deficit": 3108
+        },
+        {
+          "zone": "RZ_205",
+          "deficit": 12013
+        },
+        {
+          "zone": "RZ_111",
+          "deficit": 1107
+        },
+        {
+          "zone": "RZ_153",
+          "deficit": 2091
+        },
+        {
+          "zone": "RZ_1",
+          "deficit": 9113
+        },
+        {
+          "zone": "RZ_114",
+          "deficit": 4114
+        },
+        {
+          "zone": "RZ_140",
+          "deficit": 3271
+        },
+        {
+          "zone": "RZ_101",
+          "deficit": 5388
+        },
+        {
+          "zone": "RZ_2",
+          "deficit": 3483
+        },
+        {
+          "zone": "RZ_99",
+          "deficit": 2247
+        },
+        {
+          "zone": "RZ_106",
+          "deficit": 3177
+        },
+        {
+          "zone": "RZ_182",
+          "deficit": 1822
+        },
+        {
+          "zone": "RZ_12",
+          "deficit": 333
+        },
+        {
+          "zone": "RZ_147",
+          "deficit": 5411
+        },
+        {
+          "zone": "RZ_122",
+          "deficit": 1820
+        },
+        {
+          "zone": "RZ_184",
+          "deficit": 2601
+        },
+        {
+          "zone": "RZ_128",
+          "deficit": 8815
+        },
+        {
+          "zone": "RZ_120",
+          "deficit": 5850
+        },
+        {
+          "zone": "RZ_149",
+          "deficit": 643
+        },
+        {
+          "zone": "RZ_157",
+          "deficit": 1041
+        },
+        {
+          "zone": "RZ_191",
+          "deficit": 1814
+        },
+        {
+          "zone": "RZ_3",
+          "deficit": 1103
+        },
+        {
+          "zone": "RZ_110",
+          "deficit": 8140
+        },
+        {
+          "zone": "RZ_164",
+          "deficit": 3301
+        },
+        {
+          "zone": "RZ_130",
+          "deficit": 3892
+        },
+        {
+          "zone": "RZ_141",
+          "deficit": 2838
+        },
+        {
+          "zone": "RZ_255",
+          "deficit": 17061
+        },
+        {
+          "zone": "RZ_145",
+          "deficit": 4416
+        },
+        {
+          "zone": "RZ_159",
+          "deficit": 2166
+        },
+        {
+          "zone": "RZ_165",
+          "deficit": 4163
+        },
+        {
+          "zone": "RZ_113",
+          "deficit": 5501
+        },
+        {
+          "zone": "RZ_125",
+          "deficit": 1480
+        },
+        {
+          "zone": "RZ_127",
+          "deficit": 2837
+        },
+        {
+          "zone": "RZ_188",
+          "deficit": 2637
+        },
+        {
+          "zone": "RZ_241",
+          "deficit": 14757
+        },
+        {
+          "zone": "RZ_138",
+          "deficit": 12557
+        },
+        {
+          "zone": "RZ_151",
+          "deficit": 4182
+        },
+        {
+          "zone": "RZ_172",
+          "deficit": 10319
+        },
+        {
+          "zone": "RZ_197",
+          "deficit": 13483
+        },
+        {
+          "zone": "RZ_229",
+          "deficit": 9366
+        },
+        {
+          "zone": "RZ_201",
+          "deficit": 2239
+        },
+        {
+          "zone": "RZ_193",
+          "deficit": 3651
+        },
+        {
+          "zone": "RZ_171",
+          "deficit": 6696
+        },
+        {
+          "zone": "RZ_181",
+          "deficit": 6234
+        },
+        {
+          "zone": "RZ_158",
+          "deficit": 6278
+        },
+        {
+          "zone": "RZ_192",
+          "deficit": 2130
+        },
+        {
+          "zone": "RZ_148",
+          "deficit": 1873
+        },
+        {
+          "zone": "RZ_70",
+          "deficit": 5714
+        },
+        {
+          "zone": "RZ_207",
+          "deficit": 7991
+        },
+        {
+          "zone": "RZ_215",
+          "deficit": 6300
+        },
+        {
+          "zone": "RZ_108",
+          "deficit": 567
+        },
+        {
+          "zone": "RZ_221",
+          "deficit": 2850
+        },
+        {
+          "zone": "RZ_168",
+          "deficit": 4982
+        },
+        {
+          "zone": "RZ_190",
+          "deficit": 1825
+        },
+        {
+          "zone": "RZ_152",
+          "deficit": 6782
+        },
+        {
+          "zone": "RZ_160",
+          "deficit": 8590
+        },
+        {
+          "zone": "RZ_206",
+          "deficit": 2499
+        },
+        {
+          "zone": "RZ_227",
+          "deficit": 6783
+        },
+        {
+          "zone": "RZ_226",
+          "deficit": 5032
+        },
+        {
+          "zone": "RZ_244",
+          "deficit": 8640
+        },
+        {
+          "zone": "RZ_254",
+          "deficit": 9251
+        },
+        {
+          "zone": "RZ_143",
+          "deficit": 3899
+        },
+        {
+          "zone": "RZ_161",
+          "deficit": 3699
+        },
+        {
+          "zone": "RZ_174",
+          "deficit": 4352
+        },
+        {
+          "zone": "RZ_212",
+          "deficit": 6551
+        },
+        {
+          "zone": "RZ_217",
+          "deficit": 10845
+        },
+        {
+          "zone": "RZ_194",
+          "deficit": 4992
+        },
+        {
+          "zone": "RZ_0",
+          "deficit": 3055
+        },
+        {
+          "zone": "RZ_200",
+          "deficit": 5648
+        },
+        {
+          "zone": "RZ_237",
+          "deficit": 3312
+        },
+        {
+          "zone": "RZ_267",
+          "deficit": 16936
+        },
+        {
+          "zone": "RZ_6",
+          "deficit": 14845
+        },
+        {
+          "zone": "RZ_180",
+          "deficit": 8393
+        },
+        {
+          "zone": "RZ_204",
+          "deficit": 4072
+        },
+        {
+          "zone": "RZ_259",
+          "deficit": 5663
+        },
+        {
+          "zone": "RZ_264",
+          "deficit": 15370
+        },
+        {
+          "zone": "RZ_240",
+          "deficit": 9386
+        },
+        {
+          "zone": "RZ_150",
+          "deficit": 13483
+        },
+        {
+          "zone": "RZ_256",
+          "deficit": 6785
+        },
+        {
+          "zone": "RZ_163",
+          "deficit": 1905
+        },
+        {
+          "zone": "RZ_177",
+          "deficit": 13659
+        },
+        {
+          "zone": "RZ_219",
+          "deficit": 2054
+        },
+        {
+          "zone": "RZ_243",
+          "deficit": 2831
+        },
+        {
+          "zone": "RZ_169",
+          "deficit": 4076
+        },
+        {
+          "zone": "RZ_263",
+          "deficit": 12511
+        },
+        {
+          "zone": "RZ_232",
+          "deficit": 3517
+        },
+        {
+          "zone": "RZ_5",
+          "deficit": 1041
+        },
+        {
+          "zone": "RZ_211",
+          "deficit": 1249
+        },
+        {
+          "zone": "RZ_176",
+          "deficit": 2082
+        },
+        {
+          "zone": "RZ_213",
+          "deficit": 7495
+        },
+        {
+          "zone": "RZ_220",
+          "deficit": 5126
+        },
+        {
+          "zone": "RZ_249",
+          "deficit": 6859
+        },
+        {
+          "zone": "RZ_178",
+          "deficit": 1661
+        },
+        {
+          "zone": "RZ_209",
+          "deficit": 2126
+        },
+        {
+          "zone": "RZ_235",
+          "deficit": 3340
+        },
+        {
+          "zone": "RZ_251",
+          "deficit": 1601
+        },
+        {
+          "zone": "RZ_258",
+          "deficit": 4661
+        },
+        {
+          "zone": "RZ_214",
+          "deficit": 3412
+        },
+        {
+          "zone": "RZ_253",
+          "deficit": 4993
+        },
+        {
+          "zone": "RZ_185",
+          "deficit": 2000
+        },
+        {
+          "zone": "RZ_195",
+          "deficit": 1558
+        },
+        {
+          "zone": "RZ_142",
+          "deficit": 1255
+        },
+        {
+          "zone": "RZ_179",
+          "deficit": 3084
+        },
+        {
+          "zone": "RZ_236",
+          "deficit": 4498
+        },
+        {
+          "zone": "RZ_170",
+          "deficit": 970
+        },
+        {
+          "zone": "RZ_175",
+          "deficit": 4252
+        },
+        {
+          "zone": "RZ_202",
+          "deficit": 10199
+        },
+        {
+          "zone": "RZ_248",
+          "deficit": 9307
+        },
+        {
+          "zone": "RZ_250",
+          "deficit": 8489
+        },
+        {
+          "zone": "RZ_260",
+          "deficit": 15406
+        },
+        {
+          "zone": "RZ_187",
+          "deficit": 2038
+        },
+        {
+          "zone": "RZ_199",
+          "deficit": 4519
+        },
+        {
+          "zone": "RZ_246",
+          "deficit": 14323
+        },
+        {
+          "zone": "RZ_257",
+          "deficit": 10009
+        },
+        {
+          "zone": "RZ_261",
+          "deficit": 2379
+        },
+        {
+          "zone": "RZ_223",
+          "deficit": 10083
+        },
+        {
+          "zone": "RZ_189",
+          "deficit": 1853
+        },
+        {
+          "zone": "RZ_231",
+          "deficit": 1491
+        },
+        {
+          "zone": "RZ_265",
+          "deficit": 7984
+        },
+        {
+          "zone": "RZ_225",
+          "deficit": 9006
+        },
+        {
+          "zone": "RZ_262",
+          "deficit": 5071
+        },
+        {
+          "zone": "RZ_8",
+          "deficit": 2678
+        },
+        {
+          "zone": "RZ_216",
+          "deficit": 2218
+        },
+        {
+          "zone": "RZ_233",
+          "deficit": 1899
+        },
+        {
+          "zone": "RZ_196",
+          "deficit": 1639
+        },
+        {
+          "zone": "RZ_222",
+          "deficit": 1803
+        },
+        {
+          "zone": "RZ_247",
+          "deficit": 4355
+        },
+        {
+          "zone": "RZ_198",
+          "deficit": 1577
+        },
+        {
+          "zone": "RZ_218",
+          "deficit": 668
+        },
+        {
+          "zone": "RZ_224",
+          "deficit": 4208
+        },
+        {
+          "zone": "RZ_242",
+          "deficit": 2974
+        },
+        {
+          "zone": "RZ_230",
+          "deficit": 1069
+        },
+        {
+          "zone": "RZ_234",
+          "deficit": 1852
+        },
+        {
+          "zone": "RZ_239",
+          "deficit": 2954
+        },
+        {
+          "zone": "RZ_245",
+          "deficit": 4621
+        },
+        {
+          "zone": "RZ_266",
+          "deficit": 8694
+        },
+        {
+          "zone": "RZ_208",
+          "deficit": 6766
+        },
+        {
+          "zone": "RZ_252",
+          "deficit": 7305
+        },
+        {
+          "zone": "RZ_210",
+          "deficit": 1884
+        },
+        {
+          "zone": "RZ_238",
+          "deficit": 3674
+        }
+      ],
+      "telemetry": {
+        "gust": 22.3,
+        "pressure": 1009
+      }
+    },
+    "recommendation": "Recommend immediate relocation of RAMACHANDRAPURAM(U) and Ravulapalem (combined 72k citizens at risk) to Pedaraghavulupeta. Pedaraghavulupeta is nearing maximum capacity at 100% (829/829 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ_22 registers an aggregate carrying-capacity deficit of 39,487 residents, requiring NDRF pre-positioning of temporary modular field relief camps. Doppler telemetry records peak sustained gusts of 22.3 km/h."
+  },
+  {
+    "id": "REC-1789287692669",
+    "timestamp": "2026-09-13T08:21:32.669Z",
+    "model": "Deterministic Operational Risk Analyst Engine",
+    "provider": "deterministic-fallback",
+    "inputSummary": {
+      "topHabitations": [
+        {
+          "name": "RAMACHANDRAPURAM(U)",
+          "pop": 46769,
+          "vpi": 0.619,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Ravulapalem",
+          "pop": 25117,
+          "vpi": 0.576,
+          "tier": "SHORT_TERM"
+        },
+        {
+          "name": "Mamidikuduru",
+          "pop": 76668,
+          "vpi": 0.567,
+          "tier": "SHORT_TERM"
+        }
+      ],
+      "deficitReports": [
+        {
+          "zone": "RZ_22",
+          "deficit": 39487
+        },
+        {
+          "zone": "RZ_69",
+          "deficit": 25117
+        },
+        {
+          "zone": "RZ_228",
+          "deficit": 76668
+        },
+        {
+          "zone": "RZ_89",
+          "deficit": 26633
+        },
+        {
+          "zone": "RZ_48",
+          "deficit": 14243
+        },
+        {
+          "zone": "RZ_43",
+          "deficit": 13706
+        },
+        {
+          "zone": "RZ_34",
+          "deficit": 12663
+        },
+        {
+          "zone": "RZ_49",
+          "deficit": 10552
+        },
+        {
+          "zone": "RZ_21",
+          "deficit": 9859
+        },
+        {
+          "zone": "RZ_64",
+          "deficit": 8509
+        },
+        {
+          "zone": "RZ_75",
+          "deficit": 8728
+        },
+        {
+          "zone": "RZ_96",
+          "deficit": 10505
+        },
+        {
+          "zone": "RZ_18",
+          "deficit": 8040
+        },
+        {
+          "zone": "RZ_36",
+          "deficit": 7691
+        },
+        {
+          "zone": "RZ_44",
+          "deficit": 7536
+        },
+        {
+          "zone": "RZ_84",
+          "deficit": 7377
+        },
+        {
+          "zone": "RZ_183",
+          "deficit": 57774
+        },
+        {
+          "zone": "RZ_29",
+          "deficit": 6535
+        },
+        {
+          "zone": "RZ_80",
+          "deficit": 6150
+        },
+        {
+          "zone": "RZ_15",
+          "deficit": 5021
+        },
+        {
+          "zone": "RZ_88",
+          "deficit": 5682
+        },
+        {
+          "zone": "RZ_31",
+          "deficit": 4677
+        },
+        {
+          "zone": "RZ_57",
+          "deficit": 10092
+        },
+        {
+          "zone": "RZ_58",
+          "deficit": 4406
+        },
+        {
+          "zone": "RZ_62",
+          "deficit": 4459
+        },
+        {
+          "zone": "RZ_19",
+          "deficit": 4110
+        },
+        {
+          "zone": "RZ_38",
+          "deficit": 3945
+        },
+        {
+          "zone": "RZ_42",
+          "deficit": 4189
+        },
+        {
+          "zone": "RZ_11",
+          "deficit": 3314
+        },
+        {
+          "zone": "RZ_20",
+          "deficit": 3447
+        },
+        {
+          "zone": "RZ_25",
+          "deficit": 3452
+        },
+        {
+          "zone": "RZ_26",
+          "deficit": 3740
+        },
+        {
+          "zone": "RZ_51",
+          "deficit": 3502
+        },
+        {
+          "zone": "RZ_13",
+          "deficit": 3209
+        },
+        {
+          "zone": "RZ_24",
+          "deficit": 2879
+        },
+        {
+          "zone": "RZ_54",
+          "deficit": 10746
+        },
+        {
+          "zone": "RZ_16",
+          "deficit": 2548
+        },
+        {
+          "zone": "RZ_17",
+          "deficit": 2475
+        },
+        {
+          "zone": "RZ_35",
+          "deficit": 2473
+        },
+        {
+          "zone": "RZ_40",
+          "deficit": 2400
+        },
+        {
+          "zone": "RZ_52",
+          "deficit": 2692
+        },
+        {
+          "zone": "RZ_63",
+          "deficit": 2355
+        },
+        {
+          "zone": "RZ_27",
+          "deficit": 2218
+        },
+        {
+          "zone": "RZ_37",
+          "deficit": 1993
+        },
+        {
+          "zone": "RZ_14",
+          "deficit": 1301
+        },
+        {
+          "zone": "RZ_23",
+          "deficit": 1407
+        },
+        {
+          "zone": "RZ_28",
+          "deficit": 1453
+        },
+        {
+          "zone": "RZ_39",
+          "deficit": 1432
+        },
+        {
+          "zone": "RZ_47",
+          "deficit": 1620
+        },
+        {
+          "zone": "RZ_55",
+          "deficit": 1545
+        },
+        {
+          "zone": "RZ_10",
+          "deficit": 865
+        },
+        {
+          "zone": "RZ_30",
+          "deficit": 1098
+        },
+        {
+          "zone": "RZ_32",
+          "deficit": 1931
+        },
+        {
+          "zone": "RZ_33",
+          "deficit": 613
+        },
+        {
+          "zone": "RZ_9",
+          "deficit": 1493
+        },
+        {
+          "zone": "RZ_45",
+          "deficit": 2350
+        },
+        {
+          "zone": "RZ_53",
+          "deficit": 4084
+        },
+        {
+          "zone": "RZ_86",
+          "deficit": 1458
+        },
+        {
+          "zone": "RZ_41",
+          "deficit": 2334
+        },
+        {
+          "zone": "RZ_102",
+          "deficit": 8571
+        },
+        {
+          "zone": "RZ_4",
+          "deficit": 1866
+        },
+        {
+          "zone": "RZ_59",
+          "deficit": 2141
+        },
+        {
+          "zone": "RZ_61",
+          "deficit": 4507
+        },
+        {
+          "zone": "RZ_97",
+          "deficit": 7202
+        },
+        {
+          "zone": "RZ_66",
+          "deficit": 7354
+        },
+        {
+          "zone": "RZ_93",
+          "deficit": 4756
+        },
+        {
+          "zone": "RZ_60",
+          "deficit": 1659
+        },
+        {
+          "zone": "RZ_71",
+          "deficit": 1675
+        },
+        {
+          "zone": "RZ_112",
+          "deficit": 10350
+        },
+        {
+          "zone": "RZ_68",
+          "deficit": 5985
+        },
+        {
+          "zone": "RZ_73",
+          "deficit": 4004
+        },
+        {
+          "zone": "RZ_107",
+          "deficit": 11911
+        },
+        {
+          "zone": "RZ_124",
+          "deficit": 4504
+        },
+        {
+          "zone": "RZ_65",
+          "deficit": 2014
+        },
+        {
+          "zone": "RZ_74",
+          "deficit": 2888
+        },
+        {
+          "zone": "RZ_67",
+          "deficit": 226
+        },
+        {
+          "zone": "RZ_72",
+          "deficit": 2099
+        },
+        {
+          "zone": "RZ_135",
+          "deficit": 7754
+        },
+        {
+          "zone": "RZ_50",
+          "deficit": 2503
+        },
+        {
+          "zone": "RZ_83",
+          "deficit": 3951
+        },
+        {
+          "zone": "RZ_82",
+          "deficit": 3899
+        },
+        {
+          "zone": "RZ_46",
+          "deficit": 2031
+        },
+        {
+          "zone": "RZ_90",
+          "deficit": 5235
+        },
+        {
+          "zone": "RZ_92",
+          "deficit": 4528
+        },
+        {
+          "zone": "RZ_76",
+          "deficit": 2056
+        },
+        {
+          "zone": "RZ_77",
+          "deficit": 5767
+        },
+        {
+          "zone": "RZ_134",
+          "deficit": 8958
+        },
+        {
+          "zone": "RZ_78",
+          "deficit": 537
+        },
+        {
+          "zone": "RZ_115",
+          "deficit": 6904
+        },
+        {
+          "zone": "RZ_109",
+          "deficit": 1479
+        },
+        {
+          "zone": "RZ_133",
+          "deficit": 2643
+        },
+        {
+          "zone": "RZ_85",
+          "deficit": 1270
+        },
+        {
+          "zone": "RZ_56",
+          "deficit": 429
+        },
+        {
+          "zone": "RZ_81",
+          "deficit": 2775
+        },
+        {
+          "zone": "RZ_79",
+          "deficit": 2186
+        },
+        {
+          "zone": "RZ_95",
+          "deficit": 5314
+        },
+        {
+          "zone": "RZ_139",
+          "deficit": 9993
+        },
+        {
+          "zone": "RZ_104",
+          "deficit": 3185
+        },
+        {
+          "zone": "RZ_87",
+          "deficit": 3202
+        },
+        {
+          "zone": "RZ_132",
+          "deficit": 3634
+        },
+        {
+          "zone": "RZ_156",
+          "deficit": 10266
+        },
+        {
+          "zone": "RZ_91",
+          "deficit": 1697
+        },
+        {
+          "zone": "RZ_100",
+          "deficit": 5867
+        },
+        {
+          "zone": "RZ_94",
+          "deficit": 3996
+        },
+        {
+          "zone": "RZ_103",
+          "deficit": 2999
+        },
+        {
+          "zone": "RZ_129",
+          "deficit": 25757
+        },
+        {
+          "zone": "RZ_118",
+          "deficit": 9047
+        },
+        {
+          "zone": "RZ_7",
+          "deficit": 2291
+        },
+        {
+          "zone": "RZ_126",
+          "deficit": 2246
+        },
+        {
+          "zone": "RZ_131",
+          "deficit": 2624
+        },
+        {
+          "zone": "RZ_136",
+          "deficit": 10382
+        },
+        {
+          "zone": "RZ_144",
+          "deficit": 4428
+        },
+        {
+          "zone": "RZ_137",
+          "deficit": 2612
+        },
+        {
+          "zone": "RZ_119",
+          "deficit": 2143
+        },
+        {
+          "zone": "RZ_186",
+          "deficit": 5908
+        },
+        {
+          "zone": "RZ_123",
+          "deficit": 7946
+        },
+        {
+          "zone": "RZ_146",
+          "deficit": 2954
+        },
+        {
+          "zone": "RZ_166",
+          "deficit": 9616
+        },
+        {
+          "zone": "RZ_105",
+          "deficit": 10012
+        },
+        {
+          "zone": "RZ_154",
+          "deficit": 4217
+        },
+        {
+          "zone": "RZ_167",
+          "deficit": 5749
+        },
+        {
+          "zone": "RZ_117",
+          "deficit": 8934
+        },
+        {
+          "zone": "RZ_155",
+          "deficit": 8778
+        },
+        {
+          "zone": "RZ_121",
+          "deficit": 6740
+        },
+        {
+          "zone": "RZ_203",
+          "deficit": 20972
+        },
+        {
+          "zone": "RZ_162",
+          "deficit": 918
+        },
+        {
+          "zone": "RZ_173",
+          "deficit": 12448
+        },
+        {
+          "zone": "RZ_116",
+          "deficit": 5568
+        },
+        {
+          "zone": "RZ_98",
+          "deficit": 3108
+        },
+        {
+          "zone": "RZ_205",
+          "deficit": 12013
+        },
+        {
+          "zone": "RZ_111",
+          "deficit": 1107
+        },
+        {
+          "zone": "RZ_153",
+          "deficit": 2091
+        },
+        {
+          "zone": "RZ_1",
+          "deficit": 9113
+        },
+        {
+          "zone": "RZ_114",
+          "deficit": 4114
+        },
+        {
+          "zone": "RZ_140",
+          "deficit": 3271
+        },
+        {
+          "zone": "RZ_101",
+          "deficit": 5388
+        },
+        {
+          "zone": "RZ_2",
+          "deficit": 3483
+        },
+        {
+          "zone": "RZ_99",
+          "deficit": 2247
+        },
+        {
+          "zone": "RZ_106",
+          "deficit": 3177
+        },
+        {
+          "zone": "RZ_182",
+          "deficit": 1822
+        },
+        {
+          "zone": "RZ_12",
+          "deficit": 333
+        },
+        {
+          "zone": "RZ_147",
+          "deficit": 5411
+        },
+        {
+          "zone": "RZ_122",
+          "deficit": 1820
+        },
+        {
+          "zone": "RZ_184",
+          "deficit": 2601
+        },
+        {
+          "zone": "RZ_128",
+          "deficit": 8815
+        },
+        {
+          "zone": "RZ_120",
+          "deficit": 5850
+        },
+        {
+          "zone": "RZ_149",
+          "deficit": 643
+        },
+        {
+          "zone": "RZ_157",
+          "deficit": 1041
+        },
+        {
+          "zone": "RZ_191",
+          "deficit": 1814
+        },
+        {
+          "zone": "RZ_3",
+          "deficit": 1103
+        },
+        {
+          "zone": "RZ_110",
+          "deficit": 8140
+        },
+        {
+          "zone": "RZ_164",
+          "deficit": 3301
+        },
+        {
+          "zone": "RZ_130",
+          "deficit": 3892
+        },
+        {
+          "zone": "RZ_141",
+          "deficit": 2838
+        },
+        {
+          "zone": "RZ_255",
+          "deficit": 17061
+        },
+        {
+          "zone": "RZ_145",
+          "deficit": 4416
+        },
+        {
+          "zone": "RZ_159",
+          "deficit": 2166
+        },
+        {
+          "zone": "RZ_165",
+          "deficit": 4163
+        },
+        {
+          "zone": "RZ_113",
+          "deficit": 5501
+        },
+        {
+          "zone": "RZ_125",
+          "deficit": 1480
+        },
+        {
+          "zone": "RZ_127",
+          "deficit": 2837
+        },
+        {
+          "zone": "RZ_188",
+          "deficit": 2637
+        },
+        {
+          "zone": "RZ_241",
+          "deficit": 14757
+        },
+        {
+          "zone": "RZ_138",
+          "deficit": 12557
+        },
+        {
+          "zone": "RZ_151",
+          "deficit": 4182
+        },
+        {
+          "zone": "RZ_172",
+          "deficit": 10319
+        },
+        {
+          "zone": "RZ_197",
+          "deficit": 13483
+        },
+        {
+          "zone": "RZ_229",
+          "deficit": 9366
+        },
+        {
+          "zone": "RZ_201",
+          "deficit": 2239
+        },
+        {
+          "zone": "RZ_193",
+          "deficit": 3651
+        },
+        {
+          "zone": "RZ_171",
+          "deficit": 6696
+        },
+        {
+          "zone": "RZ_181",
+          "deficit": 6234
+        },
+        {
+          "zone": "RZ_158",
+          "deficit": 6278
+        },
+        {
+          "zone": "RZ_192",
+          "deficit": 2130
+        },
+        {
+          "zone": "RZ_148",
+          "deficit": 1873
+        },
+        {
+          "zone": "RZ_70",
+          "deficit": 5714
+        },
+        {
+          "zone": "RZ_207",
+          "deficit": 7991
+        },
+        {
+          "zone": "RZ_215",
+          "deficit": 6300
+        },
+        {
+          "zone": "RZ_108",
+          "deficit": 567
+        },
+        {
+          "zone": "RZ_221",
+          "deficit": 2850
+        },
+        {
+          "zone": "RZ_168",
+          "deficit": 4982
+        },
+        {
+          "zone": "RZ_190",
+          "deficit": 1825
+        },
+        {
+          "zone": "RZ_152",
+          "deficit": 6782
+        },
+        {
+          "zone": "RZ_160",
+          "deficit": 8590
+        },
+        {
+          "zone": "RZ_206",
+          "deficit": 2499
+        },
+        {
+          "zone": "RZ_227",
+          "deficit": 6783
+        },
+        {
+          "zone": "RZ_226",
+          "deficit": 5032
+        },
+        {
+          "zone": "RZ_244",
+          "deficit": 8640
+        },
+        {
+          "zone": "RZ_254",
+          "deficit": 9251
+        },
+        {
+          "zone": "RZ_143",
+          "deficit": 3899
+        },
+        {
+          "zone": "RZ_161",
+          "deficit": 3699
+        },
+        {
+          "zone": "RZ_174",
+          "deficit": 4352
+        },
+        {
+          "zone": "RZ_212",
+          "deficit": 6551
+        },
+        {
+          "zone": "RZ_217",
+          "deficit": 10845
+        },
+        {
+          "zone": "RZ_194",
+          "deficit": 4992
+        },
+        {
+          "zone": "RZ_0",
+          "deficit": 3055
+        },
+        {
+          "zone": "RZ_200",
+          "deficit": 5648
+        },
+        {
+          "zone": "RZ_237",
+          "deficit": 3312
+        },
+        {
+          "zone": "RZ_267",
+          "deficit": 16936
+        },
+        {
+          "zone": "RZ_6",
+          "deficit": 14845
+        },
+        {
+          "zone": "RZ_180",
+          "deficit": 8393
+        },
+        {
+          "zone": "RZ_204",
+          "deficit": 4072
+        },
+        {
+          "zone": "RZ_259",
+          "deficit": 5663
+        },
+        {
+          "zone": "RZ_264",
+          "deficit": 15370
+        },
+        {
+          "zone": "RZ_240",
+          "deficit": 9386
+        },
+        {
+          "zone": "RZ_150",
+          "deficit": 13483
+        },
+        {
+          "zone": "RZ_256",
+          "deficit": 6785
+        },
+        {
+          "zone": "RZ_163",
+          "deficit": 1905
+        },
+        {
+          "zone": "RZ_177",
+          "deficit": 13659
+        },
+        {
+          "zone": "RZ_219",
+          "deficit": 2054
+        },
+        {
+          "zone": "RZ_243",
+          "deficit": 2831
+        },
+        {
+          "zone": "RZ_169",
+          "deficit": 4076
+        },
+        {
+          "zone": "RZ_263",
+          "deficit": 12511
+        },
+        {
+          "zone": "RZ_232",
+          "deficit": 3517
+        },
+        {
+          "zone": "RZ_5",
+          "deficit": 1041
+        },
+        {
+          "zone": "RZ_211",
+          "deficit": 1249
+        },
+        {
+          "zone": "RZ_176",
+          "deficit": 2082
+        },
+        {
+          "zone": "RZ_213",
+          "deficit": 7495
+        },
+        {
+          "zone": "RZ_220",
+          "deficit": 5126
+        },
+        {
+          "zone": "RZ_249",
+          "deficit": 6859
+        },
+        {
+          "zone": "RZ_178",
+          "deficit": 1661
+        },
+        {
+          "zone": "RZ_209",
+          "deficit": 2126
+        },
+        {
+          "zone": "RZ_235",
+          "deficit": 3340
+        },
+        {
+          "zone": "RZ_251",
+          "deficit": 1601
+        },
+        {
+          "zone": "RZ_258",
+          "deficit": 4661
+        },
+        {
+          "zone": "RZ_214",
+          "deficit": 3412
+        },
+        {
+          "zone": "RZ_253",
+          "deficit": 4993
+        },
+        {
+          "zone": "RZ_185",
+          "deficit": 2000
+        },
+        {
+          "zone": "RZ_195",
+          "deficit": 1558
+        },
+        {
+          "zone": "RZ_142",
+          "deficit": 1255
+        },
+        {
+          "zone": "RZ_179",
+          "deficit": 3084
+        },
+        {
+          "zone": "RZ_236",
+          "deficit": 4498
+        },
+        {
+          "zone": "RZ_170",
+          "deficit": 970
+        },
+        {
+          "zone": "RZ_175",
+          "deficit": 4252
+        },
+        {
+          "zone": "RZ_202",
+          "deficit": 10199
+        },
+        {
+          "zone": "RZ_248",
+          "deficit": 9307
+        },
+        {
+          "zone": "RZ_250",
+          "deficit": 8489
+        },
+        {
+          "zone": "RZ_260",
+          "deficit": 15406
+        },
+        {
+          "zone": "RZ_187",
+          "deficit": 2038
+        },
+        {
+          "zone": "RZ_199",
+          "deficit": 4519
+        },
+        {
+          "zone": "RZ_246",
+          "deficit": 14323
+        },
+        {
+          "zone": "RZ_257",
+          "deficit": 10009
+        },
+        {
+          "zone": "RZ_261",
+          "deficit": 2379
+        },
+        {
+          "zone": "RZ_223",
+          "deficit": 10083
+        },
+        {
+          "zone": "RZ_189",
+          "deficit": 1853
+        },
+        {
+          "zone": "RZ_231",
+          "deficit": 1491
+        },
+        {
+          "zone": "RZ_265",
+          "deficit": 7984
+        },
+        {
+          "zone": "RZ_225",
+          "deficit": 9006
+        },
+        {
+          "zone": "RZ_262",
+          "deficit": 5071
+        },
+        {
+          "zone": "RZ_8",
+          "deficit": 2678
+        },
+        {
+          "zone": "RZ_216",
+          "deficit": 2218
+        },
+        {
+          "zone": "RZ_233",
+          "deficit": 1899
+        },
+        {
+          "zone": "RZ_196",
+          "deficit": 1639
+        },
+        {
+          "zone": "RZ_222",
+          "deficit": 1803
+        },
+        {
+          "zone": "RZ_247",
+          "deficit": 4355
+        },
+        {
+          "zone": "RZ_198",
+          "deficit": 1577
+        },
+        {
+          "zone": "RZ_218",
+          "deficit": 668
+        },
+        {
+          "zone": "RZ_224",
+          "deficit": 4208
+        },
+        {
+          "zone": "RZ_242",
+          "deficit": 2974
+        },
+        {
+          "zone": "RZ_230",
+          "deficit": 1069
+        },
+        {
+          "zone": "RZ_234",
+          "deficit": 1852
+        },
+        {
+          "zone": "RZ_239",
+          "deficit": 2954
+        },
+        {
+          "zone": "RZ_245",
+          "deficit": 4621
+        },
+        {
+          "zone": "RZ_266",
+          "deficit": 8694
+        },
+        {
+          "zone": "RZ_208",
+          "deficit": 6766
+        },
+        {
+          "zone": "RZ_252",
+          "deficit": 7305
+        },
+        {
+          "zone": "RZ_210",
+          "deficit": 1884
+        },
+        {
+          "zone": "RZ_238",
+          "deficit": 3674
+        }
+      ],
+      "telemetry": {
+        "gust": 22.3,
+        "pressure": 1009
+      }
+    },
+    "recommendation": "Recommend immediate relocation of RAMACHANDRAPURAM(U) and Ravulapalem (combined 72k citizens at risk) to Pedaraghavulupeta. Pedaraghavulupeta is nearing maximum capacity at 100% (829/829 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ_22 registers an aggregate carrying-capacity deficit of 39,487 residents, requiring NDRF pre-positioning of temporary modular field relief camps. Doppler telemetry records peak sustained gusts of 22.3 km/h."
+  },
+  {
     "id": "REC-1789090836747",
     "timestamp": "2026-09-11T01:40:36.747Z",
     "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
@@ -5248,226 +8591,6 @@
   {
     "id": "REC-1789065769270",
     "timestamp": "2026-09-10T18:42:49.270Z",
-    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
-    "inputSummary": {
-      "topHabitations": [
-        {
-          "name": "Barpeta Lowland Clusters",
-          "pop": 27612,
-          "vpi": 0.746,
-          "tier": "SHORT_TERM"
-        },
-        {
-          "name": "Visakhapatnam Urban Coast",
-          "pop": 2091035,
-          "vpi": 0.737,
-          "tier": "SHORT_TERM"
-        },
-        {
-          "name": "Majuli River Island",
-          "pop": 19338,
-          "vpi": 0.696,
-          "tier": "SHORT_TERM"
-        }
-      ],
-      "deficitReports": [
-        {
-          "zone": "RZ002",
-          "deficit": 93310
-        },
-        {
-          "zone": "RZ_VIZAG",
-          "deficit": 2086835
-        },
-        {
-          "zone": "RZ001",
-          "deficit": 111360
-        },
-        {
-          "zone": "RZ005",
-          "deficit": 37778
-        },
-        {
-          "zone": "RZ003",
-          "deficit": 6880
-        },
-        {
-          "zone": "RZ004",
-          "deficit": 56641
-        }
-      ],
-      "telemetry": {}
-    },
-    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
-  },
-  {
-    "id": "REC-1789065733962",
-    "timestamp": "2026-09-10T18:42:13.962Z",
-    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
-    "inputSummary": {
-      "topHabitations": [
-        {
-          "name": "Barpeta Lowland Clusters",
-          "pop": 27612,
-          "vpi": 0.746,
-          "tier": "SHORT_TERM"
-        },
-        {
-          "name": "Visakhapatnam Urban Coast",
-          "pop": 2091035,
-          "vpi": 0.737,
-          "tier": "SHORT_TERM"
-        },
-        {
-          "name": "Majuli River Island",
-          "pop": 19338,
-          "vpi": 0.696,
-          "tier": "SHORT_TERM"
-        }
-      ],
-      "deficitReports": [
-        {
-          "zone": "RZ002",
-          "deficit": 93310
-        },
-        {
-          "zone": "RZ_VIZAG",
-          "deficit": 2086835
-        },
-        {
-          "zone": "RZ001",
-          "deficit": 111360
-        },
-        {
-          "zone": "RZ005",
-          "deficit": 37778
-        },
-        {
-          "zone": "RZ003",
-          "deficit": 6880
-        },
-        {
-          "zone": "RZ004",
-          "deficit": 56641
-        }
-      ],
-      "telemetry": {}
-    },
-    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
-  },
-  {
-    "id": "REC-1789065133949",
-    "timestamp": "2026-09-10T18:32:13.949Z",
-    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
-    "inputSummary": {
-      "topHabitations": [
-        {
-          "name": "Barpeta Lowland Clusters",
-          "pop": 27612,
-          "vpi": 0.746,
-          "tier": "SHORT_TERM"
-        },
-        {
-          "name": "Visakhapatnam Urban Coast",
-          "pop": 2091035,
-          "vpi": 0.737,
-          "tier": "SHORT_TERM"
-        },
-        {
-          "name": "Majuli River Island",
-          "pop": 19338,
-          "vpi": 0.696,
-          "tier": "SHORT_TERM"
-        }
-      ],
-      "deficitReports": [
-        {
-          "zone": "RZ002",
-          "deficit": 93310
-        },
-        {
-          "zone": "RZ_VIZAG",
-          "deficit": 2086835
-        },
-        {
-          "zone": "RZ001",
-          "deficit": 111360
-        },
-        {
-          "zone": "RZ005",
-          "deficit": 37778
-        },
-        {
-          "zone": "RZ003",
-          "deficit": 6880
-        },
-        {
-          "zone": "RZ004",
-          "deficit": 56641
-        }
-      ],
-      "telemetry": {}
-    },
-    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
-  },
-  {
-    "id": "REC-1789064533202",
-    "timestamp": "2026-09-10T18:22:13.202Z",
-    "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
-    "inputSummary": {
-      "topHabitations": [
-        {
-          "name": "Barpeta Lowland Clusters",
-          "pop": 27612,
-          "vpi": 0.746,
-          "tier": "SHORT_TERM"
-        },
-        {
-          "name": "Visakhapatnam Urban Coast",
-          "pop": 2091035,
-          "vpi": 0.737,
-          "tier": "SHORT_TERM"
-        },
-        {
-          "name": "Majuli River Island",
-          "pop": 19338,
-          "vpi": 0.696,
-          "tier": "SHORT_TERM"
-        }
-      ],
-      "deficitReports": [
-        {
-          "zone": "RZ002",
-          "deficit": 93310
-        },
-        {
-          "zone": "RZ_VIZAG",
-          "deficit": 2086835
-        },
-        {
-          "zone": "RZ001",
-          "deficit": 111360
-        },
-        {
-          "zone": "RZ005",
-          "deficit": 37778
-        },
-        {
-          "zone": "RZ003",
-          "deficit": 6880
-        },
-        {
-          "zone": "RZ004",
-          "deficit": 56641
-        }
-      ],
-      "telemetry": {}
-    },
-    "recommendation": "Recommend immediate relocation of Barpeta Lowland Clusters and Visakhapatnam Urban Coast (combined 2119k citizens at risk) to Jorhat District Flood Relief Center. Kakinada Port Trust Cyclone Relief Camp is nearing maximum capacity at 100% (5000/5000 beds) — redirect second-wave evacuees toward regional overflow centers. Hazard Zone RZ002 registers an aggregate carrying-capacity deficit of 93,310 residents, requiring NDRF pre-positioning of temporary modular field relief camps."
-  },
-  {
-    "id": "REC-1789063981954",
-    "timestamp": "2026-09-10T18:13:01.954Z",
     "model": "Operational Risk Analyst Engine (Deterministic Fallback)",
     "inputSummary": {
       "topHabitations": [

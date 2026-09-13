@@ -1410,8 +1410,8 @@ function getHabitationRegion(h) {
   if (d.includes('kakinada') || d.includes('east godavari') || v.includes('uppada') || v.includes('port') || v.includes('suryaraopeta')) {
     return { name: 'Kakinada Coast & Corridors', hazard: '🌀 Cyclone & Surge', tag: 'Direct Maritime Interface' };
   }
-  if (d.includes('konaseema') || d.includes('west godavari') || v.includes('amalapuram') || v.includes('godavari') || v.includes('antardvedi')) {
-    return { name: 'Konaseema Delta Floodplain', hazard: '🌊 Riverine & Surge', tag: 'Low-Lying Estuary' };
+  if (d.includes('west godavari') || v.includes('amalapuram') || v.includes('godavari') || v.includes('antardvedi')) {
+    return { name: 'Coastal AP Floodplain', hazard: '🌊 Riverine & Surge', tag: 'Low-Lying Estuary' };
   }
   if (d.includes('alluri') || d.includes('visakhapatnam') || d.includes('manyam') || d.includes('chamoli') || d.includes('kullu') || d.includes('aruku')) {
     return { name: 'Eastern Ghats & Upland Sector', hazard: '⛰️ Landslide & Inundation', tag: 'Slope Instability' };
@@ -1420,209 +1420,223 @@ function getHabitationRegion(h) {
 }
 
 function renderPriorityRankingTable(data) {
-  const tbody = document.getElementById('habitations-ranking-tbody');
+  const container = document.getElementById('priority-queue-container');
   const chip = document.getElementById('vpi-summary-chip');
-  if (!tbody || !data || !data.habitations) return;
+  if (!container || !data || !data.habitations) return;
 
   if (chip && data.summary) {
-    chip.innerHTML = `VPI Engine Active &bull; Immediate: <strong style="color:#fca5a5;">${data.summary.immediateTierCount}</strong> | Short-Term: <strong style="color:#fdba74;">${data.summary.shortTermTierCount}</strong> | Deficit: <strong style="color:#ef4444;">${Number(data.summary.totalDeficitPop).toLocaleString()}</strong>`;
+    chip.innerHTML = `Priority Engine Active &bull; Critical: <strong style="color:#fca5a5;">${data.summary.criticalCount}</strong> | High: <strong style="color:#fdba74;">${data.summary.highCount}</strong>`;
   }
 
-  // FLIP (First, Last, Invert, Play) technique for smooth row reordering
-  const firstPositions = new Map();
-  tbody.querySelectorAll('tr[data-village-id]').forEach(tr => {
-    firstPositions.set(tr.dataset.villageId, tr.getBoundingClientRect().top);
-  });
+  container.innerHTML = '';
 
-  tbody.innerHTML = '';
-
-  // Group habitations by Hazard Region (Requirement H2)
-  const regionMap = new Map();
   data.habitations.forEach(h => {
-    const reg = getHabitationRegion(h);
-    if (!regionMap.has(reg.name)) {
-      regionMap.set(reg.name, { meta: reg, items: [] });
+    // Determine styles based on tier
+    let borderCol = '#334155';
+    let bgCol = '#1e293b';
+    let badgeCol = '#94a3b8';
+    
+    if (h.priorityLevel === 'CRITICAL') {
+      borderCol = '#ef4444';
+      bgCol = '#7f1d1d20';
+      badgeCol = '#f87171';
+    } else if (h.priorityLevel === 'HIGH') {
+      borderCol = '#f97316';
+      bgCol = '#7c2d1220';
+      badgeCol = '#fb923c';
+    } else if (h.priorityLevel === 'MODERATE') {
+      borderCol = '#eab308';
+      bgCol = '#713f1220';
+      badgeCol = '#facc15';
     }
-    regionMap.get(reg.name).items.push(h);
-  });
 
-  let globalIndex = 1;
-  regionMap.forEach(({ meta, items }, regName) => {
-    const subtotalPop = items.reduce((sum, it) => sum + (Number(it.growth_adjusted_pop) || Number(it.census_2011_pop) || 0), 0);
+    const card = document.createElement('div');
+    card.style.border = `1px solid ${borderCol}`;
+    card.style.background = bgCol;
+    card.style.borderRadius = '12px';
+    card.style.padding = '16px';
+    card.style.display = 'flex';
+    card.style.flexDirection = 'column';
+    card.style.gap = '12px';
 
-    // Section header for hazard region
-    const headerTr = document.createElement('tr');
-    headerTr.className = 'region-header-row';
-    headerTr.innerHTML = `
-      <td colspan="9" style="background:#eff6ff; padding:10px 14px; border-top:2px solid #bfdbfe; border-bottom:1px solid #dbeafe;">
-        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <span style="font-size:13px; font-weight:800; color:#1d4ed8;">📍 ${meta.name}</span>
-            <span style="font-size:10px; font-weight:700; padding:2px 8px; border-radius:6px; background:#fef2f2; color:#b91c1c; border:1px solid #fecaca;">${meta.hazard}</span>
-            <span style="font-size:10px; color:#64748b;">(${meta.tag})</span>
+    const hLat = h.lat || 16.9891;
+    const hLng = h.lng || 82.2475;
+
+    // Encode factor data for explanation
+    const explainData = encodeURIComponent(JSON.stringify({
+      name: h.name,
+      score: h.priorityScore,
+      level: h.priorityLevel,
+      factors: h.factorScores,
+      reasons: h.reasons,
+      action: h.recommendedAction,
+      override: h.overrideApplied
+    }));
+
+    card.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+        <div>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+            <span style="font-size:18px; font-weight:800; color:#fff;">#${h.rank}</span>
+            <a href="javascript:void(0)" onclick="focusCoordinates(${hLat}, ${hLng}, 14)" style="color:var(--text-primary); font-size:16px; font-weight:700; text-decoration:none;">
+              ${h.name} 🔍
+            </a>
+            <span style="background:${borderCol}33; color:${badgeCol}; padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700; border:1px solid ${borderCol};">
+              ${h.priorityLevel} — ${h.priorityScore}
+            </span>
           </div>
-          <div style="font-size:11px; color:#475569;">
-            Habitations: <strong style="color:#0f172a;">${items.length}</strong> &bull; Subtotal Exposure: <strong style="color:#1d4ed8;">${subtotalPop.toLocaleString()}</strong>
+          <div style="font-size:12px; color:var(--text-muted);">
+            ${h.district} &bull; ${h.hazardType} &bull; ${h.population.toLocaleString()} people
           </div>
         </div>
-      </td>
+        <button class="btn btn-glass" style="font-size:11px; padding:4px 8px;" onclick="showPriorityExplanation('${explainData}')">
+          ❓ Why this decision?
+        </button>
+      </div>
+
+      <div style="display:flex; gap:16px; font-size:12px; color:var(--text-secondary); background:rgba(0,0,0,0.2); padding:8px 12px; border-radius:8px;">
+        <div><strong style="color:#fff;">Pop Risk:</strong> ${h.factorScores.populationAtRisk}</div>
+        <div><strong style="color:#fff;">Life Risk:</strong> ${h.factorScores.immediateLifeRisk}</div>
+        <div><strong style="color:#fff;">Urgency:</strong> ${h.factorScores.responseUrgency}</div>
+        <div><strong style="color:#fff;">ETA Score:</strong> ${h.factorScores.accessibility}</div>
+      </div>
+
+      <div style="font-size:13px; border-top:1px solid rgba(255,255,255,0.1); padding-top:8px;">
+        <strong style="color:#38bdf8;">RECOMMENDED ACTION:</strong> <span style="color:#fff;">${h.recommendedAction}</span>
+      </div>
     `;
-    tbody.appendChild(headerTr);
 
-    items.forEach(h => {
-      const tr = document.createElement('tr');
-      tr.dataset.villageId = h.village_id;
-
-      let tierBadgeClass = 'tier-medium-term';
-      let tierIcon = '✅';
-      if (h.tier === 'IMMEDIATE') {
-        tierBadgeClass = 'tier-immediate';
-        tierIcon = '🚨';
-      } else if (h.tier === 'SHORT_TERM') {
-        tierBadgeClass = 'tier-short-term';
-        tierIcon = '⚠️';
-      }
-
-      // Shelter allocation rendering
-      let shelterHtml = '';
-      if (h.assigned_shelters && h.assigned_shelters.length > 0) {
-        shelterHtml = h.assigned_shelters.map(s => `
-          <div style="margin-bottom:4px;">
-            <strong style="color:var(--text-primary); font-size:12px;">${s.shelter_name}</strong>
-            <div style="font-size:11px; color:var(--text-muted);">
-              ${Number(s.allocated_pop).toLocaleString()} evacuees &bull; <span style="color:#38bdf8; font-weight:600;">${s.distance_km} km</span> road distance
-            </div>
-          </div>
-        `).join('');
-        if (h.allocation_status === 'PARTIALLY_ALLOCATED') {
-          shelterHtml += `<span class="alloc-badge alloc-partial">SPLIT ALLOCATION (${Number(h.unallocated_pop).toLocaleString()} unassigned)</span>`;
-        }
-      } else {
-        shelterHtml = `<span class="alloc-badge alloc-unallocated">CAPACITY DEFICIT (${Number(h.unallocated_pop).toLocaleString()} unassigned)</span>`;
-      }
-
-      // Factors breakdown popover
-      const cf = h.contributing_factors || {};
-      const breakdownHtml = `
-        <div style="position:relative; display:inline-block;">
-          <button class="vpi-breakdown-btn" onclick="toggleFactorBreakdown('${h.village_id}')" title="Inspect 6 contributing VPI factors">
-            <span>🔬</span> <span>View Weights</span>
-          </button>
-          <div class="factor-breakdown-box" id="breakdown-${h.village_id}">
-            <div style="font-weight:700; color:#fff; margin-bottom:8px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:6px;">
-              <span>${h.village_name}</span>
-              <span style="color:#38bdf8; font-family:monospace; font-size:12px;">VPI: ${h.vpi_score.toFixed(3)}</span>
-            </div>
-            <div class="factor-row">
-              <span class="factor-name">1. Hazard Intensity (w=0.25):</span>
-              <span class="factor-val">${cf.hazard_intensity?.normalized ?? 0}</span>
-              <span class="factor-contrib">+${cf.hazard_intensity?.weighted ?? 0}</span>
-            </div>
-            <div class="factor-row">
-              <span class="factor-name">2. Census Vulnerability (w=0.20):</span>
-              <span class="factor-val">${cf.vulnerability?.normalized ?? 0}</span>
-              <span class="factor-contrib">+${cf.vulnerability?.weighted ?? 0}</span>
-            </div>
-            <div class="factor-row">
-              <span class="factor-name">3. Normalized pop-density score (w=0.15):</span>
-              <span class="factor-val">${cf.population_density?.normalized ?? 0}</span>
-              <span class="factor-contrib">Contrib: +${cf.population_density?.weighted ?? 0}</span>
-            </div>
-            <div class="factor-row">
-              <span class="factor-name">4. Elevation Inundation (w=0.15):</span>
-              <span class="factor-val">${cf.elevation_risk?.normalized ?? 0} (${cf.elevation_risk?.raw ?? 0}m)</span>
-              <span class="factor-contrib">+${cf.elevation_risk?.weighted ?? 0}</span>
-            </div>
-            <div class="factor-row">
-              <span class="factor-name">5. Disaster History (w=0.10):</span>
-              <span class="factor-val">${cf.disaster_history?.normalized ?? 0}</span>
-              <span class="factor-contrib">+${cf.disaster_history?.weighted ?? 0}</span>
-            </div>
-            <div class="factor-row">
-              <span class="factor-name">6. Access Isolation (w=0.15):</span>
-              <span class="factor-val">${cf.access_isolation?.normalized ?? 0} (${cf.access_isolation?.raw ?? 0}km)</span>
-              <span class="factor-contrib">+${cf.access_isolation?.weighted ?? 0}</span>
-            </div>
-            <div style="margin-top:8px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; font-weight:700;">
-              <span style="color:var(--text-muted);">Composite VPI:</span>
-              <span style="color:#38bdf8;">${h.vpi_score.toFixed(3)} (${h.tier})</span>
-            </div>
-          </div>
-        </div>
-      `;
-
-      const hLat = h.lat || 16.9891;
-      const hLng = h.lng || 82.2475;
-
-      tr.innerHTML = `
-        <td style="color:var(--text-muted); font-weight:700;">${globalIndex++}</td>
-        <td>
-          <a href="javascript:void(0)" onclick="focusCoordinates(${hLat}, ${hLng}, 14)" style="color:var(--text-primary); font-size:13px; font-weight:700; text-decoration:none;" title="Click to view habitation on GIS map">
-            ${h.village_name} 🔍
-          </a>
-          <br><small style="color:var(--text-muted);">${h.district}, ${h.state}</small>
-        </td>
-        <td><strong>${Number(h.growth_adjusted_pop).toLocaleString()}</strong></td>
-        <td><span class="risk-badge" style="background:rgba(255,255,255,0.06); text-transform:capitalize;">${h.hazard_type || 'Cyclone'}</span></td>
-        <td><span class="vpi-score-pill" data-vpi-target="${h.vpi_score.toFixed(3)}">0.000</span></td>
-        <td><span class="tier-badge ${tierBadgeClass}">${tierIcon} ${h.tier.replace('_', ' ')}</span></td>
-        <td>${shelterHtml}</td>
-        <td>${breakdownHtml}</td>
-      `;
-      tbody.appendChild(tr);
-    });
+    container.appendChild(card);
   });
-
-  // FLIP animation playback
-  requestAnimationFrame(() => {
-    tbody.querySelectorAll('tr[data-village-id]').forEach(tr => {
-      const id = tr.dataset.villageId;
-      if (firstPositions.has(id)) {
-        const oldTop = firstPositions.get(id);
-        const newTop = tr.getBoundingClientRect().top;
-        const deltaY = oldTop - newTop;
-        if (Math.abs(deltaY) > 1) {
-          tr.style.transform = `translateY(${deltaY}px)`;
-          tr.style.transition = 'none';
-          requestAnimationFrame(() => {
-            tr.style.transition = 'transform 0.3s ease';
-            tr.style.transform = '';
-          });
-        }
-      }
-    });
-  });
-
-  // Animate VPI scores counting up from 0 to final value over ~800ms
-  animateVpiScores();
 }
 
-function animateVpiScores() {
-  const pills = document.querySelectorAll('.vpi-score-pill[data-vpi-target]');
-  if (!pills.length) return;
-  const startTime = performance.now();
-  const duration = 800;
+function showPriorityExplanation(encodedData) {
+  const data = JSON.parse(decodeURIComponent(encodedData));
+  const content = document.getElementById('priority-modal-content');
+  if(!content) return;
 
-  function step(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    // Ease-out expo/cubic curve
-    const ease = 1 - Math.pow(1 - progress, 3);
+  const getLLMExplanation = `
+    <div style="margin-top:16px; text-align:center;">
+      <button class="btn btn-primary" onclick="fetchAIExplanationForIncident('${encodeURIComponent(JSON.stringify(data))}')" id="btn-fetch-explanation">
+        🤖 Ask DeepSeek for Briefing
+      </button>
+      <div id="ai-briefing-result" style="margin-top:12px; font-size:13px; color:#fff; text-align:left; background:#1e293b; padding:12px; border-radius:8px; display:none;"></div>
+    </div>
+  `;
 
-    pills.forEach(pill => {
-      const target = parseFloat(pill.dataset.vpiTarget) || 0;
-      pill.textContent = (ease * target).toFixed(3);
+  content.innerHTML = `
+    <div style="display:flex; justify-content:space-between; margin-bottom:16px;">
+      <div style="font-size:20px; font-weight:700; color:#fff;">${data.name}</div>
+      <div style="font-size:18px; font-weight:700; color:#38bdf8;">${data.score} / 100 <span style="font-size:14px; color:#94a3b8;">(${data.level})</span></div>
+    </div>
+    
+    ${data.override ? '<div style="background:#7f1d1d; color:#fca5a5; padding:8px; border-radius:6px; font-size:12px; font-weight:700; margin-bottom:16px; border:1px solid #f87171;">⚠️ Emergency life-safety override applied.</div>' : ''}
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; font-size:13px; margin-bottom:16px; color:#cbd5e1;">
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #334155; padding-bottom:4px;">
+        <span>Hazard Severity (25%)</span> <strong>${data.factors.hazardSeverity}</strong>
+      </div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #334155; padding-bottom:4px;">
+        <span>Population (20%)</span> <strong>${data.factors.populationAtRisk}</strong>
+      </div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #334155; padding-bottom:4px;">
+        <span>Vulnerability (15%)</span> <strong>${data.factors.vulnerability}</strong>
+      </div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #334155; padding-bottom:4px;">
+        <span>Life Risk (15%)</span> <strong>${data.factors.immediateLifeRisk}</strong>
+      </div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #334155; padding-bottom:4px;">
+        <span>Urgency (15%)</span> <strong>${data.factors.responseUrgency}</strong>
+      </div>
+      <div style="display:flex; justify-content:space-between; border-bottom:1px solid #334155; padding-bottom:4px;">
+        <span>Accessibility (10%)</span> <strong>${data.factors.accessibility}</strong>
+      </div>
+    </div>
+
+    <div style="margin-bottom:16px;">
+      <div style="font-size:11px; color:#94a3b8; margin-bottom:4px; text-transform:uppercase;">Primary Reasons</div>
+      <ul style="margin:0; padding-left:20px; font-size:13px; color:#fff;">
+        ${data.reasons.map(r => `<li>${r}</li>`).join('')}
+      </ul>
+    </div>
+
+    <div>
+      <div style="font-size:11px; color:#94a3b8; margin-bottom:4px; text-transform:uppercase;">Recommended Action</div>
+      <div style="font-size:14px; font-weight:600; color:#22c55e;">${data.action}</div>
+    </div>
+
+    ${getLLMExplanation}
+  `;
+
+  document.getElementById('priority-explanation-modal').style.display = 'flex';
+}
+
+async function fetchAIExplanationForIncident(encodedData) {
+  const data = JSON.parse(decodeURIComponent(encodedData));
+  const btn = document.getElementById('btn-fetch-explanation');
+  const resDiv = document.getElementById('ai-briefing-result');
+  
+  if(btn) btn.innerHTML = '⏳ Generating...';
+  
+  try {
+    const response = await fetch('/api/ai-recommendation', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        telemetry: { radar: { maxGustSpeedKmH: 120, corePressureHpa: 980 } }, // Mock telemetry just for prompt structure
+        priorityData: {
+          habitations: [{
+            name: data.name,
+            population: data.factors.populationAtRisk,
+            priorityScore: data.score,
+            priorityLevel: data.level,
+            overrideApplied: data.override,
+            factorScores: data.factors,
+            reasons: data.reasons,
+            recommendedAction: data.action
+          }]
+        }
+      })
     });
-
-    if (progress < 1) {
-      requestAnimationFrame(step);
-    } else {
-      pills.forEach(pill => {
-        pill.textContent = parseFloat(pill.dataset.vpiTarget).toFixed(3);
-      });
+    const result = await response.json();
+    if(resDiv) {
+      resDiv.innerHTML = `<strong style="color:#38bdf8;">DeepSeek Briefing:</strong><br>${result.recommendation}`;
+    }
+    if(btn) btn.style.display = 'none';
+  } catch(e) {
+    if(btn) btn.innerHTML = '🤖 Ask DeepSeek for Briefing';
+    if(resDiv) {
+      resDiv.style.display = 'block';
+      resDiv.innerHTML = '<span style="color:#ef4444;">Failed to connect to DeepSeek. Priority Engine operating deterministically.</span>';
     }
   }
-  requestAnimationFrame(step);
+}
+
+function simulateSensorAlert() {
+  showToast('SIMULATED SENSOR ALERT: Critical Water Level Threshold Breached at Podalada', 'warning');
+  
+  // To simulate this without a real backend state change, we can fetch, modify, and render locally
+  if (window.currentPriorityData && window.currentPriorityData.habitations) {
+    // Find a specific village (e.g. Podalada) and simulate extreme conditions
+    const target = window.currentPriorityData.habitations.find(h => (h.name || h.village_name) === 'Podalada') || window.currentPriorityData.habitations[0];
+    if (target) {
+      target.immediateLifeRiskRaw = 95;
+      target.hazardSeverityRaw = 90;
+      target.lifeThreatening = true;
+      target.reasons = ["Simulated Sensor Alert Received"];
+      
+      // Recalculate using local PriorityEngine
+      if (typeof window.PriorityEngine !== 'undefined') {
+        const recalc = window.PriorityEngine.rankIncidents(window.currentPriorityData.habitations);
+        window.currentPriorityData.habitations = recalc;
+        renderPriorityRankingTable(window.currentPriorityData);
+        showToast('Priority recalculated. Queue updated dynamically.', 'success');
+      }
+    }
+  } else {
+    // If we haven't loaded yet, just load and then we can simulate on next click
+    loadPriorityRanking(true);
+  }
 }
 
 function toggleFactorBreakdown(id) {
@@ -2141,7 +2155,7 @@ function renderDecisionBriefUI(briefText, meta = {}, timestamp = Date.now()) {
       icon: '🛰️',
       badge: 'SATELLITE & SENSOR GROUND TRUTH',
       color: '#38bdf8',
-      fallback: '30 TerraMind flood polygons vectorized from Sentinel-1 RTC + Sentinel-2 L2A + Copernicus DEM across Konaseema. Analysis threshold 0.50 is not ground-truth calibrated. 0 direct habitation intersections across 268 habitations; nearest is Peravaram at 631.57 m.'
+      fallback: '30 TerraMind flood polygons vectorized from Sentinel-1 RTC + Sentinel-2 L2A + Copernicus DEM across Coastal AP. Analysis threshold 0.50 is not ground-truth calibrated.'
     },
     {
       key: 'RISK / PRIORITY',
@@ -2149,7 +2163,7 @@ function renderDecisionBriefUI(briefText, meta = {}, timestamp = Date.now()) {
       icon: '⚠️',
       badge: 'EXPOSURE & SEVERITY CLASSIFICATION',
       color: '#f97316',
-      fallback: 'Konaseema 2026 projected population: 1,865,817 (MoHFW projection, not a census; not exposed population). Normalized population-density score: 0.356, Population-density VPI contribution: 0.0534. Standby monitoring priority for proximity buffer clusters.'
+      fallback: 'Coastal AP 2026 projected population (MoHFW projection, not a census; not exposed population). Normalized population-density score: 0.356, Population-density VPI contribution: 0.0534. Standby monitoring priority for proximity buffer clusters.'
     },
     {
       key: 'AUTHORITY RECOMMENDATIONS',
@@ -2165,7 +2179,7 @@ function renderDecisionBriefUI(briefText, meta = {}, timestamp = Date.now()) {
       icon: '🏕️',
       badge: 'CAPACITY & OSRM LOGISTICS',
       color: '#22c55e',
-      fallback: '10 AP SDMA cyclone shelters identified in Konaseema with official capacity of 7,282 persons. 268 selected habitation-to-shelter OSRM routes computed successfully. Road passability during a disaster is not verified.'
+      fallback: 'AP SDMA cyclone shelters identified in Coastal AP. Selected habitation-to-shelter OSRM routes computed successfully. Road passability during a disaster is not verified.'
     },
     {
       key: 'LIMITATIONS / CONFIDENCE',
@@ -2213,7 +2227,12 @@ function renderDecisionBriefUI(briefText, meta = {}, timestamp = Date.now()) {
   const metaSep = document.getElementById('dsb-meta-sep');
 
   if (metaModel) {
-    metaModel.textContent = (meta.model && meta.model.toLowerCase().includes('deepseek')) ? 'DeepSeek-R1 8B' : (meta.model || 'DeepSeek-R1 8B');
+    let label = meta.model || 'Unknown';
+    if (meta.provider === 'ollama') label = 'DeepSeek-R1 • Local AI';
+    else if (meta.provider === 'claude') label = 'Claude • Cloud AI';
+    else if (meta.provider === 'deterministic-fallback') label = 'Deterministic Emergency Analyst • Fallback';
+    
+    metaModel.textContent = label;
   }
   if (metaTime) {
     const timeStr = new Date(timestamp).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -2275,13 +2294,14 @@ async function generateDecisionBrief(forceRefresh = false) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 320000); // 320s max timeout
 
-    // Step 3: Call real API endpoint POST http://127.0.0.1:8001/ai/decision-brief
-    const resp = await fetch('http://127.0.0.1:8001/ai/decision-brief', {
+    // Step 3: Call real API endpoint POST /api/ai-recommendation
+    const resp = await fetch('/api/ai-recommendation', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
+      body: JSON.stringify({}),
       signal: controller.signal
     });
     clearTimeout(timeoutId);
@@ -2291,29 +2311,41 @@ async function generateDecisionBrief(forceRefresh = false) {
     }
 
     const data = await resp.json();
-    if (!data || !data.brief) {
+    const recommendationText = data.recommendation || data.brief;
+    if (!data || !recommendationText) {
       throw new Error('API returned empty or invalid response');
     }
 
     const duration = Math.round((Date.now() - startTime) / 1000);
-    const meta = data.meta || {};
+    const meta = data.meta || { model: data.model || 'Unknown Model', provider: data.provider || 'unknown' };
     if (!meta.inference_duration_seconds) meta.inference_duration_seconds = duration;
 
     // Cache in sessionStorage
     try {
       sessionStorage.setItem('rzi_decision_brief', JSON.stringify({
-        brief: data.brief,
+        brief: recommendationText,
         meta: meta,
         timestamp: Date.now()
       }));
     } catch (e) {}
 
-    renderDecisionBriefUI(data.brief, meta, Date.now());
-    showToast(`DeepSeek Decision Brief generated successfully (${duration}s)`, 'success');
+    renderDecisionBriefUI(recommendationText, meta, Date.now());
+    if (data.fallback) {
+      showToast(`Primary AI unavailable. Deterministic emergency analysis active. (${duration}s)`, 'warning');
+    } else {
+      let providerName = meta.provider === 'claude' ? 'Claude' : 'DeepSeek';
+      showToast(`${providerName} Decision Brief generated successfully (${duration}s)`, 'success');
+    }
 
   } catch (err) {
     console.error('Decision brief fetch error:', err);
-    renderDecisionBriefError(err.message || 'Request failed');
+    let errorMsg = err.message || 'Request failed';
+    if (errorMsg.toLowerCase().includes('failed to fetch') || errorMsg.toLowerCase().includes('networkerror')) {
+      errorMsg = 'AI service is currently unreachable. GIS intelligence remains operational.';
+    } else if (errorMsg.includes('HTTP')) {
+      errorMsg = 'AI service returned an error. GIS intelligence remains operational.';
+    }
+    renderDecisionBriefError(errorMsg);
   } finally {
     isGeneratingDecisionBrief = false;
     if (decisionBriefTimerInterval) {

@@ -64,10 +64,10 @@ const RISK_TIERS = {
 const RISK_COLORS = RISK_TIERS;
 
 const LAYER_CONFIG = {
-  satellite:   { name: 'Satellite',   icon: '🛰️', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', maxZoom: 19 },
-  standard:    { name: 'Standard',    icon: '🗺️', url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', maxZoom: 19 },
-  windy:       { name: 'Windy Radar', icon: '🌀', url: 'https://tilecache.rainviewer.com/v2/radar/nowcast/256/{z}/{x}/{y}/2/1_1.png', maxZoom: 12, opacity: 0.75 },
-  topo:        { name: 'Elevation',   icon: '⛰️', url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', maxZoom: 17 }
+  satellite: { name: 'Satellite', icon: '🛰️', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', maxZoom: 19 },
+  standard: { name: 'Standard', icon: '🗺️', url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', maxZoom: 19 },
+  windy: { name: 'Windy Radar', icon: '🌀', url: 'https://tilecache.rainviewer.com/v2/radar/nowcast/256/{z}/{x}/{y}/2/1_1.png', maxZoom: 12, opacity: 0.75 },
+  topo: { name: 'Elevation', icon: '⛰️', url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', maxZoom: 17 }
 };
 
 if (typeof fetch !== 'undefined') {
@@ -78,7 +78,7 @@ if (typeof fetch !== 'undefined') {
         LAYER_CONFIG.windy.url = `https://tiles.windy.com/tiles/v1.0/radar/{z}/{x}/{y}.png?key=${cfg.key}`;
       }
     })
-    .catch(() => {});
+    .catch(() => { });
 }
 
 if (typeof window !== 'undefined') {
@@ -177,7 +177,7 @@ class DisasterMap {
     this.overlayLayers = {};
     this.activeBaseLayer = 'standard';
     this.riskZoneCircles = [];
-    this.markers = { safeSites: [], hospitals: [], habitations: [], hazards: [] };
+    this.markers = { safeSites: [], hospitals: [], habitations: null, hazards: [] };
     this.userMarker = null;
     this.init();
   }
@@ -217,6 +217,21 @@ class DisasterMap {
       setTimeout(() => {
         if (this.map && this.map.scrollWheelZoom) {
           this.map.scrollWheelZoom.enable();
+        }
+
+        // AP Boundary Enforcement
+        if (window.APBoundaryService) {
+          const checkAPReady = setInterval(() => {
+            if (window.APBoundaryService.ready) {
+              clearInterval(checkAPReady);
+              window.APBoundaryService.drawBorder(this.map);
+              // Only fit bounds if no specific coordinate was requested (defaults to config center)
+              if (!config.center || config.center[0] === 16.99) {
+                window.APBoundaryService.fitMap(this.map);
+              }
+            }
+          }, 100);
+          setTimeout(() => clearInterval(checkAPReady), 3000);
         }
       }, 350);
     });
@@ -277,9 +292,9 @@ class DisasterMap {
   drawRiskZones() {
     if (this.riskZoneCircles && this.riskZoneCircles.length) {
       this.riskZoneCircles.forEach(rz => {
-        if (rz.circle) try { this.map.removeLayer(rz.circle); } catch(e) {}
-        if (rz.rings) rz.rings.forEach(r => { try { this.map.removeLayer(r); } catch(e) {} });
-        if (rz.label) try { this.map.removeLayer(rz.label); } catch(e) {}
+        if (rz.circle) try { this.map.removeLayer(rz.circle); } catch (e) { }
+        if (rz.rings) rz.rings.forEach(r => { try { this.map.removeLayer(r); } catch (e) { } });
+        if (rz.label) try { this.map.removeLayer(rz.label); } catch (e) { }
       });
     }
     this.riskZoneCircles = [];
@@ -287,8 +302,8 @@ class DisasterMap {
     // Concentric multi-ring configuration:
     // Simplified to 2 rings to reduce visual clutter
     const CONCENTRIC_TIERS = [
-      { level: 'YELLOW', multiplier: 1.00, subLabel: 'MODERATE',   fillOpacity: 0.15, strokeOpacity: 0.60, ringName: 'Monitoring Zone' },
-      { level: 'RED',    multiplier: 0.35, subLabel: 'CRITICAL',   fillOpacity: 0.30, strokeOpacity: 0.90, ringName: 'Critical Active Core' }
+      { level: 'YELLOW', multiplier: 1.00, subLabel: 'MODERATE', fillOpacity: 0.15, strokeOpacity: 0.60, ringName: 'Monitoring Zone' },
+      { level: 'RED', multiplier: 0.35, subLabel: 'CRITICAL', fillOpacity: 0.30, strokeOpacity: 0.90, ringName: 'Critical Active Core' }
     ];
 
     APP_DATA.riskZones.forEach(zone => {
@@ -315,8 +330,8 @@ class DisasterMap {
             ringLabel: tier.subLabel,
             ringName: `${zone.name} — ${tier.ringName} (${tier.subLabel})`,
             desc: tier.level === 'RED' ? (zone.desc || 'Critical active hazard core. Direct impact corridor.') :
-                  tier.level === 'ORANGE' ? 'High alert buffer zone. Imminent severe impact watch.' :
-                  tier.level === 'YELLOW' ? 'Moderate risk monitoring zone. Squall & waterlogging monitoring.' :
+              tier.level === 'ORANGE' ? 'High alert buffer zone. Imminent severe impact watch.' :
+                tier.level === 'YELLOW' ? 'Moderate risk monitoring zone. Squall & waterlogging monitoring.' :
                   'Low risk perimeter. Advisory monitoring zone.'
           };
 
@@ -348,6 +363,13 @@ class DisasterMap {
           polygonLayer.bindPopup(this.createRiskPopup(ringZoneData), { className: 'custom-popup' });
           polygonLayer.bindTooltip(zone.name, { permanent: false, sticky: true, className: 'zone-tooltip' });
           rings.push(polygonLayer);
+
+          if (!this.hazardPolygons) this.hazardPolygons = [];
+          this.hazardPolygons.push({
+            polygon: geojsonFeature,
+            level: tier.level,
+            hazardType: hazardType
+          });
           if (tier.level === 'RED') {
             primaryCircle = polygonLayer;
           }
@@ -435,7 +457,7 @@ class DisasterMap {
         className: '', iconSize: [24, 24], iconAnchor: [12, 12]
       });
       const marker = L.marker([site.lat, site.lng], { icon }).addTo(this.map);
-      
+
       marker.bindPopup(`
         <div class="map-popup">
           <div class="popup-header"><span class="risk-badge risk-green">SAFE SITE</span><span class="popup-name">${site.name}</span></div>
@@ -453,10 +475,10 @@ class DisasterMap {
   }
 
   addHazardMarkers() {
-    const icons = { Cyclone:'🌀', Flood:'🌊', Landslide:'⛰️', Earthquake:'📳', Cloudburst:'⛈️' };
+    const icons = { Cyclone: '🌀', Flood: '🌊', Landslide: '⛰️', Earthquake: '📳', Cloudburst: '⛈️' };
     APP_DATA.activeHazards.forEach(h => {
       const icon = L.divIcon({
-        html: `<div style="font-size:24px;text-shadow:0 2px 6px rgba(0,0,0,0.6);animation:float 2s ease-in-out infinite">${icons[h.type]||'⚠️'}</div>`,
+        html: `<div style="font-size:24px;text-shadow:0 2px 6px rgba(0,0,0,0.6);animation:float 2s ease-in-out infinite">${icons[h.type] || '⚠️'}</div>`,
         className: '', iconSize: [32, 32], iconAnchor: [16, 16]
       });
       const marker = L.marker([h.lat, h.lng], { icon }).addTo(this.map);
@@ -500,9 +522,51 @@ class DisasterMap {
   }
 
   addHabitationMarkers() {
+    this.markers.habitations = L.markerClusterGroup({
+      iconCreateFunction: function (cluster) {
+        const count = cluster.getChildCount();
+        const markers = cluster.getAllChildMarkers();
+        let totalPop = 0;
+        markers.forEach(m => totalPop += (m._habData.pop || m._habData.growth_adjusted_pop || 1000));
+
+        return L.divIcon({
+          html: `<div style="background: rgba(15,23,42,0.95); border: 2px solid rgba(255,255,255,0.2); color: #f1f5f9; padding: 6px 10px; border-radius: 12px; font-weight: 700; font-size: 11px; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,0.5); text-align: center;">
+            <span style="font-size:12px;">🏠 ${count} Habitations</span><br>
+            <span style="color:#94a3b8; font-size:10px;">~${totalPop.toLocaleString()} pop</span>
+          </div>`,
+          className: 'custom-cluster-icon',
+          iconSize: L.point(110, 40)
+        });
+      },
+      maxClusterRadius: 70,
+      disableClusteringAtZoom: 11
+    });
+
     APP_DATA.habitations.forEach(hab => {
-      const riskColors = { RED:'#ef4444', ORANGE:'#f97316', YELLOW:'#eab308', GREEN:'#22c55e' };
+      // Compute dynamic risk based on Turf.js point-in-polygon vs active hazards
+      let computedRisk = 'GREEN';
+      let activeThreat = 'None';
+      if (typeof window.turf !== 'undefined' && this.hazardPolygons) {
+        const pt = turf.point([hab.lng || hab.lon, hab.lat]);
+        let maxRank = 0;
+        const rankMap = { 'GREEN': 1, 'YELLOW': 2, 'ORANGE': 3, 'RED': 4 };
+
+        this.hazardPolygons.forEach(hp => {
+          if (turf.booleanPointInPolygon(pt, hp.polygon)) {
+            if (rankMap[hp.level] > maxRank) {
+              maxRank = rankMap[hp.level];
+              computedRisk = hp.level;
+              activeThreat = hp.hazardType.charAt(0).toUpperCase() + hp.hazardType.slice(1);
+            }
+          }
+        });
+      }
+
+      hab.risk = computedRisk; // Override with live dynamic risk
+
+      const riskColors = { RED: '#ef4444', ORANGE: '#f97316', YELLOW: '#eab308', GREEN: '#22c55e' };
       const col = riskColors[hab.risk] || '#94a3b8';
+
       const icon = L.divIcon({
         html: `
           <div class="map-poi-pin poi-habitation" style="--poi-accent:${col};" title="Habitation: ${hab.name}">
@@ -513,36 +577,38 @@ class DisasterMap {
         `,
         className: '', iconSize: [22, 22], iconAnchor: [11, 11]
       });
-      const marker = L.marker([hab.lat, hab.lng], { icon }); // Don't addTo(this.map) immediately, let updateZoomVisibility handle it
+      const marker = L.marker([hab.lat, hab.lng || hab.lon], { icon });
       marker._habData = hab;
-      marker.bindTooltip(`${hab.name} (${hab.risk} Risk)`, { permanent: false, direction: 'top', className: 'hab-tooltip' });
 
-      // Authority Incident Command Context: Include historical impact if available
-      const hist = (typeof window !== 'undefined' && window.DisasterHistoryService) ?
-        window.DisasterHistoryService.getNearest(hab.lat, hab.lng) : '';
-      const histHtml = hist ? `
-        <div class="popup-stat" style="display:block; margin-top:6px; padding:6px 8px; border-radius:6px; background:rgba(234,179,8,0.12); border:1px solid rgba(234,179,8,0.25); color:#facc15; font-size:11px; line-height:1.4;">
-          <strong style="color:#fde047;">📜 Historical Impact:</strong> ${hist}
-        </div>
-      ` : '';
+      // Light-theme, high-contrast popup for habitations
+      const bgColors = { RED: '#fef2f2', ORANGE: '#fff7ed', YELLOW: '#fefce8', GREEN: '#f0fdf4' };
+      const txtColors = { RED: '#b91c1c', ORANGE: '#c2410c', YELLOW: '#a16207', GREEN: '#15803d' };
+      const riskBg = bgColors[hab.risk] || '#f8fafc';
+      const riskTxt = txtColors[hab.risk] || '#0f172a';
 
       marker.bindPopup(`
-        <div class="map-popup">
+        <div class="map-popup light-theme">
           <div class="popup-header">
-            <span class="risk-badge" style="background:${col}22; color:${col}; border:1px solid ${col}66;">${hab.risk} RISK</span>
+            <span class="risk-badge" style="background:${riskBg}; color:${riskTxt}; border:1px solid ${col}66; font-weight:700;">${hab.risk} RISK</span>
             <span class="popup-name">${hab.name}</span>
           </div>
           <div class="popup-body">
-            <div class="popup-stat"><span>Population</span><strong>${(hab.pop || 0).toLocaleString()}</strong></div>
-            <div class="popup-stat"><span>Risk Tier</span><strong>${hab.risk === 'RED' ? 'Critical Core' : hab.risk === 'ORANGE' ? 'High Alert' : 'Moderate Monitoring'}</strong></div>
-            ${histHtml}
-            <div class="popup-desc" style="margin-top:6px;">Habitation telemetry actively monitored by incident command.</div>
+            <div class="popup-stat"><span>Population</span><strong>${(hab.pop || hab.growth_adjusted_pop || 0).toLocaleString()}</strong></div>
+            <div class="popup-stat"><span>Status</span><strong>${hab.status || 'In Place'}</strong></div>
+            <div class="popup-stat"><span>Immediate Threat</span><strong>${activeThreat}</strong></div>
+            <div class="popup-stat"><span>Action</span><strong>${hab.risk === 'RED' ? 'Evacuate immediately' : hab.risk === 'ORANGE' ? 'Prepare for evacuation' : 'Monitor updates'}</strong></div>
           </div>
         </div>
-      `, { className: 'custom-popup' });
+      `, { className: 'custom-popup-light' });
 
-      this.markers.habitations.push(marker);
+      this.markers.habitations.addLayer(marker);
     });
+
+    // Add cluster group to map immediately, zoom control is handled inside markercluster
+    const isCitizen = window.location.pathname.includes('citizen');
+    if (!isCitizen) {
+      this.map.addLayer(this.markers.habitations);
+    }
   }
 
   /**
@@ -566,7 +632,7 @@ class DisasterMap {
   }
 
   toggleLayer(layerName, visible) {
-    switch(layerName) {
+    switch (layerName) {
       case 'satellite':
         if (visible) { this.baseLayers.satellite.addTo(this.map); }
         else { this.map.removeLayer(this.baseLayers.satellite); }
@@ -594,7 +660,10 @@ class DisasterMap {
         this.markers.hospitals.forEach(m => visible ? m.addTo(this.map) : this.map.removeLayer(m));
         break;
       case 'habitations':
-        this.markers.habitations.forEach(m => visible ? m.addTo(this.map) : this.map.removeLayer(m));
+        if (this.markers.habitations) {
+          if (visible) this.map.addLayer(this.markers.habitations);
+          else this.map.removeLayer(this.markers.habitations);
+        }
         break;
       case 'shelters':
         this.markers.safeSites.forEach(m => visible ? m.addTo(this.map) : this.map.removeLayer(m));
@@ -628,7 +697,13 @@ class DisasterMap {
       if (label && this.map.hasLayer(label)) this.map.removeLayer(label);
     });
     Object.values(this.markers).forEach(list => {
-      list.forEach(m => { if (this.map.hasLayer(m)) this.map.removeLayer(m); });
+      if (list) {
+        if (typeof list.forEach === 'function') {
+          list.forEach(m => { if (this.map.hasLayer(m)) this.map.removeLayer(m); });
+        } else if (typeof list.eachLayer === 'function') {
+          this.map.removeLayer(list);
+        }
+      }
     });
     // Clean up legacy userMarker if present (defensive — should not exist after the
     // setUserLocation() call was removed from init(), but kept for safety)
@@ -669,22 +744,9 @@ class DisasterMap {
   updateZoomVisibility() {
     if (!this.map) return;
     const currentZoom = this.map.getZoom();
-    
-    // Habitations clustering/hiding based on zoom
-    this.markers.habitations.forEach(marker => {
-      const hab = marker._habData;
-      if (currentZoom < 9) {
-        // Show only RED risk if zoom is >= 7, otherwise hide all habitations
-        if (hab && hab.risk === 'RED' && currentZoom >= 7) {
-          if (!this.map.hasLayer(marker)) marker.addTo(this.map);
-        } else {
-          if (this.map.hasLayer(marker)) this.map.removeLayer(marker);
-        }
-      } else {
-        // Show all habitations at zoom 9+
-        if (!this.map.hasLayer(marker)) marker.addTo(this.map);
-      }
-    });
+
+    // Habitations clustering logic is now handled internally by L.markerClusterGroup.
+    // The disableClusteringAtZoom option will automatically reveal markers at high zoom levels.
   }
 
   getMap() { return this.map; }
@@ -695,22 +757,37 @@ if (typeof document !== 'undefined') {
   const popupStyles = document.createElement('style');
   popupStyles.textContent = `
     .custom-popup .leaflet-popup-content-wrapper {
-      background: rgba(7,11,22,0.92); backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.14); border-radius: 14px;
-      padding: 0; box-shadow: 0 8px 32px rgba(0,0,0,0.5); color: #f1f5f9;
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(20px);
+      border: 1px solid rgba(15,23,42,0.12); border-radius: 14px;
+      padding: 0; box-shadow: 0 8px 32px rgba(0,0,0,0.15); color: #0F172A;
     }
     .custom-popup .leaflet-popup-tip-container { display: none; }
     .custom-popup .leaflet-popup-content { margin: 0; }
     .map-popup { min-width: 220px; }
-    .popup-header { padding: 12px 14px 8px; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 8px; }
-    .popup-name { font-size: 14px; font-weight: 700; color: #f1f5f9; }
+    .popup-header { padding: 12px 14px 8px; border-bottom: 1px solid rgba(15,23,42,0.12); display: flex; align-items: center; gap: 8px; }
+    .popup-name { font-size: 14px; font-weight: 700; color: #0F172A; }
     .popup-body { padding: 10px 14px 14px; }
-    .popup-stat { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #94a3b8; margin-bottom: 5px; }
-    .popup-stat strong { color: #f1f5f9; }
-    .popup-desc { font-size: 12px; color: #64748b; line-height: 1.5; margin-top: 8px; }
+    .popup-stat { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #64748B; margin-bottom: 5px; }
+    .popup-stat span { color: #475569; font-weight: 500; }
+    .popup-stat strong { color: #0F172A; font-weight: 700; }
+    .popup-desc { font-size: 12px; color: #334155; line-height: 1.5; margin-top: 8px; }
     .popup-amenities { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
-    .popup-amenities span { padding: 2px 8px; border-radius: 5px; font-size: 11px; font-weight: 600; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); color: #86efac; }
-    .hab-tooltip { background: rgba(7,11,22,0.9); border: 1px solid rgba(255,255,255,0.1); color: #f1f5f9; font-size: 12px; border-radius: 6px; padding: 4px 10px; }
+    .popup-amenities span { padding: 2px 8px; border-radius: 5px; font-size: 11px; font-weight: 600; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); color: #15803d; }
+    .hab-tooltip { background: rgba(255,255,255,0.95); border: 1px solid rgba(15,23,42,0.12); color: #0F172A; font-size: 12px; border-radius: 6px; padding: 4px 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    
+    /* Light Theme Popups */
+    .custom-popup-light .leaflet-popup-content-wrapper {
+      background: #FFFFFF;
+      border: 1px solid rgba(15,23,42,0.12); border-radius: 14px;
+      padding: 0; box-shadow: 0 8px 32px rgba(0,0,0,0.15); color: #0f172a;
+    }
+    .custom-popup-light .leaflet-popup-tip-container { display: none; }
+    .custom-popup-light .leaflet-popup-content { margin: 0; }
+    .custom-popup-light .popup-header { border-bottom: 1px solid rgba(15,23,42,0.08); }
+    .custom-popup-light .popup-name { color: #0f172a; font-weight: 700; }
+    .custom-popup-light .popup-stat { color: #475569; }
+    .custom-popup-light .popup-stat strong { color: #0f172a; }
+
     @keyframes float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
     @keyframes pulse-ring { 0% { opacity: 0.8; transform: scale(0.8); } 80% { opacity: 0; transform: scale(2.2); } 100% { opacity: 0; } }
   `;

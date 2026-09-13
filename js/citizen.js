@@ -16,10 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // The hazard engine owns everything drawn on the map
   disasterMap.clearDefaultOverlays();
+  disasterMap.drawRiskZones(); // Requirement: Show the same static concentric zones as Authority Portal
   hazardEngine = new HazardEngine(disasterMap.getMap());
+  hazardEngine.visible.habitations = false; // CITIZEN PORTAL: Hide habitations
   window.hazardEngine = hazardEngine;
   hazardEngine.onStatsChange = (newStats) => {
     currentStats = newStats;
+    if (window.citizenCurrentLocation) {
+      updateCitizenRiskBadge(window.citizenCurrentLocation);
+      if (typeof citizenMarker !== 'undefined' && citizenMarker && typeof citizenMarker.setPopupContent === 'function') {
+        citizenMarker.setPopupContent(buildCitizenPopupHtml(window.citizenCurrentLocation.lat, window.citizenCurrentLocation.lng, window.citizenCurrentLocation.place, window.citizenCurrentLocation.risk));
+      }
+    }
   };
 
   // Isolate floating drawers and popovers from map wheel capture
@@ -106,18 +114,25 @@ async function updateCitizenWeatherAndRisk(lat, lng, place) {
   if (chipCity && place) {
     chipCity.textContent = place;
   }
+  
+  // 0. Update badge immediately so we don't hang on CHECKING...
+  updateCitizenRiskBadge({ lat, lng });
 
   // 1. Fetch live current weather from /api/windy/point-forecast
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
     const resp = await fetch('/api/windy/point-forecast', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      signal: controller.signal,
       body: JSON.stringify({
         lat: Number(lat),
         lon: Number(lng),
         model: 'ecmwf'
       })
     });
+    clearTimeout(timeoutId);
 
     if (!resp.ok) throw new Error(`Weather fetch HTTP ${resp.status}`);
     const data = await resp.json();
@@ -165,11 +180,17 @@ async function updateCitizenWeatherAndRisk(lat, lng, place) {
 
   // 2. Risk Zone Check (Point-in-polygon containment check via /api/risk-zone)
   try {
-    const risk = await RZILocationService.checkRiskZone(lat, lng);
+    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Risk zone timeout')), 5000));
+    const risk = await Promise.race([RZILocationService.checkRiskZone(lat, lng), timeoutPromise]);
     window.citizenCurrentLocation = { lat, lng, place, risk };
 
     // Update topbar chip dynamically from live AI engine state
     updateCitizenRiskBadge({ lat, lng });
+
+    // Update marker popup now that risk data is available
+    if (citizenMarker && typeof citizenMarker.setPopupContent === 'function') {
+      citizenMarker.setPopupContent(buildCitizenPopupHtml(lat, lng, place, risk));
+    }
   } catch (err) {
     console.warn('Risk zone evaluation failed:', err);
     updateCitizenRiskBadge({ lat, lng });
@@ -269,20 +290,81 @@ function updateCitizenRiskBadge(coords) {
 window.updateCitizenRiskBadge = updateCitizenRiskBadge;
 
 /**
- * Called on load — reads ?lat, ?lng, ?place from URL if present,
- * or resolves default live weather & risk for citizen portal.
+ * Called on load — strictly prioritizes browser geolocation over URL params,
+ * separating map activation from optional API fetches (weather/risk).
  */
 async function initCitizenLocation() {
-  const loc = RZILocationService.parseLocationParams();
-  if (loc) {
-    await placeAndActivateCitizenLocation(loc.lat, loc.lng, loc.place);
-  } else {
-    // Default location (Kakinada / Uppada coastal sector)
-    const defaultLat = 16.9891;
-    const defaultLng = 82.2475;
-    const defaultPlace = 'Kakinada, AP';
-    await updateCitizenWeatherAndRisk(defaultLat, defaultLng, defaultPlace);
+  const chipRisk = document.getElementById('chip-risk');
+  const chipCity = document.getElementById('chip-city');
+
+  if (chipRisk) chipRisk.textContent = 'LOCATING...';
+  if (chipCity) chipCity.textContent = 'Finding you...';
+
+  let lat, lng, place;
+  let isTargetLocation = false;
+
+  console.log('[LOCATION] request started');
+  try {
+    // 1. Prioritize real browser GPS
+    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Location timeout')), 10000));
+    const pos = await Promise.race([RZILocationService.detectLocation(), timeoutPromise]);
+    lat = pos.lat;
+    lng = pos.lng;
+    console.log(`[LOCATION] success, latitude=${lat}, longitude=${lng}`);
+  } catch (err) {
+    console.warn('[LOCATION] GPS failed, checking fallbacks:', err.message);
+    
+    // 2. Fallback to URL parameters if GPS fails
+    const loc = RZILocationService.parseLocationParams();
+    if (loc) {
+      lat = loc.lat;
+      lng = loc.lng;
+      place = loc.place;
+      isTargetLocation = true;
+      console.log(`[LOCATION] using target location from URL, lat=${lat}, lng=${lng}`);
+    } else {
+      // 3. Final fallback
+      lat = 16.9891;
+      lng = 82.2475;
+      place = 'Kakinada, AP (Fallback)';
+      console.log(`[LOCATION] using fallback location, lat=${lat}, lng=${lng}`);
+    }
   }
+
+  // 4. Commit State IMMEDIATELY
+  window.citizenCurrentLocation = { lat, lng, place: place || 'Local Area', risk: { tier: 'GREEN' } };
+  console.log('[LOCATION] state updated');
+
+  // 5. Update Map Center & Marker (Synchronously relative to the user)
+  try {
+    placeAndActivateCitizenLocation(lat, lng, window.citizenCurrentLocation.place);
+    console.log('[LOCATION] map updated');
+  } catch (err) {
+    console.error('[LOCATION] Map marker failed:', err);
+  }
+
+  // 6. Asynchronously resolve place name if missing, without blocking map
+  if (!place) {
+    RZILocationService.reverseGeocode(lat, lng)
+      .then(reverse => {
+        if (reverse && reverse.display) {
+          window.citizenCurrentLocation.place = reverse.display;
+          if (chipCity) chipCity.textContent = reverse.display;
+        }
+      })
+      .catch(() => {});
+  } else {
+    if (chipCity) chipCity.textContent = place;
+  }
+
+  // 7. Fetch weather and risk zone asynchronously
+  updateCitizenWeatherAndRisk(lat, lng, window.citizenCurrentLocation.place)
+    .then(() => console.log('[LOCATION] UI updated'))
+    .catch(err => {
+      console.error('[LOCATION] Weather/Risk fetch failed:', err);
+      // Failsafe: Ensure UI is not stuck on LOCATING/CHECKING if network fails
+      updateCitizenRiskBadge({ lat, lng });
+    });
 
   // Periodic refresh: re-fetch weather and risk every 5 minutes while app is open
   if (citizenWeatherTimer) clearInterval(citizenWeatherTimer);
@@ -397,9 +479,9 @@ function flyToShelter(id, lat, lng, name) {
 window.flyToShelter = flyToShelter;
 
 /**
- * Core routine: place marker, query live weather and point-in-polygon risk zone, update UI.
+ * Place citizen beacon and fly map. Now fully synchronous and purely visual.
  */
-async function placeAndActivateCitizenLocation(lat, lng, place) {
+function placeAndActivateCitizenLocation(lat, lng, place) {
   const leafletMap = disasterMap.getMap();
 
   // Remove previous citizen marker if any
@@ -427,19 +509,9 @@ async function placeAndActivateCitizenLocation(lat, lng, place) {
 
   citizenMarker = L.marker([lat, lng], { icon: pulseIcon, zIndexOffset: 9000 })
     .addTo(leafletMap)
-    .bindPopup(
-      `<div class="location-popup">
-        <div class="location-popup-header">
-          <div class="location-popup-title-row">
-            <span class="location-popup-icon">📍</span>
-            <span class="location-popup-title">You are here</span>
-          </div>
-        </div>
-        <div class="location-popup-place">${escapeHtml(place)}</div>
-        <div class="location-popup-coords">${lat.toFixed(5)}°N, ${lng.toFixed(5)}°E</div>
-      </div>`,
-      { className: 'location-popup-wrapper', maxWidth: 320, minWidth: 260 }
-    )
+    .bindPopup(buildCitizenPopupHtml(lat, lng, place, window.citizenCurrentLocation?.risk), {
+      className: 'location-popup-wrapper', maxWidth: 320, minWidth: 260
+    })
     .openPopup();
 
   // Add pulse CSS if not already injected
@@ -458,19 +530,22 @@ async function placeAndActivateCitizenLocation(lat, lng, place) {
   if (window.windyController) {
     window.windyController.onLocationChanged(lat, lng, place);
   }
+}
 
-  // Immediately fetch live weather & check risk zone for these resolved coordinates
-  await updateCitizenWeatherAndRisk(lat, lng, place);
+/**
+ * Builds the HTML content for the citizen location popup, including shelters if available.
+ */
+function buildCitizenPopupHtml(lat, lng, place, risk) {
+  if (!risk) {
+    risk = {
+      riskLevel: 'Safe',
+      riskColor: '#22c55e',
+      zone: 'General Safe Zone',
+      advisory: 'Area currently clear of active hazard corridors.',
+      shelters: []
+    };
+  }
 
-  const risk = window.citizenCurrentLocation?.risk || {
-    riskLevel: 'Safe',
-    riskColor: '#22c55e',
-    zone: 'General Safe Zone',
-    advisory: 'Area currently clear of active hazard corridors.',
-    shelters: []
-  };
-
-  // Render clickable shelter list with full navigation wiring
   const sheltersHtml = (risk.shelters && risk.shelters.length) ? `
     <div class="location-popup-shelters-section">
       <div class="location-popup-shelters-header">
@@ -503,18 +578,20 @@ async function placeAndActivateCitizenLocation(lat, lng, place) {
     </div>
   ` : '';
 
-  // Update marker popup with frosted glass styling and structured hierarchy
-  citizenMarker.setPopupContent(
-    `<div class="location-popup">
+  return `
+    <div class="location-popup">
       <div class="location-popup-header">
         <div class="location-popup-title-row">
           <span class="location-popup-icon">📍</span>
           <span class="location-popup-title">You are here</span>
         </div>
-        <span class="location-popup-badge" style="background:${risk.riskColor || '#22c55e'};">${escapeHtml(risk.riskLevel || 'Safe')}</span>
+        <div class="location-popup-risk" style="background:${risk.riskColor}20; color:${risk.riskColor};">
+          ${escapeHtml(risk.riskLevel)}
+        </div>
       </div>
       <div class="location-popup-place">${escapeHtml(place)}</div>
       <div class="location-popup-coords">${lat.toFixed(5)}°N, ${lng.toFixed(5)}°E</div>
+      
       <div class="location-popup-zone">
         <span class="location-popup-zone-label">Zone:</span>
         <span class="location-popup-zone-name">${escapeHtml(risk.zone || 'General Safe Zone')}</span>
@@ -524,16 +601,9 @@ async function placeAndActivateCitizenLocation(lat, lng, place) {
         <span class="location-popup-advisory-text">${escapeHtml(risk.advisory || 'Follow standard civil defense guidance.')}</span>
       </div>
       ${sheltersHtml}
-    </div>`
-  ).openPopup();
-
-  // Toast advisory
-  const toastType = risk.riskLevel === 'Red Zone' ? 'warning' : (risk.riskLevel === 'Caution' ? 'warning' : 'success');
-  showToast(`${risk.riskLevel === 'Red Zone' ? '🔴' : risk.riskLevel === 'Caution' ? '🟡' : '🟢'} ${risk.riskLevel} — ${risk.zone}`, toastType);
+    </div>
+  `;
 }
-
-
-
 
 function selectHazard(key, fly) {
   currentHazard = key;

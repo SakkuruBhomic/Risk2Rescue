@@ -27,7 +27,7 @@ const RZILocationService = (() => {
     { name: 'Eluru',                 lat: 16.7107, lng: 81.0952 },
     { name: 'Guntur',                lat: 16.3067, lng: 80.4365 },
     { name: 'Kakinada',              lat: 16.9891, lng: 82.2475 },
-    { name: 'Konaseema',             lat: 16.8150, lng: 81.9600 },
+
     { name: 'Krishna',               lat: 16.6000, lng: 80.7500 },
     { name: 'Kurnool',               lat: 15.8281, lng: 78.0373 },
     { name: 'Nandyal',               lat: 15.4786, lng: 78.4836 },
@@ -62,7 +62,7 @@ const RZILocationService = (() => {
     { name: 'Gajuwaka Industrial Belt', district: 'Visakhapatnam', lat: 17.6990, lng: 83.2080 },
     { name: 'Kakinada Urban', district: 'East Godavari', lat: 16.9891, lng: 82.2475 },
     { name: 'Rajahmundry Urban Agglomeration', district: 'East Godavari', lat: 17.0005, lng: 81.8040 },
-    { name: 'Amalapuram (Konaseema Delta)', district: 'East Godavari', lat: 16.5787, lng: 82.0061 },
+
     { name: 'Tallarevu Mandal', district: 'East Godavari', lat: 16.7800, lng: 82.2700 },
     { name: 'Uppada Coastal Belt', district: 'East Godavari', lat: 17.0800, lng: 82.3300 },
     { name: 'Eluru Urban', district: 'West Godavari', lat: 16.7107, lng: 81.0952 },

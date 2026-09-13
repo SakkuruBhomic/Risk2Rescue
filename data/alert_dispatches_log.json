@@ -1,5 +1,33 @@
 [
   {
+    "id": "alert-1789300067478-29",
+    "timestamp": "2026-09-13T11:47:47.478Z",
+    "recipient": "incident-commander@ap-sdma.gov.in",
+    "sender": "alerts@resend.dev",
+    "subject": "🚨 [NDRF-SDMA ALERT] Coastal Industrial Park Coastal Landfall Corridor Escalated to GREEN (CYCLONE)",
+    "provider": "Local Spool Log (Zero Cost / Offline Fallback)",
+    "status": "logged_locally",
+    "responseId": null,
+    "zone": "Coastal Industrial Park Coastal Landfall Corridor",
+    "tier": "GREEN",
+    "population": 2500,
+    "preview": "Current observations along the coastal corridor show moderate baseline conditions (3.6 km/h winds, 803 hPa). However, multi-model point forecasts confirm high escalation to Critical RED by +12h to +24h, impacting 5 habitations including Kakinada Urban Slums (8,500 residents). Pre-emptive evacuation dispatch to designated cyclone shelters must begin immediately before squall lines close road transit routes. Satellite imagery confirms Sentinel-2 / SAR composite reveals +18.6% surface-water inundation expansion across Coastal Industrial Park Coastal Landfall Corridor."
+  },
+  {
+    "id": "alert-1789298263490-555",
+    "timestamp": "2026-09-13T11:17:43.490Z",
+    "recipient": "incident-commander@ap-sdma.gov.in",
+    "sender": "alerts@resend.dev",
+    "subject": "🚨 [NDRF-SDMA ALERT] Coastal Industrial Park Coastal Landfall Corridor Escalated to YELLOW (CYCLONE)",
+    "provider": "Local Spool Log (Zero Cost / Offline Fallback)",
+    "status": "logged_locally",
+    "responseId": null,
+    "zone": "Coastal Industrial Park Coastal Landfall Corridor",
+    "tier": "YELLOW",
+    "population": 2500,
+    "preview": "Current observations along the coastal corridor show moderate baseline conditions (3.1 km/h winds, 803 hPa). However, multi-model point forecasts confirm high escalation to Critical RED by +12h to +24h, impacting 5 habitations including Kakinada Urban Slums (8,500 residents). Pre-emptive evacuation dispatch to designated cyclone shelters must begin immediately before squall lines close road transit routes. Satellite imagery confirms Sentinel-2 / SAR composite reveals +18.6% surface-water inundation expansion across Coastal Industrial Park Coastal Landfall Corridor."
+  },
+  {
     "id": "alert-1789256068468-974",
     "timestamp": "2026-09-12T23:34:28.468Z",
     "recipient": "incident-commander@ap-sdma.gov.in",
@@ -1361,34 +1389,6 @@
     "zone": "Ukhrul Hill Village Fault Line Focal Zone",
     "tier": "ORANGE",
     "population": 6641,
-    "preview": "Current observations along the coastal corridor show moderate baseline conditions (10.9 km/h winds, 1002 hPa). However, multi-model point forecasts confirm high escalation to Critical RED by +12h to +24h, impacting 8 habitations including Barpeta Lowland Clusters (27,612 residents). Pre-emptive evacuation dispatch to designated cyclone shelters must begin immediately before squall lines close road transit routes."
-  },
-  {
-    "id": "alert-1789038857051-530",
-    "timestamp": "2026-09-10T11:14:17.051Z",
-    "recipient": "incident-commander@ap-sdma.gov.in",
-    "sender": "alerts@resend.dev",
-    "subject": "🚨 [NDRF-SDMA ALERT] Imphal East Habitation Belt Fault Line Focal Zone Escalated to ORANGE (EARTHQUAKE)",
-    "provider": "Local Spool Log (Zero Cost / Offline Fallback)",
-    "status": "logged_locally",
-    "responseId": null,
-    "zone": "Imphal East Habitation Belt Fault Line Focal Zone",
-    "tier": "ORANGE",
-    "population": 52200,
-    "preview": "Current observations along the coastal corridor show moderate baseline conditions (10.9 km/h winds, 1002 hPa). However, multi-model point forecasts confirm high escalation to Critical RED by +12h to +24h, impacting 8 habitations including Barpeta Lowland Clusters (27,612 residents). Pre-emptive evacuation dispatch to designated cyclone shelters must begin immediately before squall lines close road transit routes."
-  },
-  {
-    "id": "alert-1789038857051-354",
-    "timestamp": "2026-09-10T11:14:17.051Z",
-    "recipient": "incident-commander@ap-sdma.gov.in",
-    "sender": "alerts@resend.dev",
-    "subject": "🚨 [NDRF-SDMA ALERT] Machilipatnam Coastal Reach Coastal Landfall Corridor Escalated to YELLOW (CYCLONE)",
-    "provider": "Local Spool Log (Zero Cost / Offline Fallback)",
-    "status": "logged_locally",
-    "responseId": null,
-    "zone": "Machilipatnam Coastal Reach Coastal Landfall Corridor",
-    "tier": "YELLOW",
-    "population": 39610,
     "preview": "Current observations along the coastal corridor show moderate baseline conditions (10.9 km/h winds, 1002 hPa). However, multi-model point forecasts confirm high escalation to Critical RED by +12h to +24h, impacting 8 habitations including Barpeta Lowland Clusters (27,612 residents). Pre-emptive evacuation dispatch to designated cyclone shelters must begin immediately before squall lines close road transit routes."
   }
 ]

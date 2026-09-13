@@ -47,54 +47,88 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 48px;
-  max-width: 48px;
-  overflow: hidden;
-  background: var(--glass-bg, rgba(255, 255, 255, 0.85));
-  border: 1px solid var(--glass-border-bright, rgba(15, 23, 42, 0.12));
-  border-left: none;
-  border-radius: 0 12px 12px 0;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  width: 48px;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  transition: max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              background 0.25s ease,
-              border-color 0.25s ease;
   outline: none;
-  font-family: var(--font-base);
-  box-shadow: var(--shadow-md);
+  padding: 0;
+  --item-bg: color-mix(in srgb, var(--item-accent, var(--accent-blue)) 15%, #ffffff);
 }
 
 .dock-item::before {
   content: '';
   position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 3.5px;
+  left: 0; top: 10px; bottom: 10px;
+  width: 4px;
   background: var(--item-accent, var(--accent-blue));
-  opacity: 0.7;
-  transition: opacity 0.25s ease;
-  border-radius: 0 2px 2px 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: 0 4px 4px 0;
 }
 
-.dock-item:hover,
-.dock-item:focus-visible,
-.dock-item.active {
-  max-width: 248px;
-  background: var(--glass-bg-hover, rgba(255, 255, 255, 0.95));
-  border-color: var(--item-accent, var(--accent-blue));
-  box-shadow: var(--shadow-lg);
-}
-.dock-item:hover::before,
-.dock-item:focus-visible::before,
-.dock-item.active::before { opacity: 1; }
-
-.dock-item.active {
-  background: color-mix(in srgb, var(--item-accent, var(--accent-blue)) 12%, #ffffff);
+.dock-item.active::before { 
+  opacity: 1; 
 }
 
-.dock-item:focus-visible {
+.dock-item:focus-visible .dock-icon {
   outline: 2px solid var(--item-accent, var(--accent-blue));
-  outline-offset: 1px;
+  outline-offset: 2px;
+}
+
+.dock-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.85));
+  border: 1px solid var(--glass-border-bright, rgba(15, 23, 42, 0.12));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 18px;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.dock-item.active .dock-icon {
+  background: var(--item-bg);
+  border-color: var(--item-accent, var(--accent-blue));
+}
+
+.dock-item:hover .dock-icon {
+  transform: scale(1.05) translateX(2px);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dock-label {
+  position: absolute;
+  left: 54px;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F172A;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(15,23,42,0.12);
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateX(-8px);
+  pointer-events: none;
+  transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+  z-index: 1000;
+}
+
+.dock-item:hover .dock-label,
+.dock-item:focus-visible .dock-label {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Basemap Windy Radar Legibility Overrides (Requirement B2) */
@@ -112,48 +146,6 @@
   stroke-width: 2.5px !important;
   stroke-opacity: 1 !important;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.7));
-}
-
-
-.dock-item {
-  --item-bg: color-mix(in srgb, var(--item-accent, var(--accent-blue)) 15%, #ffffff);
-}
-
-.dock-icon {
-  width: 32px;
-  height: 32px;
-  margin: 8px;
-  border-radius: 9px;
-  background: var(--item-bg);
-  border: 1px solid color-mix(in srgb, var(--item-accent, var(--accent-blue)) 30%, transparent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  position: relative;
-  flex-shrink: 0;
-  transition: all var(--transition-fast);
-}
-.dock-item:hover .dock-icon {
-  transform: scale(1.06);
-}
-
-.dock-label {
-  white-space: nowrap;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--text-primary);
-  padding-right: 16px;
-  opacity: 0;
-  transform: translateX(-8px);
-  transition: opacity 0.2s ease 0.07s, transform 0.2s ease 0.07s;
-  pointer-events: none;
-}
-.dock-item:hover .dock-label,
-.dock-item:focus-visible .dock-label,
-.dock-item.active .dock-label {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .dock-badge {
@@ -394,8 +386,8 @@
 @media (max-width: 640px) {
   .rzi-dock { top: 60px; bottom: 8px; }
   .dock-nav-group { gap: 4px; }
-  .dock-item { height: 44px; max-width: 44px; }
-  .dock-icon { flex-basis: 44px; width: 44px; height: 44px; font-size: 17px; }
+  .dock-item { height: 44px; width: 44px; }
+  .dock-icon { width: 36px; height: 36px; font-size: 16px; }
   .dock-profile-card {
     width: 200px;
     margin-left: 6px;

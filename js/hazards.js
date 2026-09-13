@@ -582,7 +582,7 @@ class HazardEngine {
         try { dangerPolygons.push(window.turf.polygon([polygonCoords])); } catch (e) {}
       }
 
-      const geojsonFeature = {
+      let geojsonFeature = {
         type: "Feature",
         properties: {
           name: z.name,
@@ -597,6 +597,20 @@ class HazardEngine {
           coordinates: [polygonCoords]
         }
       };
+
+      // Clip against Andhra Pradesh operational boundary
+      if (window.APBoundaryService && window.APBoundaryService.isReady()) {
+        try {
+          const turfPoly = window.turf.polygon([polygonCoords]);
+          const clipped = window.APBoundaryService.clipPolygon(turfPoly);
+          if (!clipped) {
+            return; // Completely outside AP, skip rendering
+          }
+          geojsonFeature.geometry = clipped.geometry;
+        } catch (e) {
+          console.warn('[HazardEngine] AP boundary clipping failed for zone:', z.name, e);
+        }
+      }
 
       const polygonLayer = L.geoJSON(geojsonFeature, {
         style: () => ({
@@ -695,7 +709,7 @@ class HazardEngine {
 
           bucket.zones.unshift(greenLayer);  // Add FIRST so it renders behind danger zones
           if (this.visible.zones) this.group.addLayer(greenLayer);
-          this.renderedZoneLayers.push({ polygonLayer: greenLayer, zone: { level: 'GREEN', name: 'Konaseema Safe Perimeter' }, hazard: h });
+          this.renderedZoneLayers.push({ polygonLayer: greenLayer, zone: { level: 'GREEN', name: 'Andhra Pradesh Safe Perimeter' }, hazard: h });
         }
       } catch (e) {
         console.warn('[HazardManager] Failed to merge green zones into hull:', e);
@@ -704,6 +718,7 @@ class HazardEngine {
 
     // 2. Designated Safe Shelters
     (h.safeSites || []).forEach((s, idx) => {
+      if (window.APBoundaryService && !window.APBoundaryService.isPointInside([s.lng, s.lat])) return;
       const free = s.capacity - s.current;
       const marker = L.marker([s.lat, s.lng], { icon: this.shelterIcon(idx * 40) })
         .bindPopup(this.popup('Safe Zone', 'green', s.name, [
@@ -720,6 +735,7 @@ class HazardEngine {
     (h.alerts || []).forEach((a, i) => {
       const color = a.level === 'CRITICAL' ? 'red' : a.level === 'HIGH' ? 'orange' : 'yellow';
       const coords = a.lat && a.lng ? [a.lat, a.lng] : [16.9 + (i * 0.15), 82.2 + (i * 0.12)];
+      if (window.APBoundaryService && !window.APBoundaryService.isPointInside([coords[1], coords[0]])) return;
       const marker = L.marker(coords, { icon: this.alertIcon(color, i * 40) })
         .bindPopup(this.popup('Live Warning', color, a.title, [
           ['Severity', a.level],
@@ -731,16 +747,69 @@ class HazardEngine {
     });
 
     // 4. At-Risk Habitations
-    (h.habitations || []).forEach((hab, i) => {
-      const marker = L.marker([hab.lat, hab.lng], { icon: this.habitationIcon(hab.risk, i * 35) })
-        .bindPopup(this.popup(`Risk: ${hab.risk}`, hab.risk.toLowerCase(), hab.name, [
-          ['Population', hab.pop.toLocaleString()],
-          ['Status', hab.evacuated ? 'Evacuated' : 'In Place'],
-          ['Immediate threat', h.label]
-        ], 'Local habitation telemetry monitored by disaster grid.'), { className: 'custom-popup' });
-      bucket.habitations.push(marker);
-      if (this.visible.habitations) this.group.addLayer(marker);
-    });
+    let habCluster = null;
+    if (h.habitations && h.habitations.length > 0) {
+      habCluster = L.markerClusterGroup({
+        iconCreateFunction: function(cluster) {
+          const count = cluster.getChildCount();
+          return L.divIcon({
+            html: `<div style="background: rgba(15,23,42,0.95); border: 2px solid rgba(255,255,255,0.2); color: #f1f5f9; padding: 6px 10px; border-radius: 12px; font-weight: 700; font-size: 11px; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,0.5); text-align: center;">
+              🏠 ${count} Habitations
+            </div>`,
+            className: 'custom-cluster-icon',
+            iconSize: L.point(100, 30)
+          });
+        },
+        maxClusterRadius: 70,
+        disableClusteringAtZoom: 11
+      });
+
+      h.habitations.forEach((hab, i) => {
+        if (window.APBoundaryService && !window.APBoundaryService.isPointInside([hab.lng || hab.lon, hab.lat])) return;
+        
+        // Turf dynamic risk check vs rendered non-green danger polygons for THIS hazard
+        let computedRisk = 'GREEN';
+        if (typeof window.turf !== 'undefined' && dangerPolygons.length > 0) {
+          const pt = window.turf.point([hab.lng || hab.lon, hab.lat]);
+          let maxRank = 0;
+          const rankMap = { 'GREEN': 1, 'YELLOW': 2, 'ORANGE': 3, 'RED': 4 };
+          
+          dangerPolygons.forEach(dp => {
+            if (window.turf.booleanPointInPolygon(pt, dp)) {
+              const dpRank = rankMap[dp.properties?.level || 'RED'];
+              if (dpRank > maxRank) {
+                maxRank = dpRank;
+                computedRisk = dp.properties?.level || 'RED';
+              }
+            }
+          });
+        }
+        hab.risk = computedRisk;
+        
+        const riskColors = { RED:'#ef4444', ORANGE:'#f97316', YELLOW:'#eab308', GREEN:'#22c55e' };
+        const col = riskColors[hab.risk] || '#94a3b8';
+
+        const marker = L.marker([hab.lat, hab.lng || hab.lon], { icon: this.habitationIcon(hab.risk, i * 35) })
+          .bindPopup(`
+            <div class="map-popup light-theme">
+              <div class="popup-header">
+                <span class="risk-badge" style="background:${hab.risk==='RED'?'#fef2f2':hab.risk==='ORANGE'?'#fff7ed':hab.risk==='YELLOW'?'#fefce8':'#f0fdf4'}; color:${hab.risk==='RED'?'#b91c1c':hab.risk==='ORANGE'?'#c2410c':hab.risk==='YELLOW'?'#a16207':'#15803d'}; border:1px solid ${col}66; font-weight:700;">${hab.risk} RISK</span>
+                <span class="popup-name" style="color:#0f172a; font-weight:700;">${hab.name}</span>
+              </div>
+              <div class="popup-body" style="background:#ffffff; color:#334155;">
+                <div class="popup-stat" style="color:#475569;"><span>Population:</span><strong style="color:#0f172a;">${(hab.pop || hab.growth_adjusted_pop || 0).toLocaleString()}</strong></div>
+                <div class="popup-stat" style="color:#475569;"><span>Status:</span><strong style="color:#0f172a;">${hab.evacuated ? 'Evacuated' : 'In Place'}</strong></div>
+                <div class="popup-stat" style="color:#475569;"><span>Immediate Threat:</span><strong style="color:#0f172a;">${hab.risk === 'GREEN' ? 'None' : h.label}</strong></div>
+              </div>
+            </div>
+          `, { className: 'custom-popup-light' });
+        
+        habCluster.addLayer(marker);
+      });
+      
+      bucket.habitations.push(habCluster);
+      if (this.visible.habitations) this.group.addLayer(habCluster);
+    }
 
     // 6. Emergency Hospitals & Trauma Centers
     if (h.hospitals) {

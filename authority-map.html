@@ -49,9 +49,7 @@
   <nav class="rzi-dock" id="rzi-dock" aria-label="Primary Navigation">
     <div class="dock-nav-group">
       <!-- Home / Live GIS Risk Map (DEFAULT LANDING PAGE) -->
-      <button class="dock-item active" data-view="map-view" style="--item-accent: var(--accent-cyan)" title="Home">
-        <span class="dock-icon">🏠</span><span class="dock-label">Home</span>
-      </button>
+      <a href="authority-map.html" class="dock-item active" style="--item-accent: var(--accent-cyan); text-decoration: none;" title="Home"><span class="dock-icon">🏠</span><span class="dock-label">Home</span></a>
 
       <!-- Command Center -->
       <button class="dock-item" data-view="command" style="--item-accent: var(--accent-blue)" title="Command Center">
@@ -59,17 +57,13 @@
       </button>
 
       <!-- AI Decision Support (DeepSeek-R1 8B) -->
-      <button class="dock-item" data-view="decision-support" onclick="switchToDecisionBrief()" style="--item-accent: #a855f7" title="AI Decision Support">
-        <span class="dock-icon">🧠</span><span class="dock-label">AI Decision Support</span>
-      </button>
+      <a href="authority-ai.html" class="dock-item " style="--item-accent: #a855f7; text-decoration: none;" title="AI Decision Support"><span class="dock-icon">🧠</span><span class="dock-label">AI Decision Support</span></a>
 
       <!-- Divider -->
       <div class="dock-divider"></div>
 
       <!-- Red Zones & Habitations -->
-      <button class="dock-item" data-view="habitations" style="--item-accent: var(--risk-red)" title="Red Zones & Habitations">
-        <span class="dock-icon">🏘️</span><span class="dock-label">Red Zones &amp; Habitations</span>
-      </button>
+      <a href="authority-queue.html" class="dock-item " style="--item-accent: var(--risk-red); text-decoration: none;" title="Priority Queue"><span class="dock-icon">🏘️</span><span class="dock-label">Priority Queue</span></a>
 
       <!-- Population at Risk -->
       <button class="dock-item" data-view="population-risk" style="--item-accent: var(--risk-orange)" title="Population at Risk">
@@ -85,16 +79,10 @@
       </button>
 
       <!-- Citizen Report Queue -->
-      <button class="dock-item" data-view="reports" style="--item-accent: var(--risk-orange)" title="Citizen Report Queue">
-        <span class="dock-icon">📥</span>
-        <span class="dock-label">Citizen Report Queue</span>
-        <span class="dock-badge" id="dock-queue-badge">3</span>
-      </button>
+      <a href="authority-citizen.html" class="dock-item " style="--item-accent: var(--risk-orange); text-decoration: none;" title="Citizen Report Queue"><span class="dock-icon">📥</span><span class="dock-label">Citizen Report Queue</span><span class="dock-badge" id="dock-queue-badge">3</span></a>
 
       <!-- Safe Sites & Capacity (Repositioned right before Sensor Data Sources) -->
-      <button class="dock-item" data-view="safesites" style="--item-accent: var(--risk-green)" title="Safe Sites & Capacity">
-        <span class="dock-icon">🏕️</span><span class="dock-label">Safe Sites &amp; Capacity</span>
-      </button>
+      <a href="authority-capacity.html" class="dock-item " style="--item-accent: var(--risk-green); text-decoration: none;" title="Safe Sites & Capacity"><span class="dock-icon">🏕️</span><span class="dock-label">Safe Sites &amp; Capacity</span></a>
 
       <!-- Sensor Data Sources -->
       <button class="dock-item" data-view="datasources" style="--item-accent: var(--accent-blue)" title="Sensor Data Sources">

@@ -1,10 +1,8 @@
 /**
- * RISK2RESCUE — PRIORITY ENGINE
- * Vulnerability Priority Index (VPI) Engine & Greedy Carrying Capacity Allocation
+ * RISK2RESCUE — PRIORITY ENGINE (Deterministic 6-Factor Model)
  *
- * Universal Module: Usable both in Node.js backend (CommonJS) and browser frontends (window.PriorityEngine)
+ * Universal Module: Usable both in Node.js backend (CommonJS) and browser frontends.
  */
-
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) {
     // Node.js CommonJS
@@ -15,545 +13,251 @@
   }
 }(typeof self !== 'undefined' ? self : this, function () {
 
-  // =========================================================================
-  // 1. CONFIGURABLE WEIGHT CONSTANTS (Must sum to 1.00)
-  // =========================================================================
-  /**
-   * Weight rationale:
-   * - w1 (hazard_intensity): 0.25 — volatile, real-time trigger driving immediate emergency urgency.
-   * - w2 (vulnerability_score): 0.20 — structural, socioeconomic & housing fragility baseline from Census.
-   * - w3 (population_density): 0.15 — scale of human exposure and crowd evacuation friction.
-   * - w4 (elevation_risk): 0.15 — lower elevation = higher inundation/storm-surge susceptibility.
-   * - w5 (disaster_history): 0.10 — empirical recurrence frequency over historical cycles (Phase 2 data).
-   * - w6 (access_isolation): 0.15 — logistical bottleneck based on road distance to nearest reachable shelter.
-   * Sum = 0.25 + 0.20 + 0.15 + 0.15 + 0.10 + 0.15 = 1.00
-   */
   const WEIGHTS = {
-    w1_hazard_intensity: 0.25,
-    w2_vulnerability: 0.20,
-    w3_population_density: 0.15,
-    w4_elevation_risk: 0.15,
-    w5_disaster_history: 0.10,
-    w6_access_isolation: 0.15
-  };
-
-  // =========================================================================
-  // 2. TIER THRESHOLDS CONSTANTS
-  // =========================================================================
-  const TIER_THRESHOLDS = {
-    IMMEDIATE_MIN: 0.80,    // VPI > 0.80: Immediate relocation dispatch required
-    SHORT_TERM_MIN: 0.50    // VPI 0.50 - 0.80: Short-term prioritized relocation
-    // VPI < 0.50: Medium-term advisory monitoring
+    hazardSeverity: 0.25,
+    populationAtRisk: 0.20,
+    vulnerability: 0.15,
+    immediateLifeRisk: 0.15,
+    responseUrgency: 0.15,
+    accessibility: 0.10
   };
 
   const TIERS = {
-    IMMEDIATE: 'IMMEDIATE',
-    SHORT_TERM: 'SHORT_TERM',
-    MEDIUM_TERM: 'MEDIUM_TERM'
+    CRITICAL: { min: 90, max: 100 },
+    HIGH: { min: 75, max: 89 },
+    MODERATE: { min: 50, max: 74 },
+    LOW: { min: 0, max: 49 }
   };
 
-  // Default maximum travel radius in km for shelter evacuation candidate matching
-  const DEFAULT_TRAVEL_RADIUS_KM = 65;
-
-  // =========================================================================
-  // 3. UTILITY & NORMALIZATION HELPERS
-  // =========================================================================
-
-  /**
-   * Haversine straight-line distance in kilometers
-   */
-  function haversineDistKm(lat1, lon1, lat2, lon2) {
-    const R = 6371; // Earth radius in km
-    const dLat = (lat2 - lat1) * Math.PI / 180;
-    const dLon = (lon2 - lon1) * Math.PI / 180;
-    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-              Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c;
+  function normalize(val, min, max) {
+    if (max === min) return 0;
+    let norm = (val - min) / (max - min);
+    return Math.max(0, Math.min(100, norm * 100));
   }
 
-  /**
-   * Ray-casting Point-in-Polygon check
-   * point = [lng, lat], polygon = [[lng, lat], ...]
-   */
-  function pointInPolygon(point, polygon) {
-    if (!polygon || !Array.isArray(polygon) || polygon.length < 3) return false;
-    const x = point[0], y = point[1];
-    let inside = false;
-    for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
-      const xi = polygon[i][0], yi = polygon[i][1];
-      const xj = polygon[j][0], yj = polygon[j][1];
-      const intersect = ((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
-      if (intersect) inside = !inside;
+  function calculateHazardSeverity(incident) {
+    // 0-100
+    // Example fields mapped to hazard intensity
+    let score = 0;
+    if (incident.hazardSeverityRaw !== undefined) {
+      score = incident.hazardSeverityRaw;
+    } else {
+      // Default mappings if raw score missing
+      const hazardStr = String(incident.hazardType || incident.hazard_type || '').toLowerCase();
+      if (hazardStr.includes('cyclone') || hazardStr.includes('hurricane')) score = 85;
+      else if (hazardStr.includes('flood') || hazardStr.includes('tsunami')) score = 75;
+      else if (hazardStr.includes('landslide')) score = 80;
+      else if (hazardStr.includes('earthquake')) score = 90;
+      else if (hazardStr.includes('fire')) score = 85;
+      else score = 50; // generic hazard
     }
-    return inside;
+    return Math.max(0, Math.min(100, score));
   }
 
-  /**
-   * Standard Min-Max Normalizer: scale value to [0, 1]
-   */
-  function minMaxNormalize(val, minVal, maxVal) {
-    if (maxVal === minVal) return 0.5;
-    const norm = (val - minVal) / (maxVal - minVal);
-    return Math.max(0, Math.min(1, norm));
+  function calculatePopulationRisk(incident) {
+    const pop = Number(incident.populationAtRisk || incident.population || incident.growth_adjusted_pop || 0);
+    // Band mapping based on standard scales
+    if (pop > 10000) return 100;
+    if (pop > 5000) return 85;
+    if (pop > 1000) return 70;
+    if (pop > 500) return 50;
+    if (pop > 50) return 30;
+    if (pop > 0) return 10;
+    return 0;
   }
 
-  /**
-   * Inverse Min-Max Normalizer: lower value = higher risk (scale to [0, 1])
-   * Used for elevation: lowest elevation gets 1.0 (highest inundation risk),
-   * highest elevation gets 0.0.
-   */
-  function inverseMinMaxNormalize(val, minVal, maxVal) {
-    if (maxVal === minVal) return 0.5;
-    const norm = (maxVal - val) / (maxVal - minVal);
-    return Math.max(0, Math.min(1, norm));
+  function calculateVulnerability(incident) {
+    let score = incident.vulnerabilityRaw !== undefined ? incident.vulnerabilityRaw : 50; 
+    // Add logic for elderly, isolated, etc if data exists
+    if (incident.elderlyPct) score += incident.elderlyPct * 100 * 0.3;
+    if (incident.isolated === true) score += 20;
+    if (incident.structuralVulnerability) score += incident.structuralVulnerability;
+    return Math.max(0, Math.min(100, score));
   }
 
-  /**
-   * Computes disaster history score from Phase 2 array:
-   * [{ year, event_type, severity, deaths_or_displacement }]
-   * Returns a normalized score between 0 and 1.
-   */
-  function computeDisasterHistoryScore(historyArray) {
-    if (!historyArray || !Array.isArray(historyArray) || historyArray.length === 0) {
-      return 0.0;
+  function calculateImmediateLifeRisk(incident) {
+    if (incident.immediateLifeRiskRaw !== undefined) return incident.immediateLifeRiskRaw;
+    let score = 10; // Base life risk in disaster
+    if (incident.personTrapped === true) score = 100;
+    if (incident.lifeThreatening === true) score = 100;
+    if (incident.rapidlyRisingWater) score += 40;
+    if (incident.criticalInfrastructureFailure) score += 30;
+    return Math.max(0, Math.min(100, score));
+  }
+
+  function calculateResponseUrgency(incident) {
+    if (incident.responseUrgencyRaw !== undefined) return incident.responseUrgencyRaw;
+    let score = 50; // Default moderate urgency
+    if (incident.etaMins !== undefined) {
+      if (incident.etaMins <= 15) score = 90; // Need to act now because it's happening
+      else if (incident.etaMins <= 60) score = 75;
+      else if (incident.etaMins <= 180) score = 50;
+      else score = 30;
     }
-    const currentYear = new Date().getFullYear();
-    let scoreAcc = 0;
-
-    historyArray.forEach(ev => {
-      const ageYears = Math.max(0, currentYear - (ev.year || currentYear));
-      // Recency decay factor (events in last 10 years weight 1.0, decaying to 0.4 at 25+ years)
-      const recencyWeight = Math.max(0.4, 1.0 - (ageYears * 0.024));
-
-      // Severity factor (Catastrophic/Severe: 1.0, High: 0.75, Moderate: 0.5, Low: 0.25)
-      let sevWeight = 0.5;
-      const s = String(ev.severity || '').toLowerCase();
-      if (s.includes('catastrophic') || s.includes('extreme') || s.includes('critical')) sevWeight = 1.0;
-      else if (s.includes('severe') || s.includes('high')) sevWeight = 0.8;
-      else if (s.includes('moderate') || s.includes('medium')) sevWeight = 0.5;
-      else if (s.includes('minor') || s.includes('low')) sevWeight = 0.3;
-
-      scoreAcc += recencyWeight * sevWeight;
-    });
-
-    // Normalize: 3+ major events in 20 years approaches 1.0
-    return Math.min(1.0, +(scoreAcc / 2.5).toFixed(3));
+    if (incident.escalating === true) score += 20;
+    return Math.max(0, Math.min(100, score));
   }
 
-  /**
-   * Evaluates live hazard intensity (0-1) for a habitation based on telemetry and active hazard polygons
-   */
-  function computeLiveHazardIntensity(habitation, telemetry, hazardPolygons) {
-    const lat = habitation.lat;
-    const lon = habitation.lng || habitation.lon;
-    const zoneId = habitation.mapped_zone_id || '';
-    const hazardType = (habitation.hazard_type || '').toLowerCase();
+  function calculateAccessibility(incident) {
+    // HIGHER score = easier/faster response. 
+    // We normalize eta: 0 ETA = 100 Accessibility, 3+ hr ETA = 0 Accessibility
+    if (incident.accessibilityRaw !== undefined) return incident.accessibilityRaw;
+    if (incident.noUsableRoute) return 0;
+    const etaMins = incident.travelTimeMins || 60;
+    if (etaMins < 15) return 100;
+    if (etaMins < 30) return 80;
+    if (etaMins < 60) return 60;
+    if (etaMins < 120) return 30;
+    return 10;
+  }
 
-    // Baseline hazard intensity based on designated Red Zone classification
-    let baseIntensity = 0.75;
-    if (zoneId === 'RZ001') baseIntensity = 0.88; // Coastal Flood & Cyclone Inundation Belt (Michaung / Vayu)
-    else if (zoneId === 'RZ002') baseIntensity = 0.92; // Brahmaputra Flood Inundation (Assam)
-    else if (zoneId === 'RZ003') baseIntensity = 0.82; // Chamoli Landslide Corridor (Uttarakhand)
-    else if (zoneId === 'RZ004') baseIntensity = 0.78; // Manipur Seismic Zone V
-    else if (zoneId === 'RZ005') baseIntensity = 0.80; // HP Cloudburst Flash Flood
+  function assignPriorityLevel(score) {
+    if (score >= TIERS.CRITICAL.min) return 'CRITICAL';
+    if (score >= TIERS.HIGH.min) return 'HIGH';
+    if (score >= TIERS.MODERATE.min) return 'MODERATE';
+    return 'LOW';
+  }
 
-    // 1. Point-in-polygon risk zone check (adds spatial confirmation)
-    if (hazardPolygons && lat && lon) {
-      const pt = [lon, lat];
-      if (hazardPolygons.coastalFlood && pointInPolygon(pt, hazardPolygons.coastalFlood)) {
-        baseIntensity = Math.max(baseIntensity, 0.92);
+  function calculatePriority(incident) {
+    const fA = calculateHazardSeverity(incident);
+    const fB = calculatePopulationRisk(incident);
+    const fC = calculateVulnerability(incident);
+    const fD = calculateImmediateLifeRisk(incident);
+    const fE = calculateResponseUrgency(incident);
+    const fF = calculateAccessibility(incident);
+
+    let rawScore = (fA * WEIGHTS.hazardSeverity) +
+                   (fB * WEIGHTS.populationAtRisk) +
+                   (fC * WEIGHTS.vulnerability) +
+                   (fD * WEIGHTS.immediateLifeRisk) +
+                   (fE * WEIGHTS.responseUrgency) +
+                   (fF * WEIGHTS.accessibility);
+
+    let overrideApplied = false;
+    // EMERGENCY OVERRIDE
+    if (fD >= 90 && fA >= 80) {
+      if (rawScore < 90) {
+        rawScore = 90;
+        overrideApplied = true;
       }
-      if (hazardPolygons.seismic && pointInPolygon(pt, hazardPolygons.seismic)) {
-        baseIntensity = Math.max(baseIntensity, 0.85);
-      }
-      if (hazardPolygons.landslide && pointInPolygon(pt, hazardPolygons.landslide)) {
-        baseIntensity = Math.max(baseIntensity, 0.88);
+    } else if (incident.lifeThreatening === true || incident.personTrapped === true) {
+      if (rawScore < 90) {
+        rawScore = 90;
+        overrideApplied = true;
       }
     }
 
-    // 2. Modulate with live atmospheric/seismic telemetry if available
-    if (telemetry) {
-      if (hazardType === 'cyclone' || hazardType === 'flood') {
-        const gust = telemetry.radar?.maxGustSpeedKmH;
-        if (typeof gust === 'number') {
-          // IMD gale scale: 60 km/h to 160 km/h mapped to [0.7, 1.0]
-          const windFactor = Math.min(1.0, Math.max(0.4, gust / 140));
-          baseIntensity = Math.min(1.0, baseIntensity * 0.6 + windFactor * 0.4);
-        }
-      } else if (hazardType === 'earthquake') {
-        const maxMag = telemetry.seismic?.maxRecordedMagnitude;
-        if (typeof maxMag === 'number' && maxMag > 0) {
-          const quakeFactor = Math.min(1.0, Math.max(0.3, (maxMag - 2.0) / 4.5));
-          baseIntensity = Math.min(1.0, baseIntensity * 0.6 + quakeFactor * 0.4);
-        }
-      }
-    }
+    const finalScore = Math.max(0, Math.min(100, Math.round(rawScore)));
 
-    return Math.max(0.0, Math.min(1.0, +baseIntensity.toFixed(3)));
-  }
+    const reasons = [];
+    if (overrideApplied) reasons.push("Emergency life-safety override applied.");
+    if (fD >= 80) reasons.push("High immediate life-safety risk.");
+    if (fA >= 80) reasons.push("Extreme hazard severity.");
+    if (fB >= 80) reasons.push("Large exposed population.");
+    if (fE >= 80) reasons.push("Rapidly increasing hazard / High response urgency.");
 
-  // =========================================================================
-  // 4. CORE VPI COMPUTATION (Phase 1.1 & 1.2)
-  // =========================================================================
-
-  /**
-   * Computes Vulnerability Priority Index (VPI) for an array of habitations.
-   *
-   * @param {Array} habitations - Raw list from data/census_lookup.json
-   * @param {Array} shelters - Raw list from data/shelters.json
-   * @param {Object} options - Telemetry, hazardPolygons, custom distance matrix
-   * @returns {Array} Ranked list of habitations with VPI, Tier, and Breakdown
-   */
-  function computeVPI(habitations, shelters = [], options = {}) {
-    if (!Array.isArray(habitations) || habitations.length === 0) return [];
-
-    const telemetry = options.telemetry || null;
-    const hazardPolygons = options.hazardPolygons || null;
-    const distanceMatrix = options.distanceMatrix || null; // Optional precomputed road distance { village_id: distKm }
-
-    // Identify dataset min/max for normalization
-    const pops = habitations.map(h => typeof h.growth_adjusted_pop === 'number' ? h.growth_adjusted_pop : (h.census_2011_pop || 1000));
-    const elevs = habitations.map(h => typeof h.elevation_m === 'number' ? h.elevation_m : 10);
-
-    const minPop = Math.min(...pops), maxPop = Math.max(...pops);
-    const minElev = Math.min(...elevs), maxElev = Math.max(...elevs);
-
-    // Compute raw isolation distances (nearest open shelter distance per habitation)
-    const openShelters = shelters.filter(s => s.status !== 'closed');
-    const rawDistances = habitations.map(h => {
-      const vId = h.village_id;
-      if (distanceMatrix && typeof distanceMatrix[vId] === 'number') {
-        return distanceMatrix[vId];
-      }
-      const lat = h.lat;
-      const lon = h.lng || h.lon;
-      if (!openShelters.length || typeof lat !== 'number' || typeof lon !== 'number') {
-        return 15.0; // default 15km fallback
-      }
-      let closest = Infinity;
-      for (const s of openShelters) {
-        const d = haversineDistKm(lat, lon, s.lat, s.lon);
-        if (d < closest) closest = d;
-      }
-      return closest === Infinity ? 15.0 : +closest.toFixed(2);
-    });
-
-    // Calculate VPI per habitation
-    const results = habitations.map((h, idx) => {
-      const lat = h.lat;
-      const lon = h.lng || h.lon;
-      const pop = typeof h.growth_adjusted_pop === 'number' ? h.growth_adjusted_pop : (h.census_2011_pop || 1000);
-      const elev = typeof h.elevation_m === 'number' ? h.elevation_m : 10;
-      const rawVuln = typeof h.vulnerability_score === 'number' ? h.vulnerability_score : 0.5;
-      const rawDist = rawDistances[idx];
-
-      // 1. Hazard Intensity (normalized 0-1 based on zone classification, polygons, and live telemetry)
-      const normHazard = computeLiveHazardIntensity(h, telemetry, hazardPolygons);
-
-      // 2. Vulnerability Score (calibrated 0-1 scale from Census socioeconomic & housing vulnerability)
-      const normVuln = Math.max(0, Math.min(1, rawVuln));
-
-      // 3. Population Density / Exposure Size (min-max normalized 0-1 across dataset)
-      const normPop = minMaxNormalize(pop, minPop, maxPop);
-
-      // 4. Elevation Risk (inverse min-max normalized: lower elevation = higher inundation risk 0-1)
-      const normElevRisk = inverseMinMaxNormalize(elev, minElev, maxElev);
-
-      // 5. Disaster History (normalized 0-1 from Phase 2 historical recurrence array)
-      const rawDisasterHistory = h.disaster_history || [];
-      const normDisaster = computeDisasterHistoryScore(rawDisasterHistory);
-
-      // 6. Access Isolation (normalized relative to 35km critical emergency road transit cutoff)
-      const normIsolation = Math.max(0, Math.min(1, rawDist / 35.0));
-
-      // Composite VPI calculation
-      const vpi = (WEIGHTS.w1_hazard_intensity * normHazard) +
-                  (WEIGHTS.w2_vulnerability * normVuln) +
-                  (WEIGHTS.w3_population_density * normPop) +
-                  (WEIGHTS.w4_elevation_risk * normElevRisk) +
-                  (WEIGHTS.w5_disaster_history * normDisaster) +
-                  (WEIGHTS.w6_access_isolation * normIsolation);
-
-      const roundedVpi = Math.max(0, Math.min(1, +vpi.toFixed(3)));
-
-      // Tier bucketing
-      let tier = TIERS.MEDIUM_TERM;
-      if (roundedVpi > TIER_THRESHOLDS.IMMEDIATE_MIN) {
-        tier = TIERS.IMMEDIATE;
-      } else if (roundedVpi >= TIER_THRESHOLDS.SHORT_TERM_MIN) {
-        tier = TIERS.SHORT_TERM;
-      }
-
-      return {
-        village_id: h.village_id,
-        village_name: h.village_name || h.name || 'Habitation',
-        district: h.district || 'Unassigned',
-        state: h.state || 'India',
-        mapped_zone_id: h.mapped_zone_id || 'GENERAL',
-        hazard_type: h.hazard_type || 'general',
-        lat,
-        lon,
-        elevation_m: elev,
-        growth_adjusted_pop: pop,
-        census_2011_pop: h.census_2011_pop || pop,
-        vpi_score: roundedVpi,
-        tier,
-        contributing_factors: {
-          hazard_intensity: {
-            raw: +normHazard.toFixed(2),
-            normalized: +normHazard.toFixed(3),
-            weight: WEIGHTS.w1_hazard_intensity,
-            weighted: +(WEIGHTS.w1_hazard_intensity * normHazard).toFixed(3),
-            description: 'Real-time hazard intensity & risk-zone intersection'
-          },
-          vulnerability: {
-            raw: rawVuln,
-            normalized: +normVuln.toFixed(3),
-            weight: WEIGHTS.w2_vulnerability,
-            weighted: +(WEIGHTS.w2_vulnerability * normVuln).toFixed(3),
-            description: 'Socioeconomic & housing vulnerability index (Census of India)'
-          },
-          population_density: {
-            raw: pop,
-            normalized: +normPop.toFixed(3),
-            weight: WEIGHTS.w3_population_density,
-            weighted: +(WEIGHTS.w3_population_density * normPop).toFixed(3),
-            description: 'Demographic exposure (Growth-adjusted 2026 headcount)'
-          },
-          elevation_risk: {
-            raw: elev,
-            normalized: +normElevRisk.toFixed(3),
-            weight: WEIGHTS.w4_elevation_risk,
-            weighted: +(WEIGHTS.w4_elevation_risk * normElevRisk).toFixed(3),
-            description: 'Topographic surge & inundation risk (Inverse normalized: lower = higher risk)'
-          },
-          disaster_history: {
-            raw: rawDisasterHistory.length,
-            normalized: +normDisaster.toFixed(3),
-            weight: WEIGHTS.w5_disaster_history,
-            weighted: +(WEIGHTS.w5_disaster_history * normDisaster).toFixed(3),
-            description: 'Historical disaster recurrence & severity score'
-          },
-          access_isolation: {
-            raw: rawDist,
-            unit: 'km',
-            normalized: +normIsolation.toFixed(3),
-            weight: WEIGHTS.w6_access_isolation,
-            weighted: +(WEIGHTS.w6_access_isolation * normIsolation).toFixed(3),
-            description: 'Distance to nearest reachable emergency shelter'
-          }
-        }
-      };
-    });
-
-    // Sort descending by VPI score
-    results.sort((a, b) => b.vpi_score - a.vpi_score);
-    return results;
-  }
-
-  // =========================================================================
-  // 5. GREEDY CARRYING CAPACITY ALLOCATION (Phase 1.3)
-  // =========================================================================
-
-  /**
-   * Greedy shelter allocation algorithm:
-   * 1. Sort habitations by VPI descending.
-   * 2. For each habitation, find open shelters within travel radius with remaining capacity.
-   * 3. Assign population to closest shelters, decrementing capacity on a working copy.
-   * 4. Flag as FULLY_ALLOCATED, PARTIALLY_ALLOCATED, or UNALLOCATED.
-   * 5. Generate zone-level deficit reports.
-   *
-   * @param {Array} rankedHabitations - Output from computeVPI()
-   * @param {Array} rawShelters - Raw list of shelters from shelters.json
-   * @param {Object} options - { travelRadiusKm, distanceMatrix }
-   * @returns {Object} { allocations, shelterStatus, deficitReports, summary }
-   */
-  function allocateCarryingCapacity(rankedHabitations, rawShelters, options = {}) {
-    const travelRadiusKm = options.travelRadiusKm || DEFAULT_TRAVEL_RADIUS_KM;
-    const distanceMatrix = options.distanceMatrix || null;
-
-    // Create deep working copy of shelters — never mutate original shelter objects
-    const workingShelters = rawShelters.map(s => {
-      const cap = Number(s.capacity) || 0;
-      const occ = Number(s.current_occupancy) || 0;
-      return {
-        shelter_id: s.shelter_id,
-        name: s.name,
-        lat: s.lat,
-        lon: s.lon,
-        capacity: cap,
-        initial_occupancy: occ,
-        current_occupancy: occ,
-        available_capacity: Math.max(0, cap - occ),
-        status: s.status || 'open',
-        district: s.district,
-        allocated_villages: []
-      };
-    });
-
-    const allocations = [];
-    // Tracking for deficit calculation per zone
-    const zoneAggregates = {};
-
-    for (const hab of rankedHabitations) {
-      const zoneId = hab.mapped_zone_id || 'GENERAL';
-      const popNeeded = hab.growth_adjusted_pop;
-
-      if (!zoneAggregates[zoneId]) {
-        zoneAggregates[zoneId] = {
-          zone_id: zoneId,
-          hazard_type: hab.hazard_type,
-          total_at_risk: 0,
-          total_reachable_capacity: 0,
-          total_allocated: 0,
-          deficit: 0
-        };
-      }
-      zoneAggregates[zoneId].total_at_risk += popNeeded;
-
-      // Find reachable open shelters with remaining capacity
-      const candidates = workingShelters
-        .filter(s => s.status === 'open' && s.available_capacity > 0)
-        .map(s => {
-          let dist = haversineDistKm(hab.lat, hab.lon, s.lat, s.lon);
-          // If precomputed road distance available, use it
-          if (distanceMatrix && distanceMatrix[hab.village_id] && distanceMatrix[hab.village_id][s.shelter_id]) {
-            dist = distanceMatrix[hab.village_id][s.shelter_id];
-          }
-          return { shelter: s, distKm: +dist.toFixed(2) };
-        })
-        .filter(item => item.distKm <= travelRadiusKm || item.shelter.district === hab.district)
-        .sort((a, b) => a.distKm - b.distKm);
-
-      // Tally reachable capacity for zone
-      candidates.forEach(c => {
-        // Only count each shelter's initial available capacity once per zone calculation if needed
-      });
-
-      let remainingToAllocate = popNeeded;
-      const assignedShelters = [];
-
-      for (const candidate of candidates) {
-        if (remainingToAllocate <= 0) break;
-        const shelter = candidate.shelter;
-        const canTake = Math.min(shelter.available_capacity, remainingToAllocate);
-
-        if (canTake > 0) {
-          shelter.available_capacity -= canTake;
-          shelter.current_occupancy += canTake;
-          if (shelter.available_capacity <= 0) {
-            shelter.status = 'full';
-          }
-          shelter.allocated_villages.push({
-            village_id: hab.village_id,
-            village_name: hab.village_name,
-            allocated_pop: canTake
-          });
-
-          assignedShelters.push({
-            shelter_id: shelter.shelter_id,
-            shelter_name: shelter.name,
-            allocated_pop: canTake,
-            distance_km: candidate.distKm,
-            remaining_shelter_capacity: shelter.available_capacity
-          });
-
-          remainingToAllocate -= canTake;
-        }
-      }
-
-      const allocatedPop = popNeeded - remainingToAllocate;
-      zoneAggregates[zoneId].total_allocated += allocatedPop;
-
-      let allocationStatus = 'FULLY_ALLOCATED';
-      if (allocatedPop === 0) {
-        allocationStatus = 'UNALLOCATED';
-      } else if (remainingToAllocate > 0) {
-        allocationStatus = 'PARTIALLY_ALLOCATED';
-      }
-
-      allocations.push({
-        village_id: hab.village_id,
-        village_name: hab.village_name,
-        district: hab.district,
-        state: hab.state,
-        mapped_zone_id: zoneId,
-        hazard_type: hab.hazard_type,
-        vpi_score: hab.vpi_score,
-        tier: hab.tier,
-        growth_adjusted_pop: popNeeded,
-        allocated_pop: allocatedPop,
-        unallocated_pop: remainingToAllocate,
-        allocation_status: allocationStatus,
-        assigned_shelters: assignedShelters,
-        contributing_factors: hab.contributing_factors
-      });
-    }
-
-    // Compute zone reachable capacities and deficit reports
-    const deficitReports = Object.values(zoneAggregates).map(z => {
-      // Find all unique open shelters within radius or matching district
-      const reachableCapSum = rawShelters
-        .filter(s => s.status === 'open')
-        .reduce((sum, s) => {
-          const avail = Math.max(0, s.capacity - s.current_occupancy);
-          return sum + avail;
-        }, 0);
-
-      z.total_reachable_capacity = reachableCapSum;
-      z.deficit = Math.max(0, z.total_at_risk - z.total_allocated);
-      z.status = z.deficit > 0 ? 'CAPACITY_DEFICIT' : 'SUFFICIENT_CAPACITY';
-      return z;
-    });
-
-    const totalAtRisk = allocations.reduce((a, b) => a + b.growth_adjusted_pop, 0);
-    const totalAllocated = allocations.reduce((a, b) => a + b.allocated_pop, 0);
-    const totalDeficit = allocations.reduce((a, b) => a + b.unallocated_pop, 0);
+    let recommendedAction = "Monitor situation.";
+    if (finalScore >= 90) recommendedAction = "Immediate evacuation / rescue deployment.";
+    else if (finalScore >= 75) recommendedAction = "Prepare for priority relocation.";
+    else if (finalScore >= 50) recommendedAction = "Standby and stage resources.";
 
     return {
-      allocations,
-      shelterStatus: workingShelters.map(s => ({
-        shelter_id: s.shelter_id,
-        name: s.name,
-        capacity: s.capacity,
-        initial_occupancy: s.initial_occupancy,
-        new_occupancy: s.current_occupancy,
-        available_beds: s.available_capacity,
-        occupancy_pct: Math.round((s.current_occupancy / (s.capacity || 1)) * 100),
-        status: s.status,
-        allocated_villages: s.allocated_villages
-      })),
-      deficitReports,
-      summary: {
-        totalHabitations: allocations.length,
-        immediateTierCount: allocations.filter(a => a.tier === TIERS.IMMEDIATE).length,
-        shortTermTierCount: allocations.filter(a => a.tier === TIERS.SHORT_TERM).length,
-        mediumTermTierCount: allocations.filter(a => a.tier === TIERS.MEDIUM_TERM).length,
-        totalAtRiskPop: totalAtRisk,
-        totalAllocatedPop: totalAllocated,
-        totalDeficitPop: totalDeficit,
-        allocationEfficiencyPct: Math.round((totalAllocated / (totalAtRisk || 1)) * 100)
-      }
+      score: finalScore,
+      level: assignPriorityLevel(finalScore),
+      overrideApplied,
+      factors: {
+        hazardSeverity: Math.round(fA),
+        populationAtRisk: Math.round(fB),
+        vulnerability: Math.round(fC),
+        immediateLifeRisk: Math.round(fD),
+        responseUrgency: Math.round(fE),
+        accessibility: Math.round(fF)
+      },
+      reasons,
+      recommendedAction
     };
   }
 
-  // =========================================================================
-  // 6. EXPORT MODULE INTERFACE
-  // =========================================================================
+  function rankIncidents(incidents) {
+    const scored = incidents.map(inc => {
+      const p = calculatePriority(inc);
+      return {
+        ...inc,
+        priorityScore: p.score,
+        priorityLevel: p.level,
+        factorScores: p.factors,
+        overrideApplied: p.overrideApplied,
+        reasons: p.reasons,
+        recommendedAction: p.recommendedAction
+      };
+    });
+
+    scored.sort((a, b) => {
+      if (b.priorityScore !== a.priorityScore) {
+        return b.priorityScore - a.priorityScore;
+      }
+      // Tie-breaking
+      if (b.factorScores.immediateLifeRisk !== a.factorScores.immediateLifeRisk)
+        return b.factorScores.immediateLifeRisk - a.factorScores.immediateLifeRisk;
+      if (b.factorScores.responseUrgency !== a.factorScores.responseUrgency)
+        return b.factorScores.responseUrgency - a.factorScores.responseUrgency;
+      if (b.factorScores.vulnerability !== a.factorScores.vulnerability)
+        return b.factorScores.vulnerability - a.factorScores.vulnerability;
+      // Accessibility (higher means easier, so lower accessibility might need to be resolved earlier, but user said "Lower ETA / better response accessibility", meaning higher accessibility is preferred in tie break)
+      return b.factorScores.accessibility - a.factorScores.accessibility;
+    });
+
+    scored.forEach((inc, idx) => { inc.rank = idx + 1; });
+    return scored;
+  }
+
+  function evaluateRelocationCandidates(incident, shelters, distanceMatrix) {
+    const pop = Number(incident.populationAtRisk || incident.population || incident.growth_adjusted_pop || 0);
+    const candidates = [];
+
+    shelters.forEach(s => {
+      const totalCapacity = Number(s.capacity || s.max_capacity || 0);
+      const currentOccupancy = Number(s.current_occupancy || s.occupancy || 0);
+      const availableCapacity = totalCapacity - currentOccupancy;
+      
+      const distInfo = distanceMatrix && distanceMatrix[incident.id] ? distanceMatrix[incident.id][s.id || s.shelter_id] : null;
+
+      let status = "REJECTED";
+      let reason = "";
+
+      if (availableCapacity < pop) {
+        reason = `Insufficient capacity (Avail: ${availableCapacity}, Needed: ${pop})`;
+      } else if (distInfo === undefined || distInfo === null) {
+        reason = "No practical route found.";
+      } else {
+        status = "RECOMMENDED";
+      }
+
+      candidates.push({
+        shelter_id: s.id || s.shelter_id,
+        shelter_name: s.name || s.shelter_name,
+        availableCapacity,
+        requiredCapacity: pop,
+        distance: distInfo,
+        status,
+        reason
+      });
+    });
+
+    // Sort recommended first, then by closest distance
+    candidates.sort((a, b) => {
+      if (a.status !== b.status) return a.status === "RECOMMENDED" ? -1 : 1;
+      return (a.distance || Infinity) - (b.distance || Infinity);
+    });
+
+    return candidates;
+  }
+
   return {
     WEIGHTS,
-    TIER_THRESHOLDS,
-    TIERS,
-    DEFAULT_TRAVEL_RADIUS_KM,
-    haversineDistKm,
-    pointInPolygon,
-    minMaxNormalize,
-    inverseMinMaxNormalize,
-    computeDisasterHistoryScore,
-    computeLiveHazardIntensity,
-    computeVPI,
-    allocateCarryingCapacity
+    TIER_THRESHOLDS: TIERS,
+    calculatePriority,
+    rankIncidents,
+    evaluateRelocationCandidates
   };
 }));

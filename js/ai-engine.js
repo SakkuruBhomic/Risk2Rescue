@@ -126,18 +126,41 @@ class AIEngine {
       let priorityData = null;
       if (PriorityEngine) {
         try {
-          const ranked = PriorityEngine.computeVPI(habitations, shelters, {
-            telemetry: telemetry.summary,
-            hazardPolygons: this.serverContext.hazardPolygons || {}
+          const rankedHabitations = PriorityEngine.rankIncidents(habitations.map(v => ({
+            ...v,
+            id: v.village_id,
+            name: v.village_name,
+            population: v.growth_adjusted_pop || v.census_2011_pop,
+            hazardType: v.hazard_type,
+            vulnerabilityRaw: 100 - (v.elevation_m * 10),
+            immediateLifeRiskRaw: v.hazard_type === 'cyclone' ? 85 : undefined,
+            responseUrgencyRaw: v.mapped_zone_id ? 85 : 40,
+          })));
+
+          const alloc = [];
+          let shelterStatus = shelters.map(s => ({...s, current_occupancy: s.current_occupancy || 0}));
+          const deficitReports = [];
+          rankedHabitations.forEach(inc => {
+             const candidates = PriorityEngine.evaluateRelocationCandidates(inc, shelterStatus, null);
+             const best = candidates.find(c => c.status === 'RECOMMENDED');
+             if (best) {
+               inc.allocation_status = 'ALLOCATED';
+               inc.assigned_shelters = [{ shelter_name: best.shelter_name, allocated_pop: inc.population }];
+               const shelterRef = shelterStatus.find(s => (s.id || s.shelter_id) === best.shelter_id);
+               if (shelterRef) shelterRef.current_occupancy += inc.population;
+             } else {
+               inc.allocation_status = 'DEFICIT';
+               inc.assigned_shelters = [];
+               deficitReports.push({ zone_id: inc.name, deficit: inc.population, status: 'NO_CAPACITY' });
+             }
+             alloc.push(inc);
           });
-          const allocation = PriorityEngine.allocateCarryingCapacity(ranked, shelters, {
-            travelRadiusKm: 65
-          });
+
           priorityData = {
-            habitations: allocation.allocations,
-            shelterStatus: allocation.shelterStatus,
-            deficitReports: allocation.deficitReports,
-            summary: allocation.summary
+            habitations: alloc,
+            shelterStatus: shelterStatus.map(s => ({...s, name: s.name || s.shelter_name, new_occupancy: s.current_occupancy, occupancy_pct: Math.round((s.current_occupancy / (s.capacity || s.max_capacity || 1)) * 100)})),
+            deficitReports: deficitReports,
+            summary: { criticalCount: alloc.filter(a => a.priorityLevel === 'CRITICAL').length, highCount: alloc.filter(a => a.priorityLevel === 'HIGH').length }
           };
         } catch (peErr) {
           console.warn('[AIEngine] PriorityEngine computation failed:', peErr.message);
@@ -793,7 +816,7 @@ ${topHabitations.map((h, i) => `  ${i+1}. ${h.village_name} (${h.hazard_type}): 
           'anthropic-version': '2023-06-01',
           'Content-Length': Buffer.byteLength(payload)
         },
-        timeout: 7000
+        timeout: parseInt(process.env.AI_TIMEOUT_MS) || 60000
       }, (res) => {
         let body = '';
         res.on('data', chunk => body += chunk);
@@ -841,7 +864,7 @@ ${topHabitations.map((h, i) => `  ${i+1}. ${h.village_name} (${h.hazard_type}): 
             'Content-Type': 'application/json',
             'Content-Length': Buffer.byteLength(payload)
           },
-          timeout: 10000 // 10-second timeout for local model inference
+          timeout: parseInt(process.env.AI_TIMEOUT_MS) || 60000 // Configurable timeout for local model inference
         }, (res) => {
           let body = '';
           res.on('data', chunk => body += chunk);
@@ -861,7 +884,7 @@ ${topHabitations.map((h, i) => `  ${i+1}. ${h.village_name} (${h.hazard_type}): 
         });
 
         req.on('error', reject);
-        req.on('timeout', () => { req.destroy(); reject(new Error('Ollama API timeout (10s)')); });
+        req.on('timeout', () => { req.destroy(); reject(new Error('Ollama API timeout')); });
         req.write(payload);
         req.end();
       } catch (e) {

@@ -1,212 +1,47 @@
 [
   {
-    "shelter_id": "AP_SH_32",
-    "name": "Pedaraghavulupeta",
-    "lat": 16.516050000000057,
-    "lon": 82.11775800000004,
-    "capacity": 829,
-    "current_occupancy": 0,
-    "type": "Type - C",
-    "contact": "AP SDMA: 1070",
-    "status": "open",
-    "district": "Konaseema",
-    "state": "Andhra Pradesh",
-    "amenities": [
-      "Clean Drinking Water",
-      "Community Kitchen"
-    ],
-    "elevation_m": 10.0,
-    "structural_safety": "Good",
-    "last_updated": "2026-09-13T00:00:00.000Z",
-    "updated_by": "AP SDMA"
+    "shelter_id": "S_STATIC_01",
+    "name": "Visakhapatnam Hill Camp",
+    "district": "Visakhapatnam",
+    "lat": 17.7000,
+    "lng": 83.2200,
+    "capacity": 5000,
+    "current_occupancy": 0
   },
   {
-    "shelter_id": "AP_SH_33",
-    "name": "Neellarevu-1",
-    "lat": 16.542736000000044,
-    "lon": 82.22250400000009,
-    "capacity": 325,
-    "current_occupancy": 0,
-    "type": "Type - A",
-    "contact": "AP SDMA: 1070",
-    "status": "open",
-    "district": "Konaseema",
-    "state": "Andhra Pradesh",
-    "amenities": [
-      "Clean Drinking Water",
-      "Community Kitchen"
-    ],
-    "elevation_m": 10.0,
-    "structural_safety": "Good",
-    "last_updated": "2026-09-13T00:00:00.000Z",
-    "updated_by": "AP SDMA"
+    "shelter_id": "S_STATIC_02",
+    "name": "Kakinada Municipal Shelter",
+    "district": "East Godavari",
+    "lat": 17.0000,
+    "lng": 82.2500,
+    "capacity": 10000,
+    "current_occupancy": 0
   },
   {
-    "shelter_id": "AP_SH_34",
-    "name": "Chirrayanam",
-    "lat": 16.516647000000027,
-    "lon": 82.17155300000006,
-    "capacity": 967,
-    "current_occupancy": 0,
-    "type": "Type - D",
-    "contact": "AP SDMA: 1070",
-    "status": "open",
-    "district": "Konaseema",
-    "state": "Andhra Pradesh",
-    "amenities": [
-      "Clean Drinking Water",
-      "Community Kitchen"
-    ],
-    "elevation_m": 10.0,
-    "structural_safety": "Good",
-    "last_updated": "2026-09-13T00:00:00.000Z",
-    "updated_by": "AP SDMA"
+    "shelter_id": "S_STATIC_03",
+    "name": "Krishna Relief Center",
+    "district": "Krishna",
+    "lat": 16.2000,
+    "lng": 81.1500,
+    "capacity": 6000,
+    "current_occupancy": 0
   },
   {
-    "shelter_id": "AP_SH_35",
-    "name": "Rameswaram",
-    "lat": 16.441128000000052,
-    "lon": 82.01108300000003,
-    "capacity": 325,
-    "current_occupancy": 0,
-    "type": "Type - A",
-    "contact": "AP SDMA: 1070",
-    "status": "open",
-    "district": "Konaseema",
-    "state": "Andhra Pradesh",
-    "amenities": [
-      "Clean Drinking Water",
-      "Community Kitchen"
-    ],
-    "elevation_m": 10.0,
-    "structural_safety": "Good",
-    "last_updated": "2026-09-13T00:00:00.000Z",
-    "updated_by": "AP SDMA"
+    "shelter_id": "S_STATIC_04",
+    "name": "Srikakulam ZP High School",
+    "district": "Srikakulam",
+    "lat": 18.3000,
+    "lng": 83.9000,
+    "capacity": 4000,
+    "current_occupancy": 0
   },
   {
-    "shelter_id": "AP_SH_36",
-    "name": "Samanthakurru",
-    "lat": 16.473817000000135,
-    "lon": 82.04211300000009,
-    "capacity": 484,
-    "current_occupancy": 0,
-    "type": "Type - B",
-    "contact": "AP SDMA: 1070",
-    "status": "open",
-    "district": "Konaseema",
-    "state": "Andhra Pradesh",
-    "amenities": [
-      "Clean Drinking Water",
-      "Community Kitchen"
-    ],
-    "elevation_m": 10.0,
-    "structural_safety": "Good",
-    "last_updated": "2026-09-13T00:00:00.000Z",
-    "updated_by": "AP SDMA"
-  },
-  {
-    "shelter_id": "AP_SH_37",
-    "name": "Kesavadasupalem",
-    "lat": 16.361292000000066,
-    "lon": 81.79965600000007,
-    "capacity": 967,
-    "current_occupancy": 0,
-    "type": "Type - D",
-    "contact": "AP SDMA: 1070",
-    "status": "open",
-    "district": "Konaseema",
-    "state": "Andhra Pradesh",
-    "amenities": [
-      "Clean Drinking Water",
-      "Community Kitchen"
-    ],
-    "elevation_m": 10.0,
-    "structural_safety": "Good",
-    "last_updated": "2026-09-13T00:00:00.000Z",
-    "updated_by": "AP SDMA"
-  },
-  {
-    "shelter_id": "AP_SH_38",
-    "name": "Pallipalem",
-    "lat": 16.32307500000007,
-    "lon": 81.72937200000008,
-    "capacity": 967,
-    "current_occupancy": 0,
-    "type": "Type - D",
-    "contact": "AP SDMA: 1070",
-    "status": "open",
-    "district": "Konaseema",
-    "state": "Andhra Pradesh",
-    "amenities": [
-      "Clean Drinking Water",
-      "Community Kitchen"
-    ],
-    "elevation_m": 10.0,
-    "structural_safety": "Good",
-    "last_updated": "2026-09-13T00:00:00.000Z",
-    "updated_by": "AP SDMA"
-  },
-  {
-    "shelter_id": "AP_SH_39",
-    "name": "Padamatapalem",
-    "lat": 16.39533300000005,
-    "lon": 81.87517200000009,
-    "capacity": 967,
-    "current_occupancy": 0,
-    "type": "Type - D",
-    "contact": "AP SDMA: 1070",
-    "status": "open",
-    "district": "Konaseema",
-    "state": "Andhra Pradesh",
-    "amenities": [
-      "Clean Drinking Water",
-      "Community Kitchen"
-    ],
-    "elevation_m": 10.0,
-    "structural_safety": "Good",
-    "last_updated": "2026-09-13T00:00:00.000Z",
-    "updated_by": "AP SDMA"
-  },
-  {
-    "shelter_id": "AP_SH_40",
-    "name": "Kesanapalli",
-    "lat": 16.39546400000012,
-    "lon": 81.89574700000009,
-    "capacity": 967,
-    "current_occupancy": 0,
-    "type": "Type - D",
-    "contact": "AP SDMA: 1070",
-    "status": "open",
-    "district": "Konaseema",
-    "state": "Andhra Pradesh",
-    "amenities": [
-      "Clean Drinking Water",
-      "Community Kitchen"
-    ],
-    "elevation_m": 10.0,
-    "structural_safety": "Good",
-    "last_updated": "2026-09-13T00:00:00.000Z",
-    "updated_by": "AP SDMA"
-  },
-  {
-    "shelter_id": "AP_SH_41",
-    "name": "Karavaka",
-    "lat": 16.42129200000004,
-    "lon": 81.94408600000011,
-    "capacity": 484,
-    "current_occupancy": 0,
-    "type": "Type - B",
-    "contact": "AP SDMA: 1070",
-    "status": "open",
-    "district": "Konaseema",
-    "state": "Andhra Pradesh",
-    "amenities": [
-      "Clean Drinking Water",
-      "Community Kitchen"
-    ],
-    "elevation_m": 10.0,
-    "structural_safety": "Good",
-    "last_updated": "2026-09-13T00:00:00.000Z",
-    "updated_by": "AP SDMA"
+    "shelter_id": "S_STATIC_05",
+    "name": "Nellore Community Hall",
+    "district": "Nellore",
+    "lat": 14.4500,
+    "lng": 79.9900,
+    "capacity": 3000,
+    "current_occupancy": 0
   }
 ]
